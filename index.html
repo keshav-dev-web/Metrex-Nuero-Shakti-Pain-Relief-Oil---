@@ -1,0 +1,2377 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metrex Nuero Shakti Pain Relief Oil - जोड़ों के दर्द से मुक्ति</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        /* Import Professional Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800&family=Nunito:wght@400;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital,wght@0,400;1,400&family=Tiro+Devanagari+Sanskrit:wght@400&display=swap');
+        
+        body {
+            font-family: 'Tiro Devanagari Hindi', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        /* Layout Structure */
+        .page-layout {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 450px;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .main-content {
+            margin-top: 120px; /* Space for fixed header */
+            margin-bottom: 80px; /* Space for fixed footer */
+            flex: 1;
+        }
+        
+        /* Typography Hierarchy */
+        /* Professional Typography System with Tiro Devanagari */
+        
+        /* Hero Headlines - Bold & Impactful */
+        h1, .h1, .hero-title {
+            font-family: 'Tiro Devanagari Hindi', 'Montserrat', 'Arial Black', sans-serif;
+            font-weight: 400;
+            font-size: 2.5rem; /* 40px */
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        /* Section Headers - Professional */
+        h2, .h2, .section-title {
+            font-family: 'Tiro Devanagari Hindi', 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 2rem; /* 32px */
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+        }
+        
+        /* Sub Headers - Clean */
+        h3, .h3, .sub-title {
+            font-family: 'Tiro Devanagari Hindi', 'Nunito', sans-serif;
+            font-weight: 400;
+            font-size: 1.5rem; /* 24px */
+            line-height: 1.4;
+        }
+        
+        /* Problem/Solution Headlines */
+        .problem-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: #dc2626;
+            font-size: 1.75rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .solution-title {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            color: #059669;
+            font-size: 1.75rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        /* Small Headers (H4) - Card Titles */
+        h4, .h4 {
+            font-family: 'Tiro Devanagari Hindi', 'Inter', 'Helvetica Neue', Helvetica, sans-serif;
+            font-weight: 400;
+            font-size: 1.25rem; /* 20px */
+            line-height: 1.5;
+        }
+        
+        /* Minor Headers (H5) - Component Titles */
+        h5, .h5 {
+            font-family: 'Tiro Devanagari Hindi', 'Roboto', 'Arial', sans-serif;
+            font-weight: 400;
+            font-size: 1.125rem; /* 18px */
+            line-height: 1.6;
+        }
+        
+        /* Micro Headers (H6) - Small Labels */
+        h6, .h6 {
+            font-family: 'Tiro Devanagari Hindi', 'Inter', 'Helvetica Neue', Helvetica, sans-serif;
+            font-weight: 400;
+            font-size: 1rem; /* 16px */
+            line-height: 1.6;
+            letter-spacing: 0.02em;
+        }
+        
+        /* Responsive Typography */
+        @media (max-width: 450px) {
+            h1, .h1 { font-size: 2rem; }
+            h2, .h2 { font-size: 1.625rem; }
+            h3, .h3 { font-size: 1.375rem; }
+            h4, .h4 { font-size: 1.125rem; }
+            h5, .h5 { font-size: 1rem; }
+            h6, .h6 { font-size: 0.875rem; }
+        }
+        
+        .container-main {
+            max-width: 450px;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+            background: white;
+        }
+        
+        /* Content Alignment Utilities */
+        .content-center {
+            max-width: 32rem; /* 512px */
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        
+        .section-content {
+            max-width: 28rem; /* 448px */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .text-balance {
+            text-wrap: balance;
+        }
+        
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem auto;
+        }
+        
+        /* Professional Design Elements */
+        .impact-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .impact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+            border-color: #10b981;
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(145deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 5px solid #0ea5e9;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            box-shadow: 0 4px 15px rgba(14, 165, 233, 0.1);
+        }
+        
+        .highlight-text {
+            background: linear-gradient(90deg, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+        
+        .problem-highlight {
+            background: linear-gradient(90deg, #ef4444, #dc2626);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 700;
+            display: inline-block;
+            margin: 0.25rem;
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+        }
+        
+        .solution-highlight {
+            background: linear-gradient(90deg, #10b981, #059669);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 700;
+            display: inline-block;
+            margin: 0.25rem;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+        
+        .stats-container {
+            background: linear-gradient(145deg, #1e293b 0%, #334155 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 2.5rem;
+            color: #fbbf24;
+            display: block;
+        }
+        
+        .before-after-container {
+            position: relative;
+            background: linear-gradient(145deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            overflow: hidden;
+        }
+        
+        .before-after-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ef4444, #fbbf24, #10b981);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .pulse-animation {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: .8;
+            }
+        }
+        
+        /* Floating Order Button */
+        .floating-order-btn {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            background: linear-gradient(135deg, #ff6b6b, #ff4757);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 20px;
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: bounce 2s ease-in-out infinite;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            min-width: 140px;
+        }
+        
+        .floating-order-btn:hover {
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 12px 30px rgba(255, 107, 107, 0.6);
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(-50%) translateX(0);
+            }
+            40% {
+                transform: translateY(-50%) translateX(-5px);
+            }
+            60% {
+                transform: translateY(-50%) translateX(-3px);
+            }
+        }
+        
+        /* Fixed Footer Bar */
+        .fixed-footer {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 450px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        .scroll-text-container {
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 8px 0;
+        }
+        
+        .scroll-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll-left 20s linear infinite;
+        }
+        
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        
+        /* Notification Popup */
+        .notification-popup {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            margin-left: -205px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            border-radius: 16px;
+            padding: 16px 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15), 0 0 0 1px rgba(255,255,255,0.8);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            width: 410px;
+            max-width: 410px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        
+        /* Base notification styles - GSAP will handle all animations */
+        
+        /* Initial hidden state for content */
+        .notification-content {
+            flex: 1;
+            opacity: 0;
+        }
+
+        .notification-icon {
+            opacity: 0;
+        }        /* Enhanced notification styling */
+        .notification-popup::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, #3b82f6, #10b981, #f59e0b);
+            border-radius: 18px;
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        .notification-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            border: 3px solid white;
+            opacity: 0;
+        }
+
+        .notification-name {
+            font-weight: 700;
+            color: #1f2937;
+            font-size: 15px;
+            margin-bottom: 2px;
+        }
+
+        .notification-city {
+            color: #6b7280;
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        .notification-message {
+            color: #059669;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .notification-icon {
+            font-size: 28px;
+            animation: celebrateIcon 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes celebrateIcon {
+            0% { transform: scale(1) rotate(0deg); }
+            100% { transform: scale(1.1) rotate(5deg); }
+        }
+        
+        .notification-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .order-btn-footer {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .order-btn-footer:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.5);
+        }
+        
+        /* Full Screen Image Modal */
+        .image-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .image-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            padding: 20px;
+        }
+        
+        .modal-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            transform: scale(1.1);
+            background: #f87171;
+            color: white;
+        }
+        
+        .zoom-hint {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+        
+        .clickable-image {
+            cursor: zoom-in;
+            transition: transform 0.3s ease;
+        }
+        
+        .clickable-image:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="page-layout">
+        <!-- Fixed Header Section -->
+        <div class="fixed-header">
+            <div class="bg-green-600 text-white text-center py-4 px-4">
+                <!-- Brand Logo Area -->
+                <div class="w-8 h-8 bg-white rounded-full mx-auto mb-2 flex items-center justify-center">
+                    <div class="w-4 h-4 bg-green-600 rounded-full"></div>
+                </div>
+                <h1 class="text-xl font-bold mb-1">Metrex Nuero Shakti</h1>
+                <p class="text-sm">Pain Relief Oil</p>
+                <div class="mt-2 bg-yellow-400 text-gray-900 inline-block px-3 py-1 rounded-full font-semibold text-xs">
+                    4.9 Star Rating
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Scrollable Content -->
+        <div class="container-main">
+            <div class="main-content">
+
+        <!-- Hero Visual Section -->
+        <div class="relative bg-gradient-to-br from-amber-50 via-green-50 to-emerald-100 overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+            <div class="absolute top-10 left-10 w-20 h-20 bg-green-200/30 rounded-full blur-xl"></div>
+            <div class="absolute bottom-10 right-10 w-32 h-32 bg-yellow-200/30 rounded-full blur-2xl"></div>
+            
+            <!-- Main Content -->
+            <div class="relative px-4 py-12">
+                <!-- Bold Headline -->
+                <div class="text-center mb-8 max-w-lg mx-auto">
+                    <!-- Main Heading -->
+                    <h1 class="hero-title text-gray-900 mb-4 leading-tight">
+                        <span class="highlight-text">जोड़ों का दर्द...</span><br>
+                        <span class="solution-highlight">अब नहीं!</span>
+                    </h1>
+                    
+                    <!-- Subheading -->
+                    <div class="bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 inline-block shadow-lg mb-6">
+                        <h2 class="text-lg font-bold text-gray-800">Nuero Shakti – <span class="text-green-600">100% आयुर्वेदिक</span> Pain Relief Oil</h2>
+                    </div>
+                    
+                    <!-- Statistics Visual -->
+                    <div class="stats-container max-w-sm mx-auto">
+                        <div class="flex items-center justify-center gap-4">
+                            <div class="text-center">
+                                <span class="stat-number">10,000+</span>
+                                <span class="block font-semibold text-sm">संतुष्ट ग्राहक</span>
+                            </div>
+                            <div class="w-px h-12 bg-yellow-400"></div>
+                            <div class="text-center">
+                                <span class="stat-number text-2xl">4.9</span>
+                                <span class="block font-semibold text-sm">रेटिंग</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Trust Features -->
+                    <div class="grid grid-cols-3 gap-3 mb-6 max-w-sm mx-auto">
+                        <div class="bg-white/80 p-3 rounded-xl shadow-sm text-center">
+                            <div class="w-8 h-8 bg-green-500 rounded-full mx-auto mb-2 flex items-center justify-center">
+                                <div class="w-4 h-4 bg-white rounded-full"></div>
+                            </div>
+                            <span class="text-xs font-semibold text-gray-700">100% आयुर्वेदिक</span>
+                        </div>
+                        <div class="bg-white/80 p-3 rounded-xl shadow-sm text-center">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full mx-auto mb-2 flex items-center justify-center">
+                                <div class="w-2 h-4 bg-white rounded-sm"></div>
+                            </div>
+                            <span class="text-xs font-semibold text-gray-700">तुरंत राहत</span>
+                        </div>
+                        <div class="bg-white/80 p-3 rounded-xl shadow-sm text-center">
+                            <div class="w-8 h-8 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
+                                <div class="w-4 h-1 bg-white rounded-full"></div>
+                            </div>
+                            <span class="text-xs font-semibold text-gray-700">No केमिकल</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Hero CTA Button -->
+                    <div class="text-center">
+                        <button onclick="scrollToContact()" class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:from-orange-600 hover:to-red-600 transition-all transform hover:scale-105 pulse-animation">
+                            🛒 अभी ऑर्डर करें - विशेष छूट
+                        </button>
+                        <p class="text-sm text-gray-600 mt-2">📞 तुरंत कॉल बैक के लिए</p>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Product Showcase -->
+                <div class="relative max-w-md mx-auto">
+                    <!-- Main Product Card -->
+                    <div class="relative bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 rounded-3xl shadow-2xl overflow-hidden border border-orange-100">
+                        <!-- Premium Badge -->
+                        <div class="absolute top-4 right-4 z-20 bg-gradient-to-r from-orange-400 to-red-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                            ⭐ Premium Quality
+                        </div>
+                        
+                        <!-- Product Image Section -->
+                        <div class="relative h-80 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 flex items-center justify-center p-2 overflow-hidden">
+                            <!-- Minimal Background Decorations -->
+                            <div class="absolute inset-0">
+                                <!-- Reduced decorative elements -->
+                                <div class="absolute top-4 left-4 w-8 h-8 border border-orange-200/20 rounded-full"></div>
+                                <div class="absolute bottom-4 right-4 w-10 h-10 border border-amber-200/15 rounded-full"></div>
+                                
+                                <!-- Subtle Ayurvedic Symbols -->
+                                <div class="absolute top-6 left-1/4 text-orange-200/20 text-lg">🌿</div>
+                                <div class="absolute bottom-6 right-1/4 text-amber-200/20 text-sm">🍃</div>
+                            </div>
+                            
+                            <!-- Product Image - Much Larger -->
+                            <div class="relative z-10 transform hover:scale-102 transition-transform duration-300 w-full h-full flex items-center justify-center">
+                                <img 
+                                    id="productImage"
+                                    src="./images/productImage.png" 
+                                    alt="Metrex Nuero Shakti Pain Relief Oil - 100% आयुर्वेदिक दर्द निवारक तेल" 
+                                    class="max-h-full max-w-full object-contain drop-shadow-2xl clickable-image"
+                                    loading="lazy"
+                                    onclick="openImageModal(this.src)"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                    title="क्लिक करें बड़ी तस्वीर देखने के लिए"
+                                >
+                                <!-- Enhanced Fallback -->
+                                <div class="hidden w-full h-full flex-col items-center justify-center text-gray-600 bg-white rounded-2xl shadow-lg border-2 border-dashed border-gray-300" style="display: none;">
+                                    <div class="text-8xl mb-3">🧴</div>
+                                    <p class="font-bold text-2xl text-center text-gray-700">Metrex Nuero Shakti</p>
+                                    <p class="text-lg text-center text-gray-500 mt-1">Pain Relief Oil</p>
+                                    <p class="text-sm text-center text-orange-600 mt-2">100% आयुर्वेदिक</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Very Subtle Glow Effect -->
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-orange-100/10 to-transparent transform -skew-x-12 animate-pulse opacity-30"></div>
+                        </div>
+                        
+                        <!-- Product Info Section -->
+                        <div class="p-6 bg-gradient-to-r from-orange-50 to-amber-50">
+                            <!-- Product Name & Description -->
+                            <div class="text-center mb-4">
+                                <h3 class="text-xl font-bold text-gray-800 mb-1">Metrex Nuero Shakti</h3>
+                                <p class="text-sm text-gray-700 mb-3">जोड़ों का दर्द... अब नहीं!</p>
+                                
+                                <!-- Key Features -->
+                                <div class="flex justify-center gap-2 mb-3">
+                                    <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-semibold border border-orange-200">
+                                        🌿 100% आयुर्वेदिक
+                                    </span>
+                                    <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-xs font-semibold border border-amber-200">
+                                        ⚡ तुरंत राहत
+                                    </span>
+                                </div>
+                                
+                                <!-- Product Specs -->
+                                <div class="flex justify-between items-center text-xs text-gray-600">
+                                    <div class="flex items-center gap-1">
+                                        <span class="w-2 h-2 bg-orange-400 rounded-full"></span>
+                                        <span>50ml</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <span class="w-2 h-2 bg-amber-400 rounded-full"></span>
+                                        <span>Lab Tested</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <span class="w-2 h-2 bg-yellow-400 rounded-full"></span>
+                                        <span>ISO Certified</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Click to View Hint -->
+                            <div class="text-center">
+                                <div class="inline-flex items-center gap-2 bg-orange-100 hover:bg-orange-200 px-4 py-2 rounded-full text-xs text-orange-700 cursor-pointer transition-colors border border-orange-200" onclick="openImageModal('./images/productImage.png')">
+                                    <span>🔍</span>
+                                    <span>बड़ी तस्वीर देखने के लिए क्लिक करें</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Decorative Corner Elements -->
+                        <div class="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-orange-200/15 to-transparent rounded-br-full"></div>
+                        <div class="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-amber-200/15 to-transparent rounded-tl-full"></div>
+                    </div>
+                    
+                    <!-- Floating Trust Badges -->
+                    <div class="absolute -top-3 -left-3 bg-orange-500 text-white p-3 rounded-full shadow-lg animate-bounce">
+                        <span class="text-lg">🛡️</span>
+                    </div>
+                    <div class="absolute -bottom-3 -right-3 bg-amber-500 text-white p-3 rounded-full shadow-lg animate-pulse">
+                        <span class="text-lg">⭐</span>
+                    </div>
+                </div>
+                
+                <!-- Hero CTA Button -->
+                <div class="text-center mt-8">
+                    <button onclick="scrollToContact()" class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:from-orange-600 hover:to-red-600 transition-all transform hover:scale-105 pulse-animation">
+                        🛒 अभी ऑर्डर करें - विशेष छूट
+                    </button>
+                    <p class="text-sm text-gray-600 mt-2">📞 तुरंत कॉल बैक के लिए</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Headline -->
+        <div class="bg-red-50 border-l-4 border-red-500 p-4 mx-4 my-6">
+            <p class="text-gray-800 font-bold text-lg leading-relaxed">
+                "जोड़ों का दर्द आपकी उम्र से नहीं… आपकी रोज़ की ज़िंदगी से जीत रहा है।"
+            </p>
+            <p class="text-gray-700 mt-3 leading-relaxed">
+                "इस दर्द ने आपके चलने-फिरने की आज़ादी, आत्मविश्वास और दिनभर के कामकाज पर क़ब्ज़ा कर लिया है।"
+            </p>
+        </div>
+
+        <!-- Pain Impact Visualization -->
+        <div class="px-4 py-8 bg-gradient-to-br from-red-50 to-orange-50 relative overflow-hidden">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-10 left-10 w-32 h-32 border-2 border-red-300 rounded-full"></div>
+                <div class="absolute bottom-10 right-10 w-24 h-24 border-2 border-orange-300 rounded-full"></div>
+            </div>
+            
+            <div class="relative max-w-lg mx-auto">
+                <!-- Emotional Impact Visual -->
+                <div class="text-center mb-8">
+                    <div class="inline-block bg-white rounded-full p-6 shadow-xl mb-4">
+                        <div class="text-5xl md:text-6xl">😰</div>
+                    </div>
+                    <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">दर्द सिर्फ़ दर्द नहीं...</h2>
+                    <p class="text-gray-700 text-base md:text-lg">ये आपकी पूरी जिंदगी को प्रभावित करता है</p>
+                </div>
+                
+                <!-- Before/After Comparison -->
+                <div class="grid grid-cols-2 gap-3 md:gap-4 mb-8">
+                    <div class="bg-red-100 border-2 border-red-300 rounded-xl p-4">
+                        <div class="text-center">
+                            <div class="text-4xl mb-3">😔</div>
+                            <h3 class="font-bold text-red-700 mb-2">दर्द के साथ</h3>
+                            <div class="space-y-2 text-sm">
+                                <p class="flex items-center text-red-600"><span class="mr-2">❌</span>मुश्किल चलना</p>
+                                <p class="flex items-center text-red-600"><span class="mr-2">❌</span>नींद की समस्या</p>
+                                <p class="flex items-center text-red-600"><span class="mr-2">❌</span>काम में दिक्कत</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-green-100 border-2 border-green-300 rounded-xl p-4">
+                        <div class="text-center">
+                            <div class="text-4xl mb-3">😊</div>
+                            <h3 class="font-bold text-green-700 mb-2">राहत के बाद</h3>
+                            <div class="space-y-2 text-sm">
+                                <p class="flex items-center text-green-600"><span class="mr-2">✅</span>आसान चलना</p>
+                                <p class="flex items-center text-green-600"><span class="mr-2">✅</span>बेहतर नींद</p>
+                                <p class="flex items-center text-green-600"><span class="mr-2">✅</span>सक्रिय जीवन</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Professional Product Showcase & Information Section -->
+        <div class="px-4 py-8 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+            <!-- Sophisticated Background Elements -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute top-20 left-20 w-40 h-40 border border-blue-300 rounded-full"></div>
+                <div class="absolute bottom-20 right-20 w-28 h-28 border border-indigo-300 rounded-full"></div>
+                <div class="absolute top-1/3 right-1/4 w-3 h-3 bg-blue-400 rounded-full"></div>
+                <div class="absolute bottom-1/3 left-1/4 w-2 h-2 bg-indigo-400 rounded-full"></div>
+            </div>
+            
+            <div class="relative max-w-lg mx-auto">
+                <!-- Professional Header -->
+                <div class="text-center mb-8">
+                    <div class="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4 shadow-lg">
+                        <span class="english-text">Professional Solution</span>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-3 hindi-text leading-relaxed">समझदार विकल्प</h2>
+                    <p class="text-gray-600 text-lg hindi-text">जो वास्तव में काम करता है</p>
+                </div>
+                
+                <!-- Advanced Product Showcase Card -->
+                <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200/50 backdrop-blur-sm">
+                    <!-- Premium Gradient Header -->
+                    <div class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 px-6 py-4">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="text-white font-bold text-lg english-text">Metrex Nuero Shakti</h3>
+                                <p class="text-blue-100 text-sm hindi-text">प्रमाणित आयुर्वेदिक फॉर्मूला</p>
+                            </div>
+                            <div class="bg-white/20 rounded-full px-3 py-1">
+                                <span class="text-white text-xs font-bold english-text">Premium</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Main Content Area -->
+                    <div class="p-6">
+                        <!-- Product Image Section -->
+                        <div class="relative mb-6">
+                            <div class="bg-gradient-to-br from-gray-50 via-white to-blue-50 rounded-2xl p-4 border border-gray-100 shadow-inner">
+                                <img 
+                                    src="./images/showcase.png" 
+                                    alt="Metrex Nuero Shakti Pain Relief Oil Professional Showcase - प्रोफेशनल दर्द निवारक तेल प्रदर्शन" 
+                                    class="w-full h-auto rounded-xl clickable-image hover:scale-105 transition-all duration-500 shadow-lg"
+                                    loading="lazy"
+                                    onclick="openImageModal(this.src)"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                    title="विस्तृत जानकारी के लिए क्लिक करें"
+                                >
+                                <!-- Professional Fallback -->
+                                <div class="hidden w-full h-64 flex-col items-center justify-center text-gray-600 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border-2 border-dashed border-blue-200" style="display: none;">
+                                    <div class="w-16 h-16 bg-blue-500 rounded-full mb-4 flex items-center justify-center">
+                                        <div class="w-8 h-8 border-2 border-white rounded-full"></div>
+                                    </div>
+                                    <p class="font-bold text-xl text-center text-gray-700 hindi-text">Metrex Nuero Shakti</p>
+                                    <p class="text-lg text-center text-gray-500 mt-1 english-text">Pain Relief Oil</p>
+                                    <p class="text-sm text-center text-blue-600 mt-2 hindi-text font-semibold">100% आयुर्वेदिक समाधान</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Professional Information Grid -->
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-4 rounded-xl border border-green-200/50 hover:shadow-md transition-shadow duration-300">
+                                <div class="flex items-center mb-2">
+                                    <div class="w-8 h-8 bg-green-500 rounded-full mr-3 flex items-center justify-center">
+                                        <div class="w-4 h-4 border-2 border-white rounded-full"></div>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800 text-sm hindi-text">तुरंत प्रभावी</h4>
+                                </div>
+                                <p class="text-xs text-gray-600 hindi-text">15 मिनट में राहत महसूस करें</p>
+                            </div>
+                            
+                            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 rounded-xl border border-blue-200/50 hover:shadow-md transition-shadow duration-300">
+                                <div class="flex items-center mb-2">
+                                    <div class="w-8 h-8 bg-blue-500 rounded-full mr-3 flex items-center justify-center">
+                                        <div class="w-3 h-3 bg-white rounded-full"></div>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800 text-sm hindi-text">प्राकृतिक</h4>
+                                </div>
+                                <p class="text-xs text-gray-600 hindi-text">8 आयुर्वेदिक जड़ी-बूटियाँ</p>
+                            </div>
+                            
+                            <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-4 rounded-xl border border-purple-200/50 hover:shadow-md transition-shadow duration-300">
+                                <div class="flex items-center mb-2">
+                                    <div class="w-8 h-8 bg-purple-500 rounded-full mr-3 flex items-center justify-center">
+                                        <div class="w-2 h-4 bg-white rounded-sm"></div>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800 text-sm hindi-text">प्रमाणित</h4>
+                                </div>
+                                <p class="text-xs text-gray-600 english-text">ISO & Lab Tested</p>
+                            </div>
+                            
+                            <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-4 rounded-xl border border-orange-200/50 hover:shadow-md transition-shadow duration-300">
+                                <div class="flex items-center mb-2">
+                                    <div class="w-8 h-8 bg-orange-500 rounded-full mr-3 flex items-center justify-center">
+                                        <div class="w-4 h-1 bg-white rounded-full"></div>
+                                    </div>
+                                    <h4 class="font-bold text-gray-800 text-sm hindi-text">सुरक्षित</h4>
+                                </div>
+                                <p class="text-xs text-gray-600 hindi-text">कोई साइड इफेक्ट नहीं</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Professional Credentials -->
+                        <div class="bg-gradient-to-r from-gray-50 to-blue-50 p-4 rounded-xl border border-gray-200/50 mb-6">
+                            <div class="flex items-center justify-between text-xs">
+                                <div class="flex items-center">
+                                    <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                                    <span class="text-gray-600 english-text">50ml Bottle</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                                    <span class="text-gray-600 english-text">Lab Certified</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
+                                    <span class="text-gray-600 hindi-text">डॉक्टर अप्रूव्ड</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Professional CTA -->
+                        <div class="text-center">
+                            <button onclick="scrollToContact()" class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 pulse-animation hindi-text">
+                                प्रोफेशनल सलूशन पाएं
+                            </button>
+                            <p class="text-sm text-gray-600 mt-3 hindi-text">✅ मुफ्त डिलीवरी | 📞 एक्सपर्ट सपोर्ट</p>
+                            
+                            <!-- View Details Button -->
+                            <div class="mt-4">
+                                <div class="inline-flex items-center gap-2 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-full text-sm text-gray-700 cursor-pointer transition-all duration-300 border border-gray-200 hover:border-gray-300" onclick="openImageModal('./images/showcase.png')">
+                                    <div class="w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
+                                        <div class="w-2 h-2 bg-white rounded-full"></div>
+                                    </div>
+                                    <span class="hindi-text font-semibold">विस्तृत जानकारी देखें</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Decorative Elements -->
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-blue-200/10 to-transparent rounded-bl-full"></div>
+                    <div class="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-indigo-200/10 to-transparent rounded-tr-full"></div>
+                </div>
+                
+                <!-- Professional Trust Indicators -->
+                <div class="flex justify-center gap-4 mt-6">
+                    <div class="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-md border border-gray-200/50">
+                        <span class="text-xs font-semibold text-gray-700 english-text">4.9★ Rating</span>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-md border border-gray-200/50">
+                        <span class="text-xs font-semibold text-gray-700 hindi-text">10,000+ ग्राहक</span>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-md border border-gray-200/50">
+                        <span class="text-xs font-semibold text-gray-700 english-text">ISO Certified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Pain Impact Section -->
+        <div class="px-4 py-8 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 relative overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-10 right-10 w-32 h-32 border border-green-300 rounded-full"></div>
+                <div class="absolute bottom-10 left-10 w-24 h-24 border border-emerald-300 rounded-full"></div>
+                <div class="absolute top-1/2 left-1/4 w-4 h-4 bg-green-400 rounded-full"></div>
+                <!-- Natural Elements -->
+                <div class="absolute top-1/4 left-1/3 text-green-300/30 text-2xl">🌿</div>
+                <div class="absolute bottom-1/4 right-1/3 text-emerald-300/30 text-xl">🍃</div>
+                <div class="absolute top-3/4 left-1/5 text-teal-300/30 text-lg">🌱</div>
+            </div>
+            
+            <!-- Content Container -->
+            <div class="relative z-10">
+                <!-- Main Heading -->
+                <div class="text-center mb-8">
+                    <!-- Alert Badge -->
+                    <div class="problem-highlight inline-block mb-4">
+                        गंभीर समस्या
+                    </div>
+                    
+                    <!-- Main Heading -->
+                    <h2 class="problem-title">दर्द सिर्फ़ दर्द नहीं...</h2>
+                    
+                    <!-- Subheading -->
+                    <p class="text-gray-700 text-lg leading-relaxed font-semibold mb-6">ये धीरे-धीरे आपकी <span class="highlight-text">उम्र, हिम्मत और खुशियों</span> को कम करता है</p>
+                    
+                    <!-- Impact Analysis Visual -->
+                    <div class="before-after-container">
+                        <div class="flex items-center justify-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center">
+                                <div class="w-6 h-6 border-2 border-white rounded-full"></div>
+                            </div>
+                            <h3 class="font-bold text-xl text-gray-800">दर्द का असली प्रभाव</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content Layout -->
+                <div class="flex flex-col items-center gap-8 max-w-4xl mx-auto">
+                    <!-- Pain Points List -->
+                    <div class="w-full max-w-md space-y-3">
+                        <div class="impact-card group cursor-pointer">
+                            <!-- Icon -->
+                            <div class="flex justify-center mb-3">
+                                <div class="bg-gradient-to-r from-red-500 to-red-600 p-3 rounded-full shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                    <div class="w-4 h-4 border-2 border-white rounded-full relative">
+                                        <div class="absolute inset-1 bg-white rounded-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="text-center">
+                                <h4 class="font-bold text-gray-800 text-lg mb-1">घर का काम</h4>
+                                <p class="text-red-600 text-sm font-semibold mb-2">मुश्किल हो जाता है</p>
+                                <div class="text-xs text-gray-600">सामान्य काम भी बोझ लगते हैं</div>
+                            </div>
+                        </div>
+                        
+                        <div class="impact-card group cursor-pointer">
+                            <!-- Icon -->
+                            <div class="flex justify-center mb-3">
+                                <div class="bg-gradient-to-r from-orange-500 to-red-500 p-3 rounded-full shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                    <div class="w-4 h-4 border-2 border-white rounded-full relative">
+                                        <div class="absolute inset-1 bg-white rounded-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="text-center">
+                                <h4 class="font-bold text-gray-800 text-lg mb-1">काम में दिक्कत</h4>
+                                <p class="text-orange-600 text-sm font-semibold mb-2">फोकस नहीं रह पाता</p>
+                                <div class="text-xs text-gray-600">दर्द की वजह से ध्यान भटकता है</div>
+                            </div>
+                        </div>
+                        
+                        <div class="group flex items-start gap-3 bg-white/80 backdrop-blur-sm p-4 rounded-xl border border-red-200/50 hover:bg-white/90 hover:border-red-400/60 transition-all duration-300 cursor-pointer transform hover:scale-105 shadow-lg">
+                            <div class="bg-red-500 p-2 rounded-full flex-shrink-0 group-hover:bg-red-600 transition-colors duration-300">
+                                <span class="text-white text-lg font-bold">✕</span>
+                            </div>
+                            <p class="text-gray-800 font-medium group-hover:text-gray-900 transition-colors duration-300">रात की नींद खराब</p>
+                        </div>
+                        
+                        <div class="group flex items-start gap-3 bg-white/80 backdrop-blur-sm p-4 rounded-xl border border-red-200/50 hover:bg-white/90 hover:border-red-400/60 transition-all duration-300 cursor-pointer transform hover:scale-105 shadow-lg">
+                            <div class="bg-red-500 p-2 rounded-full flex-shrink-0 group-hover:bg-red-600 transition-colors duration-300">
+                                <span class="text-white text-lg font-bold">✕</span>
+                            </div>
+                            <p class="text-gray-800 font-medium group-hover:text-gray-900 transition-colors duration-300">चिड़चिड़ापन और थकान</p>
+                        </div>
+                        
+                        <div class="group flex items-start gap-3 bg-white/80 backdrop-blur-sm p-4 rounded-xl border border-red-200/50 hover:bg-white/90 hover:border-red-400/60 transition-all duration-300 cursor-pointer transform hover:scale-105 shadow-lg">
+                            <div class="bg-red-500 p-2 rounded-full flex-shrink-0 group-hover:bg-red-600 transition-colors duration-300">
+                                <span class="text-white text-lg font-bold">✕</span>
+                            </div>
+                            <p class="text-gray-800 font-medium group-hover:text-gray-900 transition-colors duration-300">चलने-फिरने में शर्मिंदगी</p>
+                        </div>
+                        
+                        <div class="group flex items-start gap-3 bg-white/80 backdrop-blur-sm p-4 rounded-xl border border-red-200/50 hover:bg-white/90 hover:border-red-400/60 transition-all duration-300 cursor-pointer transform hover:scale-105 shadow-lg">
+                            <div class="bg-red-500 p-2 rounded-full flex-shrink-0 group-hover:bg-red-600 transition-colors duration-300">
+                                <span class="text-white text-lg font-bold">✕</span>
+                            </div>
+                            <p class="text-gray-800 font-medium group-hover:text-gray-900 transition-colors duration-300">महंगे इलाज</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Person Image (Center) -->
+                    <div class="flex justify-center w-full">
+                        <div class="relative group cursor-pointer">
+                            <!-- Image Container -->
+                            <div class="relative w-48 h-64 bg-gradient-to-br from-green-100 to-emerald-200 rounded-3xl overflow-hidden shadow-2xl border-4 border-green-200 group-hover:border-orange-300 transition-all duration-500 transform group-hover:scale-105">
+                                <!-- Person Image -->
+                                <div class="w-full h-full relative overflow-hidden">
+                                    <img 
+                                        src="./images/oldmen_pain.jpg" 
+                                        alt="Old man experiencing joint pain - बुजुर्ग व्यक्ति दर्द में" 
+                                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                                        loading="lazy"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                    >
+                                    <!-- Fallback for image load error -->
+                                    <div class="hidden w-full h-full flex items-center justify-center bg-gradient-to-b from-green-100 via-emerald-100 to-teal-100">
+                                        <div class="text-8xl text-green-600 group-hover:text-orange-500 transition-colors duration-300 transform group-hover:scale-110">
+                                            😰
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Overlay Effect -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-green-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                                </div>
+                            </div>
+                            
+                            <!-- Glow Effect -->
+                            <div class="absolute inset-0 bg-orange-500/20 rounded-3xl blur-xl scale-110 opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bottom Quote -->
+                <div class="text-center mt-8">
+                    <div class="bg-white/90 backdrop-blur-sm border border-green-300/50 rounded-2xl p-6 transform hover:scale-105 transition-all duration-300 cursor-pointer group shadow-xl">
+                        <p class="text-gray-800 text-lg font-bold italic group-hover:text-gray-900 transition-colors duration-300">
+                            "दर्द रुकता नहीं… पूरा जीवन रुकने लगता है।"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Solution Section -->
+        <div class="px-4 py-8 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 relative overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-10 left-10 w-32 h-32 bg-green-400 rounded-full blur-xl"></div>
+                <div class="absolute bottom-10 right-10 w-24 h-24 bg-emerald-400 rounded-full blur-lg"></div>
+            </div>
+            
+            <div class="relative max-w-lg mx-auto">
+                <div class="text-center mb-6">
+                    <!-- Solution Badge -->
+                    <div class="solution-highlight inline-block mb-4">
+                        प्राकृतिक समाधान
+                    </div>
+                    
+                    <!-- Solution Icon -->
+                    <div class="w-16 h-16 bg-green-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <div class="w-8 h-8 border-2 border-white rounded-full flex items-center justify-center">
+                            <div class="w-4 h-4 bg-white rounded-full"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Main Heading -->
+                    <h2 class="solution-title">आयुर्वेद से समाधान</h2>
+                </div>
+                
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-green-200">
+                    <!-- Product Highlight -->
+                    <div class="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-6 text-center">
+                        <!-- Product Icon -->
+                        <div class="w-16 h-16 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                <div class="w-4 h-4 bg-green-600 rounded-full"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Heading -->
+                        <h3 class="text-2xl font-bold mb-2">पेश है — Metrex Nuero Shakti</h3>
+                        
+                        <!-- Subheading -->
+                        <p class="text-green-100 mb-4">Pain Relief Oil</p>
+                        
+                        <!-- Feature Badge -->
+                        <div class="inline-flex items-center bg-white/20 px-4 py-2 rounded-full">
+                            <div class="w-4 h-4 bg-yellow-300 rounded-full mr-2"></div>
+                            <span class="font-bold">100% आयुर्वेदिक फॉर्मूला</span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="testimonial-card mb-4">
+                            <p class="text-gray-800 font-semibold leading-relaxed">
+                                "ये सिर्फ़ <span class="highlight-text">पेन रिलीफ ऑयल</span> नहीं, बल्कि जोड़ों की <span class="solution-highlight">मजबूती, पोषण और लचीलापन</span> वापस लाने वाली आयुर्वेदिक थेरेपी है।"
+                            </p>
+                            <p class="text-sm text-gray-600 mt-2 font-semibold">— आयुर्वेद विशेषज्ञ</p>
+                        </div>
+                        
+                        <!-- Key Benefits -->
+                        <div class="grid grid-cols-2 gap-3 mb-6">
+                            <div class="text-center p-3 bg-green-50 rounded-xl">
+                                <!-- Icon -->
+                                <div class="w-8 h-8 bg-blue-500 rounded-full mx-auto mb-2 flex items-center justify-center">
+                                    <div class="w-3 h-3 bg-white rounded-full"></div>
+                                </div>
+                                <!-- Content -->
+                                <p class="text-sm font-bold text-green-700">तुरंत राहत</p>
+                            </div>
+                            <div class="text-center p-3 bg-green-50 rounded-xl">
+                                <!-- Icon -->
+                                <div class="w-8 h-8 bg-green-500 rounded-full mx-auto mb-2 flex items-center justify-center">
+                                    <div class="w-4 h-4 border-2 border-white rounded-full"></div>
+                                </div>
+                                <!-- Content -->
+                                <p class="text-sm font-bold text-green-700">100% प्राकृतिक</p>
+                            </div>
+                            <div class="text-center p-3 bg-green-50 rounded-xl">
+                                <!-- Icon -->
+                                <div class="w-8 h-8 bg-purple-500 rounded-full mx-auto mb-2 flex items-center justify-center">
+                                    <div class="w-2 h-4 bg-white rounded-sm"></div>
+                                </div>
+                                <!-- Content -->
+                                <p class="text-sm font-bold text-green-700">वैज्ञानिक फॉर्मूला</p>
+                            </div>
+                            <div class="text-center p-3 bg-green-50 rounded-xl">
+                                <!-- Icon -->
+                                <div class="w-8 h-8 bg-green-600 rounded-full mx-auto mb-2 flex items-center justify-center">
+                                    <div class="w-4 h-1 bg-white rounded-full"></div>
+                                </div>
+                                <!-- Content -->
+                                <p class="text-sm font-bold text-green-700">कोई नुकसान नहीं</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Solution CTA -->
+                        <div class="text-center">
+                            <button onclick="scrollToContact()" class="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:from-green-600 hover:to-emerald-700 transition-all transform hover:scale-105 pulse-animation">
+                                🌿 यह समाधान चाहिए - अभी मंगवाएं
+                            </button>
+                            <p class="text-sm text-gray-600 mt-2">🚚 मुफ्त डिलीवरी | 📞 24 घंटे में कॉल बैक</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Before/After Transformation -->
+        <div class="px-4 py-8 bg-gradient-to-br from-gray-50 via-white to-amber-50 relative overflow-hidden">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="absolute top-10 left-10 w-20 h-20 border border-gray-300 rounded-full"></div>
+                <div class="absolute bottom-10 right-10 w-16 h-16 border border-amber-300 rounded-full"></div>
+                <div class="absolute top-1/2 left-1/4 w-3 h-3 bg-gray-400 rounded-full"></div>
+            </div>
+            
+            <!-- Section Header -->
+            <div class="text-center mb-8 relative z-10">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">परिवर्तन देखें</h2>
+                <p class="text-gray-600">दर्द से राहत तक का सफर</p>
+            </div>
+            
+            <!-- Before/After Container -->
+            <div class="relative max-w-lg mx-auto">
+                <!-- Diagonal Split Design -->
+                <div class="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200" style="min-height: 280px;">
+                    
+                    <!-- Before Section (Left/Dark) -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-gray-700 via-gray-600 to-gray-800" style="clip-path: polygon(0 0, 65% 0, 45% 100%, 0% 100%);">
+                        <div class="p-6 h-full flex flex-col justify-center items-start relative">
+                            <!-- Before Content -->
+                            <div class="text-amber-100 mb-4">
+                                <h3 class="text-lg font-bold mb-2 flex items-center gap-2">
+                                    <span class="text-2xl">😔</span>
+                                    <span>पहले</span>
+                                </h3>
+                                <p class="text-sm opacity-90 mb-3">दर्द और जकड़न</p>
+                            </div>
+                            
+                            <!-- Before Image -->
+                            <div class="w-24 h-24 bg-gray-600 rounded-2xl border-4 border-gray-500 overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                                <img 
+                                    src="./images/oldmen_pain.jpg" 
+                                    alt="Old man in pain - बुजुर्ग दर्द में" 
+                                    class="w-full h-full object-cover filter grayscale"
+                                    loading="lazy"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                >
+                                <!-- Fallback -->
+                                <div class="hidden text-center">
+                                    <div class="text-3xl mb-1 filter grayscale">🧓</div>
+                                    <p class="text-xs text-gray-300">दर्द में</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- After Section (Right/Light) -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-100" style="clip-path: polygon(55% 0, 100% 0, 100% 100%, 35% 100%);">
+                        <div class="p-6 h-full flex flex-col justify-center items-end relative">
+                            <!-- After Content -->
+                            <div class="text-gray-700 mb-4 text-right">
+                                <h3 class="text-lg font-bold mb-2 flex items-center gap-2 justify-end">
+                                    <span>मजबूती</span>
+                                    <span class="text-2xl">💪</span>
+                                </h3>
+                                <p class="text-sm opacity-80 mb-3">और आराम</p>
+                            </div>
+                            
+                            <!-- After Image -->
+                            <div class="w-24 h-24 bg-gradient-to-br from-orange-200 to-amber-200 rounded-2xl border-4 border-orange-300 overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                                <img 
+                                    src="./images/oldMen_run.png" 
+                                    alt="Active old man running - सक्रिय बुजुर्ग" 
+                                    class="w-full h-full object-cover"
+                                    loading="lazy"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                >
+                                <!-- Fallback -->
+                                <div class="hidden text-center">
+                                    <div class="text-3xl mb-1">🏃‍♂️</div>
+                                    <p class="text-xs text-orange-700">सक्रिय</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Center Arrow -->
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+                        <div class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-3 rounded-full shadow-xl animate-pulse hover:scale-110 transition-transform duration-300 cursor-pointer">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Top Labels -->
+                    <div class="absolute top-4 left-6 z-10">
+                        <div class="bg-gray-800/80 text-white px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm">
+                            पहले 😰
+                        </div>
+                    </div>
+                    
+                    <div class="absolute top-4 right-6 z-10">
+                        <div class="bg-orange-500/90 text-white px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm">
+                            बाद में 😊
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bottom Text -->
+                <div class="text-center mt-6">
+                    <p class="text-sm text-gray-600 italic">
+                        "हर दिन एक नई शुरुआत, दर्द मुक्त जीवन के साथ"
+                    </p>
+                    <div class="flex justify-center gap-1 mt-2">
+                        <span class="w-2 h-2 bg-orange-400 rounded-full animate-bounce" style="animation-delay: 0s;"></span>
+                        <span class="w-2 h-2 bg-orange-400 rounded-full animate-bounce" style="animation-delay: 0.1s;"></span>
+                        <span class="w-2 h-2 bg-orange-400 rounded-full animate-bounce" style="animation-delay: 0.2s;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ingredients Showcase -->
+        <div class="px-4 py-8 bg-gradient-to-br from-green-50 to-emerald-50 relative">
+            <!-- Decorative Elements -->
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-green-400 via-emerald-400 to-green-400"></div>
+            
+            <div class="text-center mb-8">
+                <div class="inline-block bg-white rounded-full p-4 shadow-lg mb-4">
+                    <span class="text-4xl">🌿</span>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">प्राकृतिक आयुर्वेदिक शक्ति</h2>
+                <p class="text-gray-600">8 शक्तिशाली जड़ी-बूटियों का संयोजन</p>
+            </div>
+            
+            <!-- Ingredients Grid -->
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="bg-white rounded-xl p-4 shadow-md border-l-4 border-green-500">
+                    <div class="flex items-center mb-2">
+                        <span class="text-2xl mr-3">🌱</span>
+                        <h3 class="font-bold text-gray-800">महामाशा तैल</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">नसों और ऊतकों को मजबूती</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-4 shadow-md border-l-4 border-blue-500">
+                    <div class="flex items-center mb-2">
+                        <span class="text-2xl mr-3">🍃</span>
+                        <h3 class="font-bold text-gray-800">निर्गुंडी</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">सूजन और दर्द में कमी</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-4 shadow-md border-l-4 border-purple-500">
+                    <div class="flex items-center mb-2">
+                        <span class="text-2xl mr-3">🌿</span>
+                        <h3 class="font-bold text-gray-800">अश्वगंधा</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">मांसपेशियों की ताकत</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-4 shadow-md border-l-4 border-orange-500">
+                    <div class="flex items-center mb-2">
+                        <span class="text-2xl mr-3">🌾</span>
+                        <h3 class="font-bold text-gray-800">शल्लकी</h3>
+                    </div>
+                    <p class="text-sm text-gray-600">जोड़ों में लचीलापन</p>
+                </div>
+            </div>
+            
+            <!-- View All Ingredients Button -->
+            <div class="text-center">
+                <button onclick="toggleIngredients()" class="bg-green-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-green-700 transition-all">
+                    सभी 8 घटक देखें 👁️
+                </button>
+            </div>
+        </div>
+        
+        <!-- Detailed Ingredients Table -->
+        <div id="detailed-ingredients" class="px-4 py-6 bg-white hidden">
+            <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                <span class="text-2xl">🌱</span> शक्तिशाली आयुर्वेदिक तेल — जड़ों से असर
+            </h2>
+            <div class="overflow-hidden rounded-lg shadow-lg">
+                <table class="w-full text-sm">
+                    <thead class="bg-green-600 text-white">
+                        <tr>
+                            <th class="py-3 px-3 text-left">आयुर्वेदिक घटक</th>
+                            <th class="py-3 px-3 text-left">फायदा</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="py-2 px-3 font-semibold text-gray-800">महामाशा तैल</td>
+                            <td class="py-2 px-3 text-gray-700">नसों और ऊतकों को मज़बूती</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="py-2 px-3 font-semibold text-gray-800">निर्गुंडी</td>
+                            <td class="py-2 px-3 text-gray-700">सूजन और दर्द कम</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3 font-semibold text-gray-800">अश्वगंधा</td>
+                            <td class="py-2 px-3 text-gray-700">मांसपेशियों की ताकत</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="py-2 px-3 font-semibold text-gray-800">शल्लकी</td>
+                            <td class="py-2 px-3 text-gray-700">जोड़ों में लचीलापन</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3 font-semibold text-gray-800">हड़जोड़</td>
+                            <td class="py-2 px-3 text-gray-700">हड्डियों का समर्थन</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="py-2 px-3 font-semibold text-gray-800">दशमूल</td>
+                            <td class="py-2 px-3 text-gray-700">जकड़न में आराम</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-3 font-semibold text-gray-800">रास्ना</td>
+                            <td class="py-2 px-3 text-gray-700">जोड़ों की तकलीफ में उपयोगी</td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="py-2 px-3 font-semibold text-gray-800">तिल का तेल</td>
+                            <td class="py-2 px-3 text-gray-700">गहरे स्तर तक प्रवेश</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- No Chemicals -->
+            <div class="mt-4 bg-white p-4 rounded-lg shadow border-2 border-green-200">
+                <div class="grid grid-cols-2 gap-2">
+                    <div class="flex items-center gap-2">
+                        <span class="text-red-500">❌</span>
+                        <span class="text-sm text-gray-700">कोई केमिकल नहीं</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-red-500">❌</span>
+                        <span class="text-sm text-gray-700">मिनरल ऑयल नहीं</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-red-500">❌</span>
+                        <span class="text-sm text-gray-700">स्टेरॉयड नहीं</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-red-500">❌</span>
+                        <span class="text-sm text-gray-700">कोई नुकसान नहीं</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- How It Works - Professional Design -->
+        <div class="px-4 py-8 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-10 left-10 w-24 h-24 bg-blue-400 rounded-full blur-xl"></div>
+                <div class="absolute bottom-10 right-10 w-32 h-32 bg-indigo-400 rounded-full blur-lg"></div>
+                <div class="absolute top-1/2 left-1/3 w-4 h-4 bg-purple-400 rounded-full"></div>
+            </div>
+            
+            <div class="relative max-w-2xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-8">
+                    <!-- Heading Icon -->
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
+                        <div class="w-8 h-8 border-2 border-white rounded-full flex items-center justify-center">
+                            <div class="w-3 h-3 bg-white rounded-full"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Main Heading -->
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">कैसे करता है असर?</h2>
+                    
+                    <!-- Subheading -->
+                    <p class="text-gray-600 text-lg">प्राकृतिक उपचार प्रक्रिया</p>
+                </div>
+                
+                <!-- Process Steps -->
+                <div class="space-y-6">
+                    <!-- Step 1 -->
+                    <div class="group relative">
+                        <div class="flex items-start gap-4 bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-blue-100 hover:border-blue-300">
+                            <!-- Step Icon -->
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                    <!-- Penetration Icon -->
+                                    <div class="relative">
+                                        <div class="w-6 h-6 border-2 border-white rounded-full"></div>
+                                        <div class="absolute inset-2 bg-white rounded-full"></div>
+                                        <div class="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Content -->
+                            <div class="flex-1">
+                                <!-- Step Number Badge -->
+                                <div class="inline-block bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-3 py-1 rounded-full text-sm font-bold mb-3">
+                                    Step 1
+                                </div>
+                                
+                                <!-- Step Title -->
+                                <h3 class="font-bold text-gray-800 text-lg mb-2">गहराई तक जोड़ों, नसों और ऊतकों में प्रवेश</h3>
+                                
+                                <!-- Step Description -->
+                                <p class="text-gray-600 leading-relaxed">आयुर्वेदिक तेल का अणु स्तर पर प्रवेश</p>
+                            </div>
+                            
+                            <!-- Arrow Indicator -->
+                            <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-blue-500 to-indigo-500 rotate-45 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="group relative">
+                        <div class="flex items-start gap-4 bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-orange-100 hover:border-orange-300">
+                            <!-- Step Icon -->
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                    <!-- Healing Icon -->
+                                    <div class="relative">
+                                        <div class="w-6 h-6 border-2 border-white rounded-full flex items-center justify-center">
+                                            <div class="w-2 h-2 bg-white rounded-full"></div>
+                                        </div>
+                                        <div class="absolute -top-1 -left-1 w-3 h-3 bg-yellow-300 rounded-full animate-ping"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Content -->
+                            <div class="flex-1">
+                                <!-- Step Number Badge -->
+                                <div class="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-sm font-bold mb-3">
+                                    Step 2
+                                </div>
+                                
+                                <!-- Step Title -->
+                                <h3 class="font-bold text-gray-800 text-lg mb-2">सूजन, जकड़न और दर्द को शांत करे</h3>
+                                
+                                <!-- Step Description -->
+                                <p class="text-gray-600 leading-relaxed">तुरंत राहत और सूजन में कमी</p>
+                            </div>
+                            
+                            <!-- Arrow Indicator -->
+                            <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rotate-45 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="group relative">
+                        <div class="flex items-start gap-4 bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-purple-100 hover:border-purple-300">
+                            <!-- Step Icon -->
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                    <!-- Lubrication Icon -->
+                                    <div class="relative">
+                                        <div class="w-6 h-6 border-2 border-white rounded-full"></div>
+                                        <div class="absolute inset-1 bg-white rounded-full flex items-center justify-center">
+                                            <div class="w-2 h-2 bg-purple-500 rounded-full animate-bounce"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Content -->
+                            <div class="flex-1">
+                                <!-- Step Number Badge -->
+                                <div class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm font-bold mb-3">
+                                    Step 3
+                                </div>
+                                
+                                <!-- Step Title -->
+                                <h3 class="font-bold text-gray-800 text-lg mb-2">प्राकृतिक lubrication और mobility को समर्थन दे</h3>
+                                
+                                <!-- Step Description -->
+                                <p class="text-gray-600 leading-relaxed">जोड़ों में स्वाभाविक गति की बहाली</p>
+                            </div>
+                            
+                            <!-- Arrow Indicator -->
+                            <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rotate-45 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="group relative">
+                        <div class="flex items-start gap-4 bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-green-100 hover:border-green-300">
+                            <!-- Step Icon -->
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                    <!-- Strengthening Icon -->
+                                    <div class="relative">
+                                        <div class="w-6 h-6 border-2 border-white rounded-full flex items-center justify-center">
+                                            <div class="w-3 h-3 bg-white rounded-full"></div>
+                                        </div>
+                                        <div class="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full"></div>
+                                        <div class="absolute -bottom-1 -left-1 w-3 h-3 bg-blue-400 rounded-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Content -->
+                            <div class="flex-1">
+                                <!-- Step Number Badge -->
+                                <div class="inline-block bg-gradient-to-r from-green-600 to-emerald-600 text-white px-3 py-1 rounded-full text-sm font-bold mb-3">
+                                    Step 4
+                                </div>
+                                
+                                <!-- Step Title -->
+                                <h3 class="font-bold text-gray-800 text-lg mb-2">लगातार उपयोग से जोड़ अंदर से मज़बूत हों</h3>
+                                
+                                <!-- Step Description -->
+                                <p class="text-gray-600 leading-relaxed">दीर्घकालिक स्वास्थ्य और मजबूती</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Process Summary -->
+                <div class="mt-8 text-center">
+                    <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl p-6 shadow-xl">
+                        <h4 class="font-bold text-lg mb-2">परिणाम</h4>
+                        <p class="text-blue-100">पूर्ण दर्द मुक्ति और स्वस्थ जोड़</p>
+                        
+                        <!-- Result Indicators -->
+                        <div class="flex justify-center gap-4 mt-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                                <span class="text-sm">तुरंत राहत</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                                <span class="text-sm">दीर्घकालिक लाभ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Doctor Testimonials -->
+        <div class="px-4 py-6 bg-gradient-to-br from-purple-50 to-pink-50">
+            <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                <span class="text-2xl">👨‍⚕️</span> डॉक्टर की सलाह
+            </h2>
+            <div class="space-y-4">
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <p class="text-gray-700 italic mb-2">
+                        "जोड़ों के दर्द में आयुर्वेदिक तेल चिकित्सा बहुत प्रभावी होती है। Nuero Shakti का संयोजन जोड़ों को प्राकृतिक रूप से मजबूत करने में मदद करता है।"
+                    </p>
+                    <p class="text-sm text-gray-600 font-semibold">— बीएएमएस आयुर्वेद विशेषज्ञ</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <p class="text-gray-700 italic mb-2">
+                        "पेनकिलर सिर्फ़ दर्द छुपाते हैं, लेकिन तेल चिकित्सा ऊतकों को पोषण देती है।"
+                    </p>
+                    <p class="text-sm text-gray-600 font-semibold">— ऑर्थो प्रैक्टिशनर</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer Reviews -->
+        <div class="px-4 py-6 bg-yellow-50">
+            <h2 class="text-xl font-bold text-gray-800 mb-1 flex items-center gap-2">
+                <span class="text-2xl">⭐</span> असली ग्राहकों की राय
+            </h2>
+            <p class="text-sm text-gray-600 mb-4">Google Rating — 4.9★</p>
+            
+            <div class="space-y-4">
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="bg-blue-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">
+                            R
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800">रवि कुमार</p>
+                            <p class="text-xs text-gray-500">उम्र 38</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 mb-2">★★★★★</div>
+                    <p class="text-gray-700">
+                        "3 हफ्तों में ही असर महसूस हुआ। सीढ़ियाँ अब आराम से चढ़ पा रहा हूँ।"
+                    </p>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="bg-pink-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">
+                            A
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800">अनीता शर्मा</p>
+                            <p class="text-xs text-gray-500">उम्र 44</p>
+                        </div>
+                    </div>
+                    <div class="text-yellow-400 mb-2">★★★★★</div>
+                    <p class="text-gray-700">
+                        "सुबह उठते ही जोड़ों में सूजन रहती थी। अब काफी फर्क दिख रहा है। नींद भी बेहतर हो गई।"
+                    </p>
+                </div>
+
+                <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-green-500">
+                    <p class="text-xs text-gray-500 mb-2">💬 WhatsApp Feedback:</p>
+                    <p class="text-gray-700">
+                        "पहले बाम और स्प्रे लगाती थी, फर्क नहीं। ये तेल 5–7 मिनट बाद गर्मी देता है और जकड़न कम हो जाती है।"
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Placeholder -->
+        <div class="px-4 py-6 bg-gray-100">
+            <h3 class="text-lg font-bold text-gray-800 mb-3 text-center">📹 देखें कैसे काम करता है</h3>
+            <div class="bg-gradient-to-br from-red-100 to-orange-100 h-48 rounded-lg flex items-center justify-center shadow-lg">
+                <div class="text-center">
+                    <div class="text-6xl mb-2">▶️</div>
+                    <p class="text-gray-700 font-semibold">Video Tutorial</p>
+                    <p class="text-sm text-gray-600">Product Demo & Usage</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- How to Use -->
+        <div class="px-4 py-6 bg-green-50">
+            <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                <span class="text-2xl">🧴</span> इस्तेमाल करने का तरीका
+            </h2>
+            <div class="space-y-3">
+                <div class="bg-white p-3 rounded-lg shadow flex items-start gap-3">
+                    <span class="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                    <p class="text-gray-700">जिस जगह दर्द है वहाँ तेल हल्का गर्म करके लगाएँ</p>
+                </div>
+                <div class="bg-white p-3 rounded-lg shadow flex items-start gap-3">
+                    <span class="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                    <p class="text-gray-700">3–5 मिनट गोलाई में मालिश करें</p>
+                </div>
+                <div class="bg-white p-3 rounded-lg shadow flex items-start gap-3">
+                    <span class="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                    <p class="text-gray-700">दिन में 2 बार इस्तेमाल करें</p>
+                </div>
+                <div class="bg-white p-3 rounded-lg shadow flex items-start gap-3">
+                    <span class="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                    <p class="text-gray-700">लगाने के तुरंत बाद ठंडी हवा से बचें</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trust & Quality Image Section -->
+        <div class="px-4 py-6 bg-white">
+            <div class="max-w-lg mx-auto">
+                <!-- Professional Header -->
+                <div class="text-center mb-6">
+                    <div class="inline-block bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4 shadow-lg">
+                        <span class="hindi-text">भरोसा और गुणवत्ता</span>
+                    </div>
+                </div>
+                
+                <!-- Trust Image Display -->
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-green-50 via-white to-emerald-50 rounded-2xl p-4 shadow-lg border border-green-200/50 overflow-hidden">
+                        <img 
+                            src="./images/belefeve1.png" 
+                            alt="Trust and Quality Certifications - भरोसा और गुणवत्ता प्रमाण पत्र" 
+                            class="w-full h-auto rounded-xl clickable-image hover:scale-105 transition-all duration-500 shadow-md"
+                            loading="lazy"
+                            onclick="openImageModal(this.src)"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                            title="प्रमाणपत्र विवरण देखने के लिए क्लिक करें"
+                        >
+                        <!-- Professional Fallback -->
+                        <div class="hidden w-full h-64 flex-col items-center justify-center text-gray-600 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl border-2 border-dashed border-green-300" style="display: none;">
+                            <div class="w-16 h-16 bg-green-500 rounded-full mb-4 flex items-center justify-center">
+                                <div class="w-8 h-8 border-2 border-white rounded-full"></div>
+                            </div>
+                            <p class="font-bold text-xl text-center text-gray-700 hindi-text">भरोसा और गुणवत्ता</p>
+                            <p class="text-lg text-center text-gray-500 mt-1 english-text">Trust & Quality</p>
+                            <div class="flex gap-2 mt-3">
+                                <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-semibold">GMP</span>
+                                <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-semibold">ISO</span>
+                                <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs font-semibold">Lab Tested</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- View Certificates Button -->
+                    <div class="text-center mt-4">
+                        <div class="inline-flex items-center gap-2 bg-green-100 hover:bg-green-200 px-4 py-2 rounded-full text-sm text-green-700 cursor-pointer transition-all duration-300 border border-green-200 hover:border-green-300" onclick="openImageModal('./images/')">
+                            <div class="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+                                <div class="w-2 h-2 bg-white rounded-full"></div>
+                            </div>
+                            <span class="hindi-text font-semibold">प्रमाणपत्र विस्तार से देखें</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Trust Badge CTA -->
+                <div class="text-center mt-6">
+                    <button onclick="scrollToContact()" class="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:from-green-700 hover:to-emerald-700 transition-all transform hover:scale-105 hindi-text">
+                        प्रमाणित समाधान - अभी मंगवाएं
+                    </button>
+                    <p class="text-sm text-gray-600 mt-2 hindi-text">✅ 100% सुरक्षित और प्रमाणित</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Urgency Section -->
+        <div class="px-4 py-6 bg-red-50">
+            <h2 class="text-xl font-bold text-red-700 mb-4 flex items-center gap-2">
+                <span class="text-2xl">⚠</span> क्यों आज ही कदम उठाएँ?
+            </h2>
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">📉</span>
+                        <p class="text-gray-700">दर्द बढ़ता है</p>
+                    </div>
+                    <div class="text-center text-2xl text-gray-400">↓</div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">🚶</span>
+                        <p class="text-gray-700">मूवमेंट कम होती है</p>
+                    </div>
+                    <div class="text-center text-2xl text-gray-400">↓</div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">💔</span>
+                        <p class="text-gray-700">जोड़ और कमजोर हो जाते हैं</p>
+                    </div>
+                    <div class="text-center text-2xl text-gray-400">↓</div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">⏰</span>
+                        <p class="text-gray-700">देर करने से रिकवरी मुश्किल हो सकती है</p>
+                    </div>
+                </div>
+                <div class="mt-4 bg-yellow-100 p-3 rounded-lg border-l-4 border-yellow-500">
+                    <p class="text-gray-800 font-bold text-center">
+                        जोड़ आज मदद माँग रहे हैं — कल देर हो सकती है।
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guarantee Section -->
+        <div class="px-4 py-6 bg-gradient-to-br from-blue-50 to-indigo-50">
+            <h2 class="text-xl font-bold text-gray-800 mb-2 flex items-center gap-2">
+                <span class="text-2xl">🛡</span> भरोसा और सुरक्षा वादा
+            </h2>
+            <p class="text-gray-700 mb-4">
+                हम आपका दर्द समझते हैं — और इसी वजह से हम केवल प्रॉडक्ट नहीं, बल्कि विश्वास और राहत देने के लिए प्रतिबद्ध हैं।
+            </p>
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <div class="space-y-2">
+                    <div class="flex items-start gap-2">
+                        <span class="text-blue-500 text-lg">🔹</span>
+                        <p class="text-gray-700 text-sm">100% Pure Ayurvedic & Natural Formula</p>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-blue-500 text-lg">🔹</span>
+                        <p class="text-gray-700 text-sm">Quality Tested & Certified Manufacturing</p>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-blue-500 text-lg">🔹</span>
+                        <p class="text-gray-700 text-sm">Customer Support Till Satisfaction</p>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-blue-500 text-lg">🔹</span>
+                        <p class="text-gray-700 text-sm">COD Available — Pay When You Receive</p>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-blue-500 text-lg">🔹</span>
+                        <p class="text-gray-700 text-sm">Assurance-Based Purchase — No Risk</p>
+                    </div>
+                </div>
+                <div class="mt-4 bg-gradient-to-r from-blue-100 to-purple-100 p-3 rounded-lg">
+                    <p class="text-gray-800 font-semibold text-sm italic text-center">
+                        "आपका विश्वास और संतुष्टि हमारे लिए सबसे महत्वपूर्ण है — इसलिए हम हर ग्राहक को सुरक्षित और आश्वासन-आधारित खरीदारी अनुभव प्रदान करते हैं।"
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Special Offer -->
+        <div class="px-4 py-6 bg-gradient-to-r from-orange-400 to-red-500 text-white">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold mb-2 pulse-animation">🚨 लिमिटेड ऑफर</h2>
+                <p class="text-3xl font-bold mb-2">Flat 10% OFF</p>
+                <div class="bg-white text-gray-800 inline-block px-4 py-2 rounded-lg font-semibold mb-3">
+                    <p>✅ COD Available</p>
+                    <p>✅ Guarantee</p>
+                    <p>✅ Trusted Brand</p>
+                </div>
+                <p class="text-lg mb-1">📦 ऑल इंडिया डिलीवरी</p>
+                <p class="text-lg mb-4">🛍 स्टॉक सीमित</p>
+                
+                <!-- Special Offer CTA -->
+                <button onclick="scrollToContact()" class="bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-xl shadow-2xl hover:bg-gray-100 transition-all transform hover:scale-105 animate-pulse">
+                    🔥 अभी ऑर्डर करें - 10% OFF
+                </button>
+            </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="px-4 py-6 bg-white">
+            <button onclick="scrollToContact()" class="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-4 rounded-lg font-bold text-xl shadow-lg hover:from-green-600 hover:to-green-700 transition-all transform hover:scale-105">
+                👉 अभी ऑर्डर करें – तुरंत राहत पाएं
+            </button>
+            <p class="text-center text-gray-600 mt-3 text-sm">📞 कॉल करके ऑर्डर करें | COD उपलब्ध | विशेष छूट</p>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="px-4 py-6 bg-gray-50">
+            <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                <span class="text-2xl">📝</span> अक्सर पूछे जाने वाले सवाल
+            </h2>
+            <div class="space-y-3">
+                
+                <details class="bg-white p-4 rounded-lg shadow">
+                    <summary class="font-semibold text-gray-800 cursor-pointer">
+                        Q1. क्या यह तेल केवल दर्द कम करता है या अंदर से भी असर करता है?
+                    </summary>
+                    <p class="mt-2 text-gray-700 text-sm">
+                        यह सिर्फ़ दर्द को दबाता नहीं, बल्कि आयुर्वेदिक जड़ी-बूटियों के माध्यम से जोड़, नस और ऊतकों को पोषण देकर अंदर से मजबूती का समर्थन करता है।
+                    </p>
+                </details>
+
+                <details class="bg-white p-4 rounded-lg shadow">
+                    <summary class="font-semibold text-gray-800 cursor-pointer">
+                        Q2. इसे किन-किन टाइप के जोड़ों के दर्द में इस्तेमाल किया जा सकता है?
+                    </summary>
+                    <p class="mt-2 text-gray-700 text-sm">
+                        घुटनों, पीठ, गर्दन, कंधे, कोहनी, टखने, कमर, एडियों, और पुराने चोट या स्ट्रेस से हुए दर्द में उपयोगी है।
+                    </p>
+                </details>
+
+                <details class="bg-white p-4 rounded-lg shadow">
+                    <summary class="font-semibold text-gray-800 cursor-pointer">
+                        Q3. क्या यह सभी के लिए सुरक्षित है?
+                    </summary>
+                    <p class="mt-2 text-gray-700 text-sm">
+                        हाँ, यह 100% प्राकृतिक और आयुर्वेदिक फ़ॉर्मूला है, इसलिए सामान्य रूप से सभी उम्र के लोग इसका इस्तेमाल कर सकते हैं।
+                    </p>
+                </details>
+
+                <details class="bg-white p-4 rounded-lg shadow">
+                    <summary class="font-semibold text-gray-800 cursor-pointer">
+                        Q4. क्या रोज़ाना इस्तेमाल करना ज़रूरी है?
+                    </summary>
+                    <p class="mt-2 text-gray-700 text-sm">
+                        बेहतर परिणाम के लिए दिन में 2 बार लगातार उपयोग करें। नियमितता इससे ज़्यादा प्रभावी बनाती है।
+                    </p>
+                </details>
+
+                <details class="bg-white p-4 rounded-lg shadow">
+                    <summary class="font-semibold text-gray-800 cursor-pointer">
+                        Q5. क्या इसमें कोई साइड इफेक्ट हैं?
+                    </summary>
+                    <p class="mt-2 text-gray-700 text-sm">
+                        नहीं। यह 100% आयुर्वेदिक जड़ी-बूटियों और तेल पर आधारित है। इसमें स्टेरॉइड, मिनरल ऑयल या हार्श केमिकल्स शामिल नहीं हैं।
+                    </p>
+                </details>
+
+                <details class="bg-white p-4 rounded-lg shadow">
+                    <summary class="font-semibold text-gray-800 cursor-pointer">
+                        Q6. कितने समय में असर दिखना शुरू हो सकता है?
+                    </summary>
+                    <p class="mt-2 text-gray-700 text-sm">
+                        हर व्यक्ति की स्थिति अलग होती है। कुछ लोगों को जल्दी आराम महसूस होता है और कुछ को धीरे-धीरे निरंतर सुधार दिखता है।
+                    </p>
+                </details>
+
+            </div>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div class="px-4 py-8 bg-gradient-to-br from-blue-50 to-indigo-50">
+            <div class="max-w-md mx-auto">
+                <div class="text-center mb-8">
+                    <div class="inline-block bg-white rounded-full p-4 shadow-lg mb-4">
+                        <span class="text-4xl">📞</span>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">संपर्क करें</h2>
+                    <p class="text-gray-600">हमारे विशेषज्ञों से बात करें</p>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">आपका नाम *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="अपना नाम लिखें">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">मोबाइल नंबर *</label>
+                            <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="+91 XXXXX XXXXX">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">शहर</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="आपका शहर">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">दर्द की समस्या</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                <option>घुटने का दर्द</option>
+                                <option>कमर दर्द</option>
+                                <option>कंधे का दर्द</option>
+                                <option>गर्दन का दर्द</option>
+                                <option>जोड़ों की जकड़न</option>
+                                <option>अन्य</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">कितने दिन से परेशानी है?</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                <option>1-3 महीने</option>
+                                <option>3-6 महीने</option>
+                                <option>6 महीने - 1 साल</option>
+                                <option>1 साल से ज्यादा</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold py-4 rounded-lg shadow-lg hover:from-green-600 hover:to-emerald-700 transition-all transform hover:scale-105">
+                            📞 कॉल बैक का अनुरोध करें
+                        </button>
+                    </form>
+                    
+                    <!-- Direct Contact Options -->
+                    <div class="mt-6 pt-6 border-t border-gray-200">
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="tel:+919876543210" class="flex items-center justify-center bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition-all">
+                                <span class="mr-2">📞</span>
+                                कॉल करें
+                            </a>
+                            <a href="https://wa.me/919876543210" target="_blank" class="flex items-center justify-center bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-all">
+                                <span class="mr-2">💬</span>
+                                WhatsApp
+                            </a>
+                        </div>
+                        
+                        <!-- Business Hours -->
+                        <div class="mt-4 text-center text-sm text-gray-600">
+                            <p class="font-semibold">⏰ सेवा समय</p>
+                            <p>सोमवार - शनिवार: 9:00 AM - 8:00 PM</p>
+                            <p>रविवार: 10:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Why Contact Us -->
+                <div class="mt-8 bg-gradient-to-r from-green-100 to-blue-100 rounded-2xl p-6">
+                    <h3 class="font-bold text-gray-800 mb-4 text-center">हमसे संपर्क क्यों करें?</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3">
+                            <span class="text-green-500 text-xl">✅</span>
+                            <div>
+                                <p class="font-semibold text-gray-800">व्यक्तिगत सलाह</p>
+                                <p class="text-sm text-gray-600">आपकी समस्या के अनुसार उपयोग की सलाह</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-green-500 text-xl">✅</span>
+                            <div>
+                                <p class="font-semibold text-gray-800">विशेष छूट</p>
+                                <p class="text-sm text-gray-600">फोन ऑर्डर पर अतिरिक्त डिस्काउंट</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-green-500 text-xl">✅</span>
+                            <div>
+                                <p class="font-semibold text-gray-800">तुरंत सहायता</p>
+                                <p class="text-sm text-gray-600">24 घंटे में कॉल बैक गारंटी</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Final CTA -->
+        <div class="px-4 py-8 bg-gradient-to-br from-green-600 to-emerald-600 text-white text-center">
+            <h3 class="text-2xl font-bold mb-3">🌿 अपने जोड़ों को आज ही राहत दें</h3>
+            <p class="mb-4">दर्द मुक्त जीवन की शुरुआत अभी करें</p>
+            <button onclick="scrollToContact()" class="inline-block bg-white text-green-600 px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:bg-gray-100 transition-all transform hover:scale-105">
+                अभी ऑर्डर करें 🛒
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <div class="px-4 py-6 bg-gray-800 text-white text-center text-sm">
+            <p class="mb-2">© 2024 Metrex Nuero Shakti Pain Relief Oil</p>
+            <p class="text-gray-400">100% Ayurvedic | Safe & Effective | Made in India 🇮🇳</p>
+            <div class="mt-3 flex justify-center gap-4">
+                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white">Terms & Conditions</a>
+                <a href="#" class="text-gray-400 hover:text-white">Contact Us</a>
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Screen Image Modal -->
+    <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img id="modalImage" src="" alt="Metrex Nuero Shakti Pain Relief Oil" class="modal-image">
+            <button class="close-modal" onclick="closeImageModal()" title="बंद करें">
+                ✕
+            </button>
+            <div class="zoom-hint">
+                📱 मोबाइल में पिंच करके ज़ूम करें | 💻 व्हील से ज़ूम करें
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed Footer Bar -->
+    <div class="fixed-footer">
+        <div class="scroll-text-container">
+            <div class="scroll-text text-sm font-semibold">
+                🌿 जोड़ों के दर्द में आयुर्वेदिक तेल चिकित्सा बहुत प्रभावी होती है। Nuero Shakti का संयोजन जोड़ों को प्राकृतिक रूप से मजबूत करने में मदद करता है। ⭐ 4.9 रेटिंग ⭐ 10,000+ संतुष्ट ग्राहक
+            </div>
+        </div>
+        <div class="px-4 py-2">
+            <button onclick="scrollToContact()" class="order-btn-footer w-full py-3 px-6 rounded-lg font-bold text-white text-lg shadow-lg">
+                📞 अभी ऑर्डर करें - सीमित स्टॉक
+            </button>
+        </div>
+    </div>
+
+    <!-- Notification Popup Container -->
+    <!-- <div id="notification-container"></div> -->
+
+    <script type="module">
+        // // Import notification data
+        // import { notifications } from './data.js';
+        
+        // let currentIndex = 0;
+
+
+
+        // // console.log(notifications)
+        // function showNotification() {
+        //     const notification = notifications[currentIndex];
+            
+        //     // Create notification element
+        //     const notificationDiv = document.createElement('div');
+        //     notificationDiv.className = 'notification-popup';
+        //     notificationDiv.innerHTML = `
+        //         <div class="notification-avatar">${notification.icon}</div>
+        //         <div class="notification-content">
+        //             <div class="notification-name">${notification.name}</div>
+        //             <div class="notification-city">${notification.city}</div>
+        //             <div class="notification-message">✓ ${notification.message}</div>
+        //         </div>
+        //         <div class="notification-icon">🎉</div>
+        //     `;
+            
+        //     // Add to container
+        //     const container = document.getElementById('notification-container');
+        //     container.innerHTML = ''; // Clear previous
+        //     container.appendChild(notificationDiv);
+            
+        //     // Set initial GSAP state
+        //     gsap.set(notificationDiv, {
+        //         width: 12,
+        //         height: 12,
+        //         padding: 0,
+        //         y: 150,
+        //         scale: 0,
+        //         opacity: 0,
+        //         borderRadius: "50%",
+        //         background: "linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"
+        //     });
+            
+        //     // Set content initial state
+        //     gsap.set(['.notification-avatar', '.notification-content', '.notification-icon'], {
+        //         opacity: 0,
+        //         y: 20
+        //     });
+            
+        //     // Create GSAP timeline - Clean and smooth animation
+        //     const tl = gsap.timeline();
+            
+        //     // Phase 1: Ball rising (0.4s)
+        //     tl.to(notificationDiv, {
+        //         duration: 0.2,
+        //         y: 50,
+        //         scale: 1,
+        //         opacity: 0.8,
+        //         ease: "power2.out"
+        //     })
+        //     .to(notificationDiv, {
+        //         duration: 0.2,
+        //         y: 0,
+        //         scale: 1.2,
+        //         opacity: 1,
+        //         background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+        //         ease: "power2.out"
+        //     })
+            
+        //     // Phase 2: Clean expansion to container (0.6s)
+        //     .to(notificationDiv, {
+        //         duration: 0.3,
+        //         width: 150,
+        //         height: 50,
+        //         borderRadius: "25px",
+        //         scale: 1,
+        //         background: "linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)",
+        //         ease: "power2.out"
+        //     })
+        //     .to(notificationDiv, {
+        //         duration: 0.3,
+        //         width: 410,
+        //         height: 80,
+        //         padding: "16px 20px",
+        //         borderRadius: "16px",
+        //         ease: "power2.out"
+        //     })
+            
+        //     // Phase 3: Content appears cleanly after container is ready
+        //     .to('.notification-avatar', {
+        //         duration: 0.4,
+        //         opacity: 1,
+        //         y: 0,
+        //         ease: "power2.out"
+        //     })
+        //     .to('.notification-content', {
+        //         duration: 0.4,
+        //         opacity: 1,
+        //         y: 0,
+        //         ease: "power2.out"
+        //     }, "-=0.2")
+        //     .to('.notification-icon', {
+        //         duration: 0.4,
+        //         opacity: 1,
+        //         y: 0,
+        //         scale: 1,
+        //         ease: "power2.out"
+        //     }, "-=0.2");
+            
+        //     // Phase 2: Stay visible for 2 seconds (automatic)
+            
+        //     // Phase 3: Hide after 3 seconds total (1s animation + 2s visible = 3s, then 1s to hide)
+        //     setTimeout(() => {
+        //         gsap.to(notificationDiv, {
+        //             duration: 1, // 1 second to hide
+        //             scale: 0.9,
+        //             opacity: 0,
+        //             y: 20,
+        //             ease: "power2.inOut",
+        //             onComplete: () => {
+        //                 notificationDiv.remove();
+        //             }
+        //         });
+        //     }, 3000); // Start hiding after 3 seconds (1s animation + 2s visible)
+            
+        //     // Move to next notification
+        //     currentIndex = (currentIndex + 1) % notifications.length;
+        // }
+
+        // // Show first notification after 2 seconds
+        // setTimeout(() => {
+        //     showNotification();
+        //     // Then show every 5 seconds (4 sec total animation + 1 sec gap)
+        //     setInterval(showNotification, 9000);
+        // }, 2000);
+
+        // Scroll to order button function
+        function scrollToOrder() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Scroll to contact form function
+        function scrollToContact() {
+            const contactSection = document.querySelector('#contactForm').closest('.px-4');
+            contactSection.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // Highlight contact form with animation
+            const contactForm = document.getElementById('contactForm');
+            contactForm.classList.add('ring-4', 'ring-green-400', 'ring-opacity-75');
+            
+            setTimeout(() => {
+                contactForm.classList.remove('ring-4', 'ring-green-400', 'ring-opacity-75');
+            }, 2000);
+        }
+        
+        // Toggle ingredients visibility
+        function toggleIngredients() {
+            const detailedSection = document.getElementById('detailed-ingredients');
+            const button = event.target;
+            
+            if (detailedSection.classList.contains('hidden')) {
+                detailedSection.classList.remove('hidden');
+                button.textContent = 'छुपाएं 👁️';
+                detailedSection.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                detailedSection.classList.add('hidden');
+                button.textContent = 'सभी 8 घटक देखें 👁️';
+            }
+        }
+        
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = '✅ अनुरोध भेजा गया!';
+            submitBtn.classList.add('bg-green-600');
+            
+            // Reset after 3 seconds
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.classList.remove('bg-green-600');
+                form.reset();
+            }, 3000);
+            
+            // You can add actual form submission logic here
+            console.log('Contact form submitted');
+        });
+        
+        // Full Screen Image Modal Functions
+        function openImageModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            
+            modalImage.src = imageSrc;
+            modal.classList.add('active');
+            
+            // Prevent body scroll when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+            
+            // Restore body scroll
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeImageModal();
+            }
+        });
+        
+        // Global function declarations for onclick handlers
+        window.openImageModal = openImageModal;
+        window.closeImageModal = closeImageModal;
+    </script>
+    
+    <!-- Floating Order Button -->
+    <!-- <button onclick="scrollToContact()" class="floating-order-btn">
+        🛒 ऑर्डर करें<br>
+        <span style="font-size: 12px;">विशेष छूट</span>
+    </button> -->
+</body>
+</html>
