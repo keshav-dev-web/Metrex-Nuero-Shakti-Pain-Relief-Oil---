@@ -7,6 +7,9 @@
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Swiper.js CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         /* Import Professional Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800&family=Nunito:wght@400;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&family=Tiro+Devanagari+Hindi:ital,wght@0,400;1,400&family=Tiro+Devanagari+Sanskrit:wght@400&display=swap');
@@ -21,13 +24,14 @@
             padding: 0 !important;
             overflow-x: hidden;
             position: relative;
-            width: 100%;
-            max-width: 450px;
-            margin-left: auto;
-            margin-right: auto;
+            width: 100vw;
+            min-height: 100vh;
             font-size: 16px;
             line-height: 1.6;
             background-color: #f9fafb;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
         }
         
         .page-layout {
@@ -35,6 +39,8 @@
             max-width: 450px;
             margin: 0 auto;
             background: #f9fafb;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
         
         .container-main {
@@ -58,6 +64,7 @@
             flex-direction: column;
             min-height: 100vh;
             position: relative;
+            margin: 0 auto;
         }
         
         /* Container styling for relative header */
@@ -2156,12 +2163,29 @@
         .mobile-m-3 { margin: 0.75rem; }
         .mobile-m-4 { margin: 1rem; }
         
-        /* Remove any large screen optimizations */
+        /* Proper centering for all screen sizes */
         @media (min-width: 451px) {
             body {
-                max-width: 450px;
+                background: #e5e7eb;
+                justify-content: center;
+            }
+            
+            .page-layout {
                 margin: 0 auto;
-                background: #f9fafb;
+                box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+            }
+        }
+        
+        @media (min-width: 768px) {
+            body {
+                align-items: center;
+                min-height: 100vh;
+            }
+            
+            .page-layout {
+                margin: 2rem auto;
+                border-radius: 1rem;
+                overflow: hidden;
             }
         }
         
@@ -2182,6 +2206,137 @@
             max-width: 450px;
             left: 50%;
             transform: translateX(-50%);
+            position: fixed;
+            z-index: 9999;
+        }
+        
+        /* Center all main content containers */
+        .px-4, .px-3 {
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* ===== SWIPER CUSTOMIZATIONS ===== */
+        
+        /* Review Cards Swiper */
+        .reviews-swiper {
+            width: 100%;
+            padding: 0 0 1rem 0;
+        }
+        
+        .reviews-swiper .swiper-slide {
+            height: auto;
+            display: flex;
+        }
+        
+        .review-card {
+            width: 100%;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        /* Swiper Pagination */
+        .swiper-pagination {
+            position: relative;
+            margin-top: 1rem;
+        }
+        
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: #dc2626;
+            opacity: 0.5;
+            transition: all 0.3s ease;
+        }
+        
+        .swiper-pagination-bullet-active {
+            background: #dc2626;
+            opacity: 1;
+            transform: scale(1.2);
+        }
+        
+        /* Swiper Navigation */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #dc2626;
+            background: white;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            background: #dc2626;
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 450px) {
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+        }
+        
+        /* Product Gallery Swiper */
+        .product-swiper {
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        .product-swiper .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Image Showcase Swiper */
+        .image-showcase-swiper {
+            width: 100%;
+            height: 400px;
+        }
+        
+        .image-showcase-swiper .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f9fafb;
+            border-radius: 1rem;
+        }
+        
+        .image-showcase-swiper .swiper-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        /* ===== GLOBAL CENTERING SYSTEM ===== */
+        
+        /* Ensure all content is properly centered */
+        .container, .max-w-lg, .max-w-md, .max-w-sm, .max-w-xs {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        
+        /* Center utility class */
+        .center-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
         }
         
         /* ===== ROW-WISE GRID LAYOUT SYSTEM ===== */
@@ -2373,6 +2528,7 @@
             max-width: 450px;
             margin: 0 auto;
             padding: 0.75rem;
+            position: relative;
         }
     </style>
 </head>
@@ -3660,108 +3816,179 @@
                 </div>
             </div>
         </div>
-        <!-- Customer Reviews -->
+        <!-- Customer Reviews with Swiper -->
         <div class="px-4 py-6 bg-yellow-50">
             <h2 class="text-xl font-bold text-gray-800 mb-1 flex items-center gap-2">
                 <span class="text-2xl">⭐</span> असली ग्राहकों की राय
             </h2>
             <p class="text-sm text-gray-600 mb-4">Google Rating — 4.9★</p>
             
-            <!-- Scrolling Customer Reviews -->
-            <div class="scrolling-reviews flex pb-4" id="customerReviews">
-                <div class="auto-scroll flex gap-4">
-                    <div class="review-card bg-white p-4 rounded-lg shadow-md border-t-4 border-blue-500">
-                        <div class="flex items-center gap-3 mb-3">
-                            <img 
-                                src="./images/old_men.jpg" 
-                                alt="रवि कुमार - Customer" 
-                                class="w-12 h-12 rounded-full border-2 border-blue-200 object-cover"
-                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                            >
-                            <div class="bg-blue-500 text-white w-12 h-12 rounded-full hidden items-center justify-center font-bold">
-                                R
+            <!-- Swiper Customer Reviews -->
+            <div class="reviews-swiper" id="customerReviewsSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Review 1 -->
+                    <div class="swiper-slide">
+                        <div class="review-card bg-white p-4 rounded-lg shadow-md border-t-4 border-blue-500">
+                            <div class="flex items-center gap-3 mb-3">
+                                <img 
+                                    src="./images/old_men.jpg" 
+                                    alt="रवि कुमार - Customer" 
+                                    class="w-12 h-12 rounded-full border-2 border-blue-200 object-cover"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                >
+                                <div class="bg-blue-500 text-white w-12 h-12 rounded-full hidden items-center justify-center font-bold">
+                                    R
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-800">रवि कुमार</p>
+                                    <p class="text-xs text-gray-500">उम्र 38 • दिल्ली</p>
+                                </div>
                             </div>
-                            <div>
-                                <p class="font-bold text-gray-800">रवि कुमार</p>
-                                <p class="text-xs text-gray-500">उम्र 38 • दिल्ली</p>
-                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-700 text-sm">
+                                "3 हफ्तों में ही असर महसूस हुआ। सीढ़ियाँ अब आराम से चढ़ पा रहा हूँ। जोड़ों की जकड़न बिल्कुल गायब!"
+                            </p>
+                            <p class="text-xs text-blue-600 mt-2">✅ Verified Purchase</p>
                         </div>
-                        <div class="text-yellow-400 mb-2">★★★★★</div>
-                        <p class="text-gray-700 text-sm">
-                            "3 हफ्तों में ही असर महसूस हुआ। सीढ़ियाँ अब आराम से चढ़ पा रहा हूँ। जोड़ों की जकड़न बिल्कुल गायब!"
-                        </p>
-                        <p class="text-xs text-blue-600 mt-2">✅ Verified Purchase</p>
                     </div>
 
-                    <div class="review-card bg-white p-4 rounded-lg shadow-md border-t-4 border-pink-500">
-                        <div class="flex items-center gap-3 mb-3">
-                            <img 
-                                src="./images/old_women.jpg" 
-                                alt="अनीता शर्मा - Customer" 
-                                class="w-12 h-12 rounded-full border-2 border-pink-200 object-cover"
-                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                            >
-                            <div class="bg-pink-500 text-white w-12 h-12 rounded-full hidden items-center justify-center font-bold">
-                                A
+                    <!-- Review 2 -->
+                    <div class="swiper-slide">
+                        <div class="review-card bg-white p-4 rounded-lg shadow-md border-t-4 border-pink-500">
+                            <div class="flex items-center gap-3 mb-3">
+                                <img 
+                                    src="./images/old_women.jpg" 
+                                    alt="अनीता शर्मा - Customer" 
+                                    class="w-12 h-12 rounded-full border-2 border-pink-200 object-cover"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                >
+                                <div class="bg-pink-500 text-white w-12 h-12 rounded-full hidden items-center justify-center font-bold">
+                                    A
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-800">अनीता शर्मा</p>
+                                    <p class="text-xs text-gray-500">उम्र 44 • मुंबई</p>
+                                </div>
                             </div>
-                            <div>
-                                <p class="font-bold text-gray-800">अनीता शर्मा</p>
-                                <p class="text-xs text-gray-500">उम्र 44 • मुंबई</p>
-                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-700 text-sm">
+                                "सुबह उठते ही जोड़ों में सूजन रहती थी। अब काफी फर्क दिख रहा है। नींद भी बेहतर हो गई।"
+                            </p>
+                            <p class="text-xs text-pink-600 mt-2">✅ Verified Purchase</p>
                         </div>
-                        <div class="text-yellow-400 mb-2">★★★★★</div>
-                        <p class="text-gray-700 text-sm">
-                            "सुबह उठते ही जोड़ों में सूजन रहती थी। अब काफी फर्क दिख रहा है। नींद भी बेहतर हो गई।"
-                        </p>
-                        <p class="text-xs text-pink-600 mt-2">✅ Verified Purchase</p>
                     </div>
 
-                    <div class="review-card bg-white p-4 rounded-lg shadow-md border-t-4 border-green-500">
-                        <div class="flex items-center gap-3 mb-3">
-                            <img 
-                                src="./images/customer3.jpg" 
-                                alt="सुनीता देवी - Customer" 
-                                class="w-12 h-12 rounded-full border-2 border-green-200 object-cover"
-                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                            >
-                            <div class="bg-green-500 text-white w-12 h-12 rounded-full hidden items-center justify-center font-bold">
-                                S
+                    <!-- Review 3 -->
+                    <div class="swiper-slide">
+                        <div class="review-card bg-white p-4 rounded-lg shadow-md border-t-4 border-green-500">
+                            <div class="flex items-center gap-3 mb-3">
+                                <img 
+                                    src="./images/customer3.jpg" 
+                                    alt="सुनीता देवी - Customer" 
+                                    class="w-12 h-12 rounded-full border-2 border-green-200 object-cover"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                >
+                                <div class="bg-green-500 text-white w-12 h-12 rounded-full hidden items-center justify-center font-bold">
+                                    S
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-800">सुनीता देवी</p>
+                                    <p class="text-xs text-gray-500">उम्र 52 • पुणे</p>
+                                </div>
                             </div>
-                            <div>
-                                <p class="font-bold text-gray-800">सुनीता देवी</p>
-                                <p class="text-xs text-gray-500">उम्र 52 • पुणे</p>
-                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-700 text-sm">
+                                "पहले बाम और स्प्रे लगाती थी, फर्क नहीं। ये तेल 5–7 मिनट बाद गर्मी देता है और जकड़न कम हो जाती है।"
+                            </p>
+                            <p class="text-xs text-green-600 mt-2">💬  Review</p>
                         </div>
-                        <div class="text-yellow-400 mb-2">★★★★★</div>
-                        <p class="text-gray-700 text-sm">
-                            "पहले बाम और स्प्रे लगाती थी, फर्क नहीं। ये तेल 5–7 मिनट बाद गर्मी देता है और जकड़न कम हो जाती है।"
-                        </p>
-                        <p class="text-xs text-green-600 mt-2">💬  Review</p>
                     </div>
                     
-                    <div class="review-card bg-white p-4 rounded-lg shadow-md border-t-4 border-purple-500">
-                        <div class="flex items-center gap-3 mb-3">
-                            <img 
-                                src="./images/customer4.jpg" 
-                                alt="राजेश गुप्ता - Customer" 
-                                class="w-12 h-12 rounded-full border-2 border-purple-200 object-cover"
-                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                            >
-                            <div class="bg-purple-500 text-white w-12 h-12 rounded-full hidden items-center justify-center font-bold">
-                                R
+                    <!-- Review 4 -->
+                    <div class="swiper-slide">
+                        <div class="review-card bg-white p-4 rounded-lg shadow-md border-t-4 border-purple-500">
+                            <div class="flex items-center gap-3 mb-3">
+                                <img 
+                                    src="./images/customer4.jpg" 
+                                    alt="राजेश गुप्ता - Customer" 
+                                    class="w-12 h-12 rounded-full border-2 border-purple-200 object-cover"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                >
+                                <div class="bg-purple-500 text-white w-12 h-12 rounded-full hidden items-center justify-center font-bold">
+                                    R
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-800">राजेश गुप्ता</p>
+                                    <p class="text-xs text-gray-500">उम्र 41 • जयपुर</p>
+                                </div>
                             </div>
-                            <div>
-                                <p class="font-bold text-gray-800">राजेश गुप्ता</p>
-                                <p class="text-xs text-gray-500">उम्र 41 • जयपुर</p>
-                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-700 text-sm">
+                                "ऑफिस में बैठे-बैठे कमर दर्द हो गया था। इस तेल से मालिश करने के बाद काम पर फोकस वापस आ गया।"
+                            </p>
+                            <p class="text-xs text-purple-600 mt-2">✅ Verified Purchase</p>
                         </div>
-                        <div class="text-yellow-400 mb-2">★★★★★</div>
-                        <p class="text-gray-700 text-sm">
-                            "ऑफिस में बैठे-बैठे कमर दर्द हो गया था। इस तेल से मालिश करने के बाद काम पर फोकस वापस आ गया।"
-                        </p>
-                        <p class="text-xs text-purple-600 mt-2">✅ Verified Purchase</p>
+                    </div>
+                    
+                    <!-- Review 5 -->
+                    <div class="swiper-slide">
+                        <div class="review-card bg-white p-4 rounded-lg shadow-md border-t-4 border-indigo-500">
+                            <div class="flex items-center gap-3 mb-3">
+                                <img 
+                                    src="./images/customer5.jpg" 
+                                    alt="प्रीति अग्रवाल - Customer" 
+                                    class="w-12 h-12 rounded-full border-2 border-indigo-200 object-cover"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                >
+                                <div class="bg-indigo-500 text-white w-12 h-12 rounded-full hidden items-center justify-center font-bold">
+                                    P
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-800">प्रीति अग्रवाल</p>
+                                    <p class="text-xs text-gray-500">उम्र 35 • बैंगलोर</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-700 text-sm">
+                                "जिम जाने के बाद मांसपेशियों में दर्द रहता था। अब एक्सरसाइज के बाद इस तेल से मालिश करती हूँ - फर्क साफ दिखता है।"
+                            </p>
+                            <p class="text-xs text-indigo-600 mt-2">✅ Verified Purchase</p>
+                        </div>
+                    </div>
+
+                    <!-- Review 6 -->
+                    <div class="swiper-slide">
+                        <div class="review-card bg-white p-4 rounded-lg shadow-md border-t-4 border-teal-500">
+                            <div class="flex items-center gap-3 mb-3">
+                                <img 
+                                    src="./images/customer6.jpg" 
+                                    alt="महेश सिंह - Customer" 
+                                    class="w-12 h-12 rounded-full border-2 border-teal-200 object-cover"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                >
+                                <div class="bg-teal-500 text-white w-12 h-12 rounded-full hidden items-center justify-center font-bold">
+                                    M
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-800">महेश सिंह</p>
+                                    <p class="text-xs text-gray-500">उम्र 56 • कोलकाता</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-700 text-sm">
+                                "डॉक्टर ने कहा था घुटनों का ऑपरेशन करवाना पड़ेगा। इस तेल के इस्तेमाल से दर्द 80% तक कम हो गया है।"
+                            </p>
+                            <p class="text-xs text-teal-600 mt-2">✅ Verified Purchase</p>
+                        </div>
                     </div>
                 </div>
+                
+                <!-- Swiper Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                
+                <!-- Swiper Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
         </div>
         <!-- How to Use -->
@@ -4291,7 +4518,7 @@
     <!-- <div id="notification-container"></div> -->
 
     <script type="module">
-        // import { notifications } from './data.js';
+
         
         // let currentIndex = 0;
 
@@ -4523,6 +4750,144 @@
             // Restore body scroll
             document.body.style.overflow = 'auto';
         }
+
+        // Initialize Swiper for Customer Reviews
+        function initializeReviewsSwiper() {
+            const reviewsSwiper = new Swiper('.reviews-swiper', {
+                // Basic configuration
+                slidesPerView: 1,
+                spaceBetween: 20,
+                centeredSlides: true,
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                },
+                
+                // Responsive breakpoints
+                breakpoints: {
+                    380: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 15
+                    },
+                    450: {
+                        slidesPerView: 1.3,
+                        spaceBetween: 20
+                    }
+                },
+                
+                // Navigation
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                
+                // Pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: true,
+                    dynamicMainBullets: 3
+                },
+                
+                // Touch settings
+                touchRatio: 1,
+                touchAngle: 45,
+                grabCursor: true,
+                
+                // Effects
+                effect: 'slide',
+                speed: 600,
+                
+                // Events
+                on: {
+                    slideChange: function() {
+                        // Add animation to active slide
+                        const activeSlide = this.slides[this.activeIndex];
+                        if (activeSlide) {
+                            activeSlide.style.transform = 'scale(1.02)';
+                            setTimeout(() => {
+                                if (activeSlide) {
+                                    activeSlide.style.transform = 'scale(1)';
+                                }
+                            }, 300);
+                        }
+                    }
+                }
+            });
+            
+            return reviewsSwiper;
+        }
+
+        // Initialize Product Gallery Swiper (if needed)
+        function initializeProductSwiper() {
+            const productSwipers = document.querySelectorAll('.product-swiper');
+            
+            productSwipers.forEach(swiperEl => {
+                new Swiper(swiperEl, {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                    centeredSlides: false,
+                    loop: false,
+                    
+                    breakpoints: {
+                        380: {
+                            slidesPerView: 2.5,
+                            spaceBetween: 12
+                        },
+                        450: {
+                            slidesPerView: 3,
+                            spaceBetween: 15
+                        }
+                    },
+                    
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true
+                    },
+                    
+                    grabCursor: true,
+                    touchRatio: 1
+                });
+            });
+        }
+
+        // Initialize Image Showcase Swiper
+        function initializeImageShowcaseSwiper() {
+            const showcaseSwipers = document.querySelectorAll('.image-showcase-swiper');
+            
+            showcaseSwipers.forEach(swiperEl => {
+                new Swiper(swiperEl, {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    centeredSlides: true,
+                    loop: true,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: true
+                    },
+                    
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true
+                    },
+                    
+                    effect: 'fade',
+                    fadeEffect: {
+                        crossFade: true
+                    },
+                    
+                    grabCursor: true,
+                    speed: 800
+                });
+            });
+        }
         
         // Close modal on Escape key
         document.addEventListener('keydown', function(e) {
@@ -4663,6 +5028,13 @@
         
         // Enhanced contact form handler
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Swiper carousels
+            setTimeout(() => {
+                initializeReviewsSwiper();
+                initializeProductSwiper();
+                initializeImageShowcaseSwiper();
+            }, 500);
+            
             const contactForm = document.getElementById('contactForm');
             if (contactForm) {
                 contactForm.addEventListener('submit', function(e) {
