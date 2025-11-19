@@ -1,0 +1,78 @@
+        <!-- Doctor Testimonials -->
+        <div class="px-4 py-6 bg-gradient-to-br from-purple-50 to-pink-50">
+            <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                <span class="text-2xl">👨‍⚕️</span> डॉक्टर की सलाह
+            </h2>
+            
+            <!-- Scrolling Doctor Reviews -->
+            <div class="scrolling-reviews flex pb-4" id="doctorReviews">
+                <div class="auto-scroll flex gap-4">
+                    <div class="review-card bg-white p-4 rounded-lg shadow-lg border-l-4 border-purple-500">
+                        <div class="flex items-center mb-3">
+                            <img 
+                                src="./images/docture2.jpg" 
+                                alt="Ayurvedic Doctor" 
+                                class="w-12 h-12 rounded-full mr-3 border-2 border-purple-200"
+                                onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSI+PGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjQiIGZpbGw9IiM5MzMzZWEiLz48cGF0aCBkPSJtMjQgMTZjLTIuMiAwLTQgMS44LTQgNHMxLjggNCA0IDQgNC0xLjggNC00LTEuOC00LTQtNHptMCAxNGMtNS41IDAtMTAgMi4yLTEwIDVzNC41IDMgMTAgMyAxMC0uNyAxMC0zLTQuNS01LTEwLTV6IiBmaWxsPSIjZmZmIi8+PC9zdmc+'"
+                            >
+                            <div>
+                                <h4 class="font-semibold text-gray-800">डॉ. राजेश शर्मा</h4>
+                                <p class="text-xs text-purple-600">बीएएमएस आयुर्वेद विशेषज्ञ</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic text-sm">
+                            "जोड़ों के दर्द में आयुर्वेदिक तेल चिकित्सा बहुत प्रभावी होती है। Nuero Shakti का संयोजन जोड़ों को प्राकृतिक रूप से मजबूत करने में मदद करता है।"
+                        </p>
+                        <div class="flex items-center mt-2">
+                            <div class="text-yellow-400 text-sm">★★★★★</div>
+                            <span class="text-xs text-gray-500 ml-2">15+ वर्षों का अनुभव</span>
+                        </div>
+                    </div>
+                    
+                    <div class="review-card bg-white p-4 rounded-lg shadow-lg border-l-4 border-blue-500">
+                        <div class="flex items-center mb-3">
+                            <img 
+                                src="./images/docture1.jpg" 
+                                alt="Orthopedic Specialist" 
+                                class="w-12 h-12 rounded-full mr-3 border-2 border-blue-200"
+                                onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSI+PGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjQiIGZpbGw9IiMzYjgyZjYiLz48cGF0aCBkPSJtMjQgMTZjLTIuMiAwLTQgMS44LTQgNHMxLjggNCA0IDQgNC0xLjggNC00LTEuOC00LTQtNHptMCAxNGMtNS41IDAtMTAgMi4yLTEwIDVzNC41IDMgMTAgMyAxMC0uNyAxMC0zLTQuNS01LTEwLTV6IiBmaWxsPSIjZmZmIi8+PC9zdmc+'"
+                            >
+                            <div>
+                                <h4 class="font-semibold text-gray-800">डॉ. प्रिया गुप्ता</h4>
+                                <p class="text-xs text-blue-600">ऑर्थो प्रैक्टिशनर</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic text-sm">
+                            "पेनकिलर सिर्फ़ दर्द छुपाते हैं, लेकिन तेल चिकित्सा ऊतकों को पोषण देती है। मैं अपने मरीजों को प्राकृतिक उपचार की सलाह देती हूं।"
+                        </p>
+                        <div class="flex items-center mt-2">
+                            <div class="text-yellow-400 text-sm">★★★★★</div>
+                            <span class="text-xs text-gray-500 ml-2">10+ वर्षों का अनुभव</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Duplicate cards for seamless loop -->
+                    <div class="review-card bg-white p-4 rounded-lg shadow-lg border-l-4 border-green-500">
+                        <div class="flex items-center mb-3">
+                            <img 
+                                src="./images/docture3.webp" 
+                                alt="Physiotherapy Expert" 
+                                class="w-12 h-12 rounded-full mr-3 border-2 border-green-200"
+                                onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSI+PGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjQiIGZpbGw9IiMxMGI5ODEiLz48cGF0aCBkPSJtMjQgMTZjLTIuMiAwLTQgMS44LTQgNHMxLjggNCA0IDQgNC0xLjggNC00LTEuOC00LTQtNHptMCAxNGMtNS41IDAtMTAgMi4yLTEwIDVzNC41IDMgMTAgMyAxMC0uNyAxMC0zLTQuNS01LTEwLTV6IiBmaWxsPSIjZmZmIi8+PC9zdmc+'"
+                            >
+                            <div>
+                                <h4 class="font-semibold text-gray-800">डॉ. अमित कुमार</h4>
+                                <p class="text-xs text-green-600">फिजियोथेरेपी एक्सपर्ट</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 italic text-sm">
+                            "जोड़ों की गतिशीलता बढ़ाने में आयुर्वेदिक तेल का बहुत फायदा है। मैं अपने पेशेंट्स को रेगुलर मसाज की सलाह देता हूं।"
+                        </p>
+                        <div class="flex items-center mt-2">
+                            <div class="text-yellow-400 text-sm">★★★★★</div>
+                            <span class="text-xs text-gray-500 ml-2">12+ वर्षों का अनुभव</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

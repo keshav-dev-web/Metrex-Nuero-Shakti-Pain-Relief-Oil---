@@ -91,7 +91,7 @@
         h1, .h1, .hero-title {
             font-family: 'Tiro Devanagari Hindi', 'Montserrat', 'Arial Black', sans-serif;
             font-weight: 400;
-            font-size: 2.5rem; /* 40px */
+            font-size: 3rem; /* 48px - 2xl scaling */
             line-height: 1.2;
             letter-spacing: -0.01em;
             text-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -101,7 +101,7 @@
         h2, .h2, .section-title {
             font-family: 'Tiro Devanagari Hindi', 'Poppins', sans-serif;
             font-weight: 400;
-            font-size: 2rem; /* 32px */
+            font-size: 2.5rem; /* 40px - 2xl scaling */
             line-height: 1.3;
             letter-spacing: -0.01em;
         }
@@ -110,7 +110,7 @@
         h3, .h3, .sub-title {
             font-family: 'Tiro Devanagari Hindi', 'Nunito', sans-serif;
             font-weight: 400;
-            font-size: 1.5rem; /* 24px */
+            font-size: 1.875rem; /* 30px - 2xl scaling */
             line-height: 1.4;
         }
         
@@ -119,7 +119,7 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 800;
             color: #dc2626;
-            font-size: 1.75rem;
+            font-size: 2.25rem; /* 2xl scaling */
             text-align: center;
             margin-bottom: 1rem;
         }
@@ -128,7 +128,7 @@
             font-family: 'Poppins', sans-serif;
             font-weight: 800;
             color: #991b1b;
-            font-size: 1.75rem;
+            font-size: 2.25rem; /* 2xl scaling */
             text-align: center;
             margin-bottom: 1rem;
         }
@@ -137,7 +137,7 @@
         h4, .h4 {
             font-family: 'Tiro Devanagari Hindi', 'Inter', 'Helvetica Neue', Helvetica, sans-serif;
             font-weight: 400;
-            font-size: 1.25rem; /* 20px */
+            font-size: 1.5rem; /* 24px - 2xl scaling */
             line-height: 1.5;
         }
         
@@ -145,7 +145,7 @@
         h5, .h5 {
             font-family: 'Tiro Devanagari Hindi', 'Roboto', 'Arial', sans-serif;
             font-weight: 400;
-            font-size: 1.125rem; /* 18px */
+            font-size: 1.375rem; /* 22px - 2xl scaling */
             line-height: 1.6;
         }
         
@@ -158,40 +158,69 @@
             letter-spacing: 0.02em;
         }
         
-        /* Enhanced Mobile Typography - Extra Large Fonts */
+        /* Enhanced Mobile Typography - 2xl Scaling with 3xl Navigation */
         @media (max-width: 450px) {
-            h1, .h1, .hero-title { font-size: 2.75rem; line-height: 1.15; }
-            h2, .h2, .section-title { font-size: 2.25rem; line-height: 1.25; }
-            h3, .h3, .sub-title { font-size: 1.875rem; line-height: 1.3; }
-            h4, .h4 { font-size: 1.5rem; line-height: 1.4; }
-            h5, .h5 { font-size: 1.25rem; line-height: 1.5; }
+            h1, .h1, .hero-title { font-size: 2.5rem; line-height: 1.15; } /* Mobile optimized */
+            h2, .h2, .section-title { font-size: 2rem; line-height: 1.25; } /* Mobile optimized */
+            h3, .h3, .sub-title { font-size: 1.75rem; line-height: 1.3; } /* Mobile optimized */
+            h4, .h4 { font-size: 1.5rem; line-height: 1.4; } /* Mobile optimized */
+            h5, .h5 { font-size: 1.25rem; line-height: 1.5; } /* Mobile optimized */
             h6, .h6 { font-size: 1.125rem; line-height: 1.5; }
             
-            .problem-title { font-size: 2.25rem; line-height: 1.25; }
-            .solution-title { font-size: 2.25rem; line-height: 1.25; }
+            .problem-title { font-size: 2rem; line-height: 1.25; } /* Mobile optimized */
+            .solution-title { font-size: 2rem; line-height: 1.25; } /* Mobile optimized */
             
             /* Body text improvements */
-            p { font-size: 1.125rem; line-height: 1.65; }
-            .text-sm { font-size: 1rem; line-height: 1.6; }
-            .text-xs { font-size: 0.95rem; line-height: 1.5; }
+            p { font-size: 1rem; line-height: 1.6; }
+            .text-sm { font-size: 0.875rem; line-height: 1.5; }
+            .text-xs { font-size: 0.8rem; line-height: 1.4; }
+        }
+        
+        /* Mobile viewport and touch optimizations */
+        @media (max-width: 768px) {
+            /* Touch-friendly button sizing */
+            button, .btn, input[type="submit"] {
+                min-height: 44px;
+                min-width: 44px;
+                padding: 12px 16px;
+            }
+            
+            /* Form input touch optimization */
+            input, select, textarea {
+                min-height: 44px;
+                font-size: 16px; /* Prevents zoom on iOS */
+            }
+            
+            /* Navigation touch targets */
+            a, .nav-link {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            /* Modal mobile optimization */
+            .modal, .fixed {
+                padding: 1rem;
+            }
         }
         
         @media (max-width: 375px) {
-            h1, .h1, .hero-title { font-size: 2.5rem; line-height: 1.2; }
-            h2, .h2, .section-title { font-size: 2rem; line-height: 1.25; }
-            h3, .h3, .sub-title { font-size: 1.75rem; line-height: 1.35; }
-            .problem-title { font-size: 2rem; line-height: 1.25; }
-            .solution-title { font-size: 2rem; line-height: 1.25; }
+            h1, .h1, .hero-title { font-size: 3rem; line-height: 1.2; }
+            h2, .h2, .section-title { font-size: 2.5rem; line-height: 1.25; }
+            h3, .h3, .sub-title { font-size: 2rem; line-height: 1.35; }
+            .problem-title { font-size: 2.25rem; line-height: 1.25; }
+            .solution-title { font-size: 2.25rem; line-height: 1.25; }
             
             p { font-size: 1.0625rem; line-height: 1.65; }
         }
         
         @media (max-width: 320px) {
-            h1, .h1, .hero-title { font-size: 2.25rem; line-height: 1.2; }
-            h2, .h2, .section-title { font-size: 1.875rem; line-height: 1.25; }
-            h3, .h3, .sub-title { font-size: 1.5rem; line-height: 1.35; }
-            .problem-title { font-size: 1.875rem; line-height: 1.25; }
-            .solution-title { font-size: 1.875rem; line-height: 1.25; }
+            h1, .h1, .hero-title { font-size: 2.75rem; line-height: 1.2; }
+            h2, .h2, .section-title { font-size: 2.25rem; line-height: 1.25; }
+            h3, .h3, .sub-title { font-size: 1.875rem; line-height: 1.35; }
+            .problem-title { font-size: 2rem; line-height: 1.25; }
+            .solution-title { font-size: 2rem; line-height: 1.25; }
             
             p { font-size: 1rem; line-height: 1.6; }
         }
@@ -305,7 +334,7 @@
             }
         }
         
-        /* Mobile spacing and sizing adjustments */
+        /* Mobile spacing and sizing adjustments with 2xl/3xl support */
         @media (max-width: 450px) {
             .px-4 { padding-left: 0.75rem; padding-right: 0.75rem; }
             .px-6 { padding-left: 1rem; padding-right: 1rem; }
@@ -319,6 +348,7 @@
             .mb-4 { margin-bottom: 0.75rem; }
             .gap-4 { gap: 0.75rem; }
             .gap-6 { gap: 1rem; }
+            .text-3xl { font-size: 2.5rem; line-height: 2.75rem; }
             .text-2xl { font-size: 2.25rem; line-height: 2.5rem; }
             .text-xl { font-size: 1.875rem; line-height: 2.25rem; }
             .text-lg { font-size: 1.5rem; line-height: 2rem; }
@@ -328,25 +358,89 @@
             .h-32 { height: 6rem; }
             .w-24 { width: 5rem; }
             .h-24 { height: 5rem; }
-            .w-16 { width: 3rem; }
-            .h-16 { height: 3rem; }
+            .w-20 { width: 4.5rem; }
+            .h-20 { height: 4.5rem; }
+            .w-16 { width: 3.5rem; }
+            .h-16 { height: 3.5rem; }
         }
         
         @media (max-width: 375px) {
             .px-4 { padding-left: 0.5rem; padding-right: 0.5rem; }
             .py-8 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
             .py-6 { padding-top: 0.875rem; padding-bottom: 0.875rem; }
+            .text-3xl { font-size: 2.25rem; line-height: 2.5rem; }
             .text-2xl { font-size: 2rem; line-height: 2.25rem; }
             .text-xl { font-size: 1.75rem; line-height: 2rem; }
             .text-lg { font-size: 1.375rem; line-height: 1.875rem; }
+            .w-20 { width: 4rem; }
+            .h-20 { height: 4rem; }
+            .w-16 { width: 3rem; }
+            .h-16 { height: 3rem; }
         }
         
         @media (max-width: 320px) {
             .px-4 { padding-left: 0.375rem; padding-right: 0.375rem; }
             .py-8 { padding-top: 1rem; padding-bottom: 1rem; }
+            .text-3xl { font-size: 2rem; line-height: 2.25rem; }
             .text-2xl { font-size: 1.875rem; line-height: 2rem; }
             .text-xl { font-size: 1.5rem; line-height: 1.75rem; }
             .text-lg { font-size: 1.25rem; line-height: 1.625rem; }
+            .w-20 { width: 3.5rem; }
+            .h-20 { height: 3.5rem; }
+            .w-16 { width: 2.5rem; }
+            .h-16 { height: 2.5rem; }
+        }
+        
+        /* Mobile-specific responsive enhancements for highlighted sections */
+        @media (max-width: 768px) {
+            /* Enhanced mobile navigation */
+            .text-3xl { font-size: 1.875rem; line-height: 2.125rem; }
+            .text-2xl { font-size: 1.625rem; line-height: 1.875rem; }
+            .text-xl { font-size: 1.375rem; line-height: 1.625rem; }
+            .text-5xl { font-size: 3rem; line-height: 3.25rem; }
+            .text-4xl { font-size: 2.5rem; line-height: 2.75rem; }
+            
+            /* Guarantee cards mobile optimization */
+            .border-4 { border-width: 3px; }
+            .p-5 { padding: 1rem; }
+            .p-6 { padding: 1.25rem; }
+            .gap-4 { gap: 0.75rem; }
+            .gap-3 { gap: 0.5rem; }
+            
+            /* Animation performance for mobile */
+            .animate-bounce { animation-duration: 1.5s; }
+            .animate-pulse { animation-duration: 1.8s; }
+            
+            /* Trust indicators mobile layout */
+            .flex { flex-wrap: wrap; }
+            .justify-center { justify-content: center; }
+            
+            /* Mobile header adjustments */
+            .w-20 { width: 4rem; }
+            .h-20 { height: 4rem; }
+            .w-16 { width: 3.25rem; }
+            .h-16 { height: 3.25rem; }
+        }
+        
+        @media (max-width: 640px) {
+            /* Further mobile optimizations */
+            .text-5xl { font-size: 2.5rem; line-height: 2.75rem; }
+            .text-4xl { font-size: 2rem; line-height: 2.25rem; }
+            .text-3xl { font-size: 1.75rem; line-height: 2rem; }
+            .text-2xl { font-size: 1.5rem; line-height: 1.75rem; }
+            
+            /* Compact spacing for small screens */
+            .px-6 { padding-left: 0.75rem; padding-right: 0.75rem; }
+            .py-8 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+            .py-6 { padding-top: 0.875rem; padding-bottom: 0.875rem; }
+            
+            /* Mobile-friendly borders */
+            .border-4 { border-width: 2px; }
+            .rounded-2xl { border-radius: 0.75rem; }
+            
+            /* Optimized animations for smaller screens */
+            .hover\:scale-105:hover { transform: scale(1.03); }
+            .hover\:scale-110:hover { transform: scale(1.05); }
         }
         
         .text-balance {
@@ -477,7 +571,30 @@
             }
         }
         
-        /* Floating Order Button */
+        /* Mobile-responsive contact form and buttons */
+        @media (max-width: 480px) {
+            /* Contact form mobile optimization */
+            .space-y-4 > * + * { margin-top: 0.75rem; }
+            .px-4 { padding-left: 0.5rem; padding-right: 0.5rem; }
+            .py-4 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+            .py-3 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+            
+            /* Button mobile sizing */
+            .text-xl { font-size: 1.125rem; line-height: 1.375rem; }
+            .px-8 { padding-left: 1rem; padding-right: 1rem; }
+            .px-6 { padding-left: 0.75rem; padding-right: 0.75rem; }
+            
+            /* Form input mobile sizing */
+            .text-lg { font-size: 1rem; line-height: 1.25rem; }
+            .rounded-xl { border-radius: 0.5rem; }
+            
+            /* Mobile navigation adjustments */
+            .gap-1 { gap: 0.125rem; }
+            .px-3 { padding-left: 0.375rem; padding-right: 0.375rem; }
+            .py-1 { padding-top: 0.125rem; padding-bottom: 0.125rem; }
+        }
+        
+        /* Enhanced Floating Order Button */
         .floating-order-btn {
             position: fixed;
             right: 10px;
@@ -497,6 +614,15 @@
             font-size: 12px;
             text-align: center;
             min-width: 120px;
+        }
+        
+        @media (max-width: 768px) {
+            .floating-order-btn {
+                right: 5px;
+                padding: 8px 12px;
+                font-size: 11px;
+                min-width: 100px;
+            }
         }
         
         @media (min-width: 375px) {
@@ -1043,17 +1169,128 @@
         
         .booking-title {
             text-align: center;
-            font-size: 16px;
+            font-size: 1.5rem;
             font-weight: 700;
             color: #1f2937;
             margin-bottom: 10px;
         }
         
+        @media (min-width: 375px) {
+            .booking-title { font-size: 1.75rem; }
+        }
+        
+        @media (min-width: 450px) {
+            .booking-title { font-size: 2rem; }
+        }
+        
+        /* Mobile grid and layout enhancements */
+        @media (max-width: 640px) {
+            /* Grid optimizations for mobile */
+            .grid-cols-2 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+            .grid-cols-3 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+            
+            /* Ingredients grid mobile layout */
+            .gap-4 { gap: 0.75rem; }
+            .gap-3 { gap: 0.5rem; }
+            
+            /* Trust indicators mobile stacking */
+            .flex { flex-direction: column; align-items: center; }
+            .justify-center { justify-content: center; }
+            
+            /* Mobile margin adjustments */
+            .mb-8 { margin-bottom: 1.5rem; }
+            .mb-6 { margin-bottom: 1rem; }
+            .mb-4 { margin-bottom: 0.75rem; }
+            .mt-8 { margin-top: 1.5rem; }
+            .mt-6 { margin-top: 1rem; }
+        }
+        
+        @media (max-width: 480px) {
+            /* Compact mobile layout */
+            .max-w-lg { max-width: 100%; }
+            .max-w-md { max-width: 100%; }
+            .max-w-2xl { max-width: 100%; }
+            
+            /* Mobile padding optimization */
+            .p-6 { padding: 1rem; }
+            .p-5 { padding: 0.875rem; }
+            .p-4 { padding: 0.75rem; }
+            
+            /* Mobile text sizing */
+            .text-3xl { font-size: 1.5rem; line-height: 1.75rem; }
+            .text-2xl { font-size: 1.25rem; line-height: 1.5rem; }
+            .text-xl { font-size: 1.125rem; line-height: 1.375rem; }
+            .text-lg { font-size: 1rem; line-height: 1.25rem; }
+        }
+        
         .booking-subtitle {
             text-align: center;
-            font-size: 12px;
+            font-size: 14px;
             color: #6b7280;
             margin-bottom: 15px;
+        }
+        
+        @media (min-width: 375px) {
+            .booking-subtitle { font-size: 16px; }
+        }
+        
+        @media (min-width: 450px) {
+            .booking-subtitle { font-size: 18px; }
+        }
+        
+        /* Mobile performance and loading optimizations */
+        @media (max-width: 768px) {
+            /* Reduce complex gradients on mobile */
+            .bg-gradient-to-br {
+                background: linear-gradient(135deg, var(--tw-gradient-from), var(--tw-gradient-to));
+            }
+            
+            /* Optimize blur effects for mobile */
+            .backdrop-blur-sm {
+                backdrop-filter: blur(4px);
+            }
+            
+            .blur-xl {
+                filter: blur(12px);
+            }
+            
+            .blur-2xl {
+                filter: blur(16px);
+            }
+            
+            /* Mobile image optimization */
+            img {
+                image-rendering: optimizeQuality;
+                max-width: 100%;
+                height: auto;
+            }
+            
+            /* Mobile transform optimization */
+            .transform {
+                transform: translateZ(0);
+            }
+            
+            /* Mobile transition optimization */
+            .transition-all {
+                transition: transform 0.2s ease, opacity 0.2s ease;
+            }
+        }
+        
+        /* Critical mobile CSS for above-fold content */
+        @media (max-width: 480px) {
+            .hero-mobile {
+                padding: 1rem 0.5rem;
+            }
+            
+            .nav-mobile {
+                padding: 0.5rem;
+            }
+            
+            .button-mobile {
+                width: 100%;
+                padding: 1rem;
+                font-size: 1.125rem;
+            }
         }
         
         .order-button {
@@ -1063,13 +1300,69 @@
             padding: 12px 24px;
             border-radius: 25px;
             font-weight: 700;
-            font-size: 14px;
+            font-size: 16px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            margin-top: 15px;
+        }
+        
+        @media (min-width: 375px) {
+            .order-button { font-size: 18px; padding: 14px 28px; }
+        }
+        
+        @media (min-width: 450px) {
+            .order-button { 
+                font-size: 20px; 
+                padding: 16px 32px;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                margin-top: 15px;
+            }
+        }
+        
+        /* Mobile animation and performance optimizations */
+        @media (max-width: 768px) and (prefers-reduced-motion: no-preference) {
+            /* Optimized animations for mobile */
+            .animate-bounce {
+                animation: mobile-bounce 2s ease-in-out infinite;
+            }
+            
+            .animate-pulse {
+                animation: mobile-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            }
+            
+            .animate-ping {
+                animation: mobile-ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+            }
+        }
+        
+        @keyframes mobile-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        @keyframes mobile-pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        @keyframes mobile-ping {
+            75%, 100% { transform: scale(1.5); opacity: 0; }
+        }
+        
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .animate-bounce,
+            .animate-pulse,
+            .animate-ping {
+                animation: none;
+            }
+            
+            .transition-all,
+            .transition-transform,
+            .transition-opacity {
+                transition: none;
+            }
         }
         
         .order-button:hover {
@@ -1510,6 +1803,207 @@
             background: #f59e0b;
             transform: scale(1.05);
         }
+        
+        /* ===== COMPREHENSIVE MOBILE RESPONSIVENESS ENHANCEMENTS ===== */
+        
+        /* Grid and Layout Mobile Optimizations */
+        @media (max-width: 640px) {
+            .grid-cols-2 { 
+                grid-template-columns: repeat(1, minmax(0, 1fr)) !important; 
+            }
+            .grid-cols-3 { 
+                grid-template-columns: repeat(1, minmax(0, 1fr)) !important; 
+            }
+            .flex {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 0.75rem !important;
+            }
+            .justify-between {
+                justify-content: center !important;
+            }
+            .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+                margin-right: 0 !important;
+                margin-left: 0 !important;
+                margin-top: 0.75rem !important;
+            }
+            .space-y-2 > :not([hidden]) ~ :not([hidden]) {
+                margin-top: 0.5rem !important;
+            }
+        }
+        
+        /* Mobile Typography Scale Adjustments */
+        @media (max-width: 480px) {
+            .text-5xl { font-size: 2.25rem !important; line-height: 2.5rem !important; }
+            .text-4xl { font-size: 1.875rem !important; line-height: 2.125rem !important; }
+            .text-3xl { font-size: 1.625rem !important; line-height: 1.875rem !important; }
+            .text-2xl { font-size: 1.375rem !important; line-height: 1.625rem !important; }
+            .text-xl { font-size: 1.25rem !important; line-height: 1.5rem !important; }
+            .text-lg { font-size: 1.125rem !important; line-height: 1.375rem !important; }
+        }
+        
+        /* Mobile Animation Performance */
+        @media (max-width: 768px) and (prefers-reduced-motion: no-preference) {
+            .animate-bounce {
+                animation: mobile-bounce 2s ease-in-out infinite !important;
+            }
+            .animate-pulse {
+                animation: mobile-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite !important;
+            }
+            .animate-ping {
+                animation: mobile-ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite !important;
+            }
+            .hover\\:scale-105:hover {
+                transform: scale(1.03) !important;
+            }
+            .hover\\:scale-110:hover {
+                transform: scale(1.05) !important;
+            }
+        }
+        
+        @keyframes mobile-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        
+        @keyframes mobile-pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        @keyframes mobile-ping {
+            75%, 100% { transform: scale(1.25); opacity: 0; }
+        }
+        
+        /* Mobile Touch Optimization */
+        @media (max-width: 768px) {
+            button, .btn, input[type="submit"], .order-btn {
+                min-height: 48px !important;
+                min-width: 48px !important;
+                padding: 12px 20px !important;
+                font-size: 16px !important;
+            }
+            
+            input, select, textarea {
+                min-height: 48px !important;
+                font-size: 16px !important;
+                padding: 12px 16px !important;
+            }
+            
+            a, .nav-link {
+                min-height: 48px !important;
+                padding: 8px 12px !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+        }
+        
+        /* Mobile Spacing and Padding Adjustments */
+        @media (max-width: 480px) {
+            .p-8 { padding: 1.25rem !important; }
+            .p-6 { padding: 1rem !important; }
+            .p-4 { padding: 0.75rem !important; }
+            .px-8 { padding-left: 1rem !important; padding-right: 1rem !important; }
+            .px-6 { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+            .py-8 { padding-top: 1.25rem !important; padding-bottom: 1.25rem !important; }
+            .py-6 { padding-top: 1rem !important; padding-bottom: 1rem !important; }
+            .mb-8 { margin-bottom: 1.25rem !important; }
+            .mb-6 { margin-bottom: 1rem !important; }
+            .mt-8 { margin-top: 1.25rem !important; }
+            .mt-6 { margin-top: 1rem !important; }
+        }
+        
+        /* Mobile Border and Visual Effects */
+        @media (max-width: 640px) {
+            .border-4 { border-width: 2px !important; }
+            .rounded-3xl { border-radius: 1rem !important; }
+            .rounded-2xl { border-radius: 0.75rem !important; }
+            .shadow-2xl { box-shadow: 0 6px 15px -2px rgba(0, 0, 0, 0.1) !important; }
+            .shadow-xl { box-shadow: 0 4px 12px -1px rgba(0, 0, 0, 0.1) !important; }
+        }
+        
+        /* Mobile Performance Optimizations */
+        @media (max-width: 768px) {
+            .backdrop-blur-sm {
+                backdrop-filter: blur(4px) !important;
+            }
+            .transform {
+                transform: translateZ(0) !important;
+            }
+            .transition-all {
+                transition: transform 0.2s ease, opacity 0.2s ease !important;
+            }
+            
+            /* Optimize gradients for mobile */
+            .bg-gradient-to-br {
+                background: linear-gradient(135deg, var(--tw-gradient-from), var(--tw-gradient-to)) !important;
+            }
+        }
+        
+        /* Mobile-Specific Classes */
+        @media (max-width: 768px) {
+            .mobile-center {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                text-align: center !important;
+            }
+            
+            .mobile-stack {
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+            
+            .mobile-full-width {
+                width: 100% !important;
+            }
+            
+            .mobile-text-center {
+                text-align: center !important;
+            }
+        }
+        
+        /* Accessibility and Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            .animate-bounce,
+            .animate-pulse,
+            .animate-ping {
+                animation: none !important;
+            }
+            .transition-all,
+            .transition-transform,
+            .transition-opacity {
+                transition: none !important;
+            }
+        }
+        
+        /* Mobile Image and Media Optimization */
+        @media (max-width: 768px) {
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+                image-rendering: optimizeQuality !important;
+            }
+            
+            .w-20 { width: 3.5rem !important; }
+            .h-20 { height: 3.5rem !important; }
+            .w-16 { width: 3rem !important; }
+            .h-16 { height: 3rem !important; }
+        }
+        
+        /* Mobile Modal and Overlay Optimization */
+        @media (max-width: 768px) {
+            .fixed, .modal {
+                padding: 1rem !important;
+            }
+            
+            .modal-content {
+                width: calc(100% - 2rem) !important;
+                max-width: none !important;
+                margin: 1rem !important;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -1517,7 +2011,7 @@
         <!-- Relative Position Header -->
         <div class="relative-header">
             <div class="bg-gradient-to-r from-red-600 via-red-700 to-orange-600 text-white text-center py-3 px-4 shadow-lg">
-                <div class="w-10 h-10 mx-auto mb-2 rounded-full overflow-hidden border-2 border-white shadow-md">
+                <div class="w-20 h-20 mx-auto mb-2 rounded-full overflow-hidden border-2 border-white shadow-md">
                     <img 
                         src="./images/logo.png" 
                         alt="Metrex Logo" 
@@ -1528,8 +2022,8 @@
                         <div class="w-6 h-6 bg-red-700 rounded-full"></div>
                     </div>
                 </div>
-                <h1 class="text-lg font-bold mb-1">Metrex Nuero Shakti</h1>
-                <p class="text-xs text-red-100">Pain Relief Oil</p>
+                <h1 class="text-2xl font-bold mb-1">Metrex Nuero Shakti</h1>
+                <p class="text-lg text-red-100">Pain Relief Oil</p>
                
             </div>
         </div>
@@ -1543,7 +2037,7 @@
             <div class="flex items-center justify-between px-4 py-2">
                 <!-- Logo in Navigation -->
                 <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 rounded-full overflow-hidden border border-white shadow-sm">
+                    <div class="w-16 h-16 rounded-full overflow-hidden border border-white shadow-sm">
                         <img 
                             src="./images/logo.png" 
                             alt="Metrex Logo" 
@@ -1554,7 +2048,7 @@
                             <div class="w-4 h-4 bg-red-700 rounded-full"></div>
                         </div>
                     </div>
-                    <span class="text-white font-bold text-sm">Metrex</span>
+                    <span class="text-white font-bold text-2xl">Metrex</span>
                 </div>
                 
                 <!-- Navigation Links -->
@@ -1591,13 +2085,13 @@
             </div>
             
             <div class="text-center mb-4">
-                <h1 class="text-xl font-bold text-gray-800 mb-2">जोड़ों का दर्द... <span class="text-red-700">अब नहीं!</span></h1>
-                <p class="text-gray-600 mb-4">Metrex Nuero Shakti - 100% आयुर्वेदिक Pain Relief Oil</p>
+                <h1 class="text-2xl font-bold text-gray-800 mb-2">जोड़ों का दर्द... <span class="text-red-700">अब नहीं!</span></h1>
+                <p class="text-lg text-gray-600 mb-4">Metrex Nuero Shakti - 100% आयुर्वेदिक Pain Relief Oil</p>
                 
                 <!-- Price Display -->
                 <div class="price-display">
                     <div class="flex items-center justify-center gap-2">
-                        <span class="price-save">22% बचत</span>
+                        <span class="price-save">10% बचत</span>
                     </div>
                     <p class="text-sm mt-1 opacity-90">🚚 मुफ्त डिलीवरी + COD Available</p>
                 </div>
@@ -1658,23 +2152,23 @@
             <!-- Main Content -->
             <div class="relative px-4 py-12">
                 <!-- Bold Headline -->
-                <div class="text-center mb-8 max-w-lg mx-auto">
+                <div class="text-center  mb-8 max-w-lg mx-auto">
                     <!-- Main Heading -->
                     <h1 class="hero-title text-gray-900 mb-4 leading-tight">
-                        <span class="highlight-text">जोड़ों का दर्द...</span><br>
+                        <span class="text-red-700 text-5xl">जोड़ों का दर्द...</span><br>
                         <span class="solution-highlight">अब नहीं!</span>
                     </h1>
                     
                     <!-- Subheading -->
-                    <div class="bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 inline-block shadow-lg mb-6">
-                        <h2 class="text-lg font-bold text-gray-800">Nuero Shakti – <span class="text-red-700">100% आयुर्वेदिक</span> Pain Relief Oil</h2>
+                    <div class="bg-white rounded-full px-6 py-3 inline-block shadow-xl mb-6 border-2 border-red-200">
+                        <h2 class="text-2xl font-bold text-gray-900">Nuero Shakti – <span class="text-red-700">100% आयुर्वेदिक</span> Pain Relief Oil</h2>
                     </div>
                     
                     <!-- Statistics Visual -->
                     <div class="stats-container max-w-sm mx-auto">
                         <div class="flex items-center justify-center gap-4">
                             <div class="text-center">
-                                <span class="stat-number">10,000+</span>
+                                <span class="stat-number">100,000+</span>
                                 <span class="block font-semibold text-sm">संतुष्ट ग्राहक</span>
                             </div>
                             <div class="w-px h-12 bg-amber-600"></div>
@@ -1685,45 +2179,72 @@
                         </div>
                     </div>
                     
-                    <!-- Trust Features -->
-                    <div class="grid grid-cols-3 gap-3 mb-6 max-w-sm mx-auto">
-                        <div class="bg-white/80 p-3 rounded-xl shadow-sm text-center">
-                            <div class="w-8 h-8 bg-gradient-to-r from-red-500 to-red-600 rounded-full mx-auto mb-2 flex items-center justify-center">
-                                <div class="w-4 h-4 bg-white rounded-full"></div>
+                    <!-- Trust Features with Images - 5xl Size -->
+                    <div class="grid grid-cols-3 gap-4 mb-8 max-w-md mx-auto">
+                        <div class="bg-white/95 p-4 rounded-2xl shadow-xl text-center border-2 border-green-200 hover:shadow-2xl transition-all duration-300">
+                            <div class="w-24 h-24 mx-auto mb-3 rounded-2xl overflow-hidden shadow-lg border-2 border-green-300 hover:scale-110 transition-transform duration-300">
+                                <img 
+                                    src="./images/100ayu.jpg" 
+                                    alt="100% आयुर्वेदिक - Pure Ayurvedic" 
+                                    class="w-full h-full object-cover"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                >
+                                <div class="hidden w-full h-full bg-gradient-to-r from-green-500 to-green-600 items-center justify-center" style="display: none;">
+                                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                                        <span class="text-green-500 text-2xl">🌿</span>
+                                    </div>
+                                </div>
                             </div>
-                            <span class="text-xs font-semibold text-gray-700">100% आयुर्वेदिक</span>
+                            <span class="text-sm font-bold text-gray-800">100% आयुर्वेदिक</span>
                         </div>
-                        <div class="bg-white/80 p-3 rounded-xl shadow-sm text-center">
-                            <div class="w-8 h-8 bg-blue-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                                <div class="w-2 h-4 bg-white rounded-sm"></div>
+                        <div class="bg-white/95 p-4 rounded-2xl shadow-xl text-center border-2 border-blue-200 hover:shadow-2xl transition-all duration-300">
+                            <div class="w-24 h-24 mx-auto mb-3 rounded-2xl overflow-hidden shadow-lg border-2 border-blue-300 hover:scale-110 transition-transform duration-300">
+                                <img 
+                                    src="./images/quick.jpg" 
+                                    alt="तुरंत राहत - Quick Relief" 
+                                    class="w-full h-full object-cover"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                >
+                                <div class="hidden w-full h-full bg-blue-500 items-center justify-center" style="display: none;">
+                                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                                        <span class="text-blue-500 text-2xl">⚡</span>
+                                    </div>
+                                </div>
                             </div>
-                            <span class="text-xs font-semibold text-gray-700">तुरंत राहत</span>
+                            <span class="text-sm font-bold text-gray-800">तुरंत राहत</span>
                         </div>
-                        <div class="bg-white/80 p-3 rounded-xl shadow-sm text-center">
-                            <div class="w-8 h-8 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                                <div class="w-4 h-1 bg-white rounded-full"></div>
+                        <div class="bg-white/95 p-4 rounded-2xl shadow-xl text-center border-2 border-red-200 hover:shadow-2xl transition-all duration-300">
+                            <div class="w-24 h-24 mx-auto mb-3 rounded-2xl overflow-hidden shadow-lg border-2 border-red-300 hover:scale-110 transition-transform duration-300">
+                                <img 
+                                    src="./images/noChemicals.jpg" 
+                                    alt="No केमिकल - Chemical Free" 
+                                    class="w-full h-full object-cover"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                >
+                                <div class="hidden w-full h-full bg-red-500 items-center justify-center" style="display: none;">
+                                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                                        <span class="text-red-500 text-2xl">🚫</span>
+                                    </div>
+                                </div>
                             </div>
-                            <span class="text-xs font-semibold text-gray-700">No केमिकल</span>
+                            <span class="text-sm font-bold text-gray-800">No केमिकल</span>
                         </div>
                     </div>
                     
                     <!-- Hero CTA Button -->
                     <div class="text-center">
-                        <button onclick="scrollToContact()" class="bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:from-red-700 hover:to-red-800 transition-all transform hover:scale-105 pulse-animation">
+                        <button onclick="scrollToContact()" class="bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-full font-bold text-2xl shadow-xl hover:from-red-700 hover:to-red-800 transition-all transform hover:scale-105 pulse-animation">
                             🛒 अभी ऑर्डर करें - विशेष छूट
                         </button>
-                        <p class="text-sm text-gray-600 mt-2">📞 तुरंत कॉल बैक के लिए</p>
+                        <p class="text-sm text-gray-600 mt-2">🛒 तुरंत ऑर्डर के लिए फॉर्म भरें</p>
                     </div>
                 </div>
                 
                 <!-- Enhanced Product Showcase -->
                 <div class="relative max-w-md mx-auto">
+
                     <!-- Main Product Card -->
                     <div class="relative bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 rounded-3xl shadow-2xl overflow-hidden border border-orange-100">
-                        <!-- Premium Badge -->
-                        <div class="absolute top-4 right-4 z-20 bg-gradient-to-r from-orange-400 to-red-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-                            ⭐ Premium Quality
-                        </div>
                         
                         <!-- Product Image Section -->
                         <div class="relative h-80 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 flex items-center justify-center p-2 overflow-hidden">
@@ -1754,7 +2275,7 @@
                                 <div class="hidden w-full h-full flex-col items-center justify-center text-gray-600 bg-white rounded-2xl shadow-lg border-2 border-dashed border-gray-300" style="display: none;">
                                     <div class="text-8xl mb-3">🧴</div>
                                     <p class="font-bold text-2xl text-center text-gray-700">Metrex Nuero Shakti</p>
-                                    <p class="text-lg text-center text-gray-500 mt-1">Pain Relief Oil</p>
+                                    <p class="text-xl text-center text-gray-500 mt-1">Pain Relief Oil</p>
                                     <p class="text-sm text-center text-orange-600 mt-2">100% आयुर्वेदिक</p>
                                 </div>
                             </div>
@@ -1767,44 +2288,74 @@
                         <div class="p-6 bg-gradient-to-r from-orange-50 to-amber-50">
                             <!-- Product Name & Description -->
                             <div class="text-center mb-4">
-                                <h3 class="text-xl font-bold text-gray-800 mb-1">Metrex Nuero Shakti</h3>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-1">Metrex Nuero Shakti</h3>
                                 <p class="text-sm text-gray-700 mb-3">जोड़ों का दर्द... अब नहीं!</p>
                                 
-                                <!-- Key Features -->
-                                <div class="flex justify-center gap-2 mb-3">
-                                    <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-semibold border border-orange-200">
-                                        🌿 100% आयुर्वेदिक
-                                    </span>
-                                    <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-xs font-semibold border border-amber-200">
-                                        ⚡ तुरंत राहत
-                                    </span>
+                                <!-- Key Features with Images - 5xl Size -->
+                                <div class="grid grid-cols-2 gap-3 mb-6 max-w-sm mx-auto">
+                                    <div class="bg-orange-100 p-3 rounded-xl border border-orange-200 flex flex-col items-center gap-2 hover:shadow-lg transition-all duration-300">
+                                        <div class="w-24 h-24 rounded-xl overflow-hidden shadow-lg border-2 border-orange-300 hover:scale-110 transition-transform duration-300">
+                                            <img 
+                                                src="./images/100ayu.png" 
+                                                alt="100% आयुर्वेदिक" 
+                                                class="w-full h-full object-cover"
+                                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                            >
+                                            <div class="hidden w-full h-full bg-gradient-to-r from-orange-500 to-orange-600 items-center justify-center" style="display: none;">
+                                                <span class="text-white text-4xl">🌿</span>
+                                            </div>
+                                        </div>
+                                        <span class="text-orange-700 text-xs font-bold text-center leading-tight">100% आयुर्वेदिक</span>
+                                    </div>
+                                    <div class="bg-red-100 p-3 rounded-xl border border-red-200 flex flex-col items-center gap-2 hover:shadow-lg transition-all duration-300">
+                                        <div class="w-24 h-24 rounded-xl overflow-hidden shadow-lg border-2 border-red-300 hover:scale-110 transition-transform duration-300">
+                                            <img 
+                                                src="./images/noChemicals.png" 
+                                                alt="No केमिकल" 
+                                                class="w-full h-full object-cover"
+                                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                            >
+                                            <div class="hidden w-full h-full bg-gradient-to-r from-red-500 to-red-600 items-center justify-center" style="display: none;">
+                                                <span class="text-white text-4xl">🚫</span>
+                                            </div>
+                                        </div>
+                                        <span class="text-red-700 text-xs font-bold text-center leading-tight">No केमिकल</span>
+                                    </div>
                                 </div>
                                 
-                                <!-- Product Specs -->
-                                <div class="flex justify-between items-center text-xs text-gray-600">
-                                    <div class="flex items-center gap-1">
-                                        <span class="w-2 h-2 bg-orange-400 rounded-full"></span>
-                                        <span>50ml</span>
+                                <!-- Product Specs with Images - 5xl Size -->
+                                <div class="grid grid-cols-2 gap-3 max-w-sm mx-auto">
+                                    <div class="flex flex-col items-center gap-2 bg-blue-50 p-3 rounded-xl border border-blue-200 hover:shadow-lg transition-all duration-300">
+                                        <div class="w-24 h-24 rounded-xl overflow-hidden shadow-lg border-2 border-blue-300 hover:scale-110 transition-transform duration-300">
+                                            <img 
+                                                src="./images/labtested.png" 
+                                                alt="Lab Tested" 
+                                                class="w-full h-full object-cover"
+                                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                            >
+                                            <div class="hidden w-full h-full bg-gradient-to-r from-blue-500 to-blue-600 items-center justify-center" style="display: none;">
+                                                <span class="text-white text-4xl">🧪</span>
+                                            </div>
+                                        </div>
+                                        <span class="font-bold text-blue-700 text-xs text-center leading-tight">Lab Tested</span>
                                     </div>
-                                    <div class="flex items-center gap-1">
-                                        <span class="w-2 h-2 bg-amber-400 rounded-full"></span>
-                                        <span>Lab Tested</span>
-                                    </div>
-                                    <div class="flex items-center gap-1">
-                                        <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
-                                        <span>ISO Certified</span>
+                                    <div class="flex flex-col items-center gap-2 bg-green-50 p-3 rounded-xl border border-green-200 hover:shadow-lg transition-all duration-300">
+                                        <div class="w-24 h-24 rounded-xl overflow-hidden shadow-lg border-2 border-green-300 hover:scale-110 transition-transform duration-300">
+                                            <img 
+                                                src="./images/ios.png" 
+                                                alt="ISO Certified" 
+                                                class="w-full h-full object-cover"
+                                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                            >
+                                            <div class="hidden w-full h-full bg-gradient-to-r from-green-500 to-green-600 items-center justify-center" style="display: none;">
+                                                <span class="text-white text-4xl">🏆</span>
+                                            </div>
+                                        </div>
+                                        <span class="font-bold text-green-700 text-xs text-center leading-tight">ISO Certified</span>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <!-- Click to View Hint -->
-                            <div class="text-center">
-                                <div class="inline-flex items-center gap-2 bg-orange-100 hover:bg-orange-200 px-4 py-2 rounded-full text-xs text-orange-700 cursor-pointer transition-colors border border-orange-200" onclick="openImageModal('./images/productImage.png')">
-                                    <span>🔍</span>
-                                    <span>बड़ी तस्वीर देखने के लिए क्लिक करें</span>
-                                </div>
-                            </div>
-                        </div>
+                          
                         
                         <!-- Decorative Corner Elements -->
                         <div class="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-orange-200/15 to-transparent rounded-br-full"></div>
@@ -1813,19 +2364,19 @@
                     
                     <!-- Floating Trust Badges -->
                     <div class="absolute -top-3 -left-3 bg-orange-500 text-white p-3 rounded-full shadow-lg animate-bounce">
-                        <span class="text-lg">🛡️</span>
+                        <span class="text-xl">🛡️</span>
                     </div>
                     <div class="absolute -bottom-3 -right-3 bg-amber-500 text-white p-3 rounded-full shadow-lg animate-pulse">
-                        <span class="text-lg">⭐</span>
+                        <span class="text-xl">⭐</span>
                     </div>
                 </div>
                 
                 <!-- Hero CTA Button -->
                 <div class="text-center mt-8">
-                    <button onclick="scrollToContact()" class="bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:from-red-700 hover:to-red-800 transition-all transform hover:scale-105 pulse-animation">
-                        🛒 अभी ऑर्डर करें - विशेष छूट
+                    <button onclick="scrollToContact()" class="bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-full font-bold text-2xl shadow-xl hover:from-red-700 hover:to-red-800 transition-all transform hover:scale-105 pulse-animation">
+                       🛒  अभी ऑर्डर करें - विशेष छूट
                     </button>
-                    <p class="text-sm text-gray-600 mt-2">📞 तुरंत कॉल बैक के लिए</p>
+                    <p class="text-sm text-gray-600 mt-2">  🛒  तुरंत ऑर्डर के लिए फॉर्म भरें</p>
                 </div>
             </div>
         </div>
@@ -1850,36 +2401,30 @@
             
             <div class="relative max-w-lg mx-auto">
                 <!-- Emotional Impact Visual -->
-                <div class="text-center mb-8">
-                    <div class="inline-block bg-white rounded-full p-6 shadow-xl mb-4">
-                        <div class="text-5xl md:text-6xl">😰</div>
-                    </div>
-                    <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">दर्द सिर्फ़ दर्द नहीं...</h2>
+                <div class="text-center mb-6"></div>
+                    <h2 class="text-5xl md:text-6xl font-bold text-red-800 mb-2">दर्द सिर्फ़ दर्द नहीं...</h2>
                     <p class="text-gray-700 text-base md:text-lg">ये आपकी पूरी जिंदगी को प्रभावित करता है</p>
                 </div>
                 
-                <!-- Before/After Comparison -->
-                <div class="grid grid-cols-2 gap-3 md:gap-4 mb-8">
-                    <div class="bg-red-100 border-2 border-red-300 rounded-xl p-4">
-                        <div class="text-center">
-                            <div class="text-4xl mb-3">😔</div>
-                            <h3 class="font-bold text-red-700 mb-2">दर्द के साथ</h3>
-                            <div class="space-y-2 text-sm">
-                                <p class="flex items-center text-red-600"><span class="mr-2">❌</span>मुश्किल चलना</p>
-                                <p class="flex items-center text-red-600"><span class="mr-2">❌</span>नींद की समस्या</p>
-                                <p class="flex items-center text-red-600"><span class="mr-2">❌</span>काम में दिक्कत</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-gradient-to-br from-red-50 to-orange-100 border-2 border-red-300 rounded-xl p-4">
-                        <div class="text-center">
-                            <div class="text-4xl mb-3">😊</div>
-                            <h3 class="font-bold text-red-700 mb-2">राहत के बाद</h3>
-                            <div class="space-y-2 text-sm">
-                                <p class="flex items-center text-red-700"><span class="mr-2">✅</span>आसान चलना</p>
-                                <p class="flex items-center text-red-700"><span class="mr-2">✅</span>बेहतर नींद</p>
-                                <p class="flex items-center text-red-700"><span class="mr-2">✅</span>सक्रिय जीवन</p>
+                <!-- Lifestyle Image -->
+                <div class="mb-8">
+                    <div class="relative w-full max-w-md mx-auto">
+                        <div class="bg-gradient-to-br from-red-50 to-orange-100 rounded-2xl p-4 shadow-xl border-2 border-red-200">
+                            <img 
+                                src="./images/lifeStyle.png" 
+                                alt="Healthy Lifestyle with Pain Relief - स्वस्थ जीवनशैली और दर्द निवारण" 
+                                class="w-full h-auto rounded-xl shadow-lg clickable-image hover:scale-105 transition-all duration-500"
+                                loading="lazy"
+                                onclick="openImageModal(this.src)"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                title="स्वस्थ जीवनशैली के लिए क्लिक करें"
+                            >
+                            <!-- Fallback for lifestyle image -->
+                            <div class="hidden w-full h-64 flex-col items-center justify-center bg-gradient-to-br from-red-100 to-orange-100 rounded-xl border-2 border-dashed border-red-200" style="display: none;">
+                                <div class="text-6xl mb-4">🏃‍♂️</div>
+                                <p class="font-bold text-xl text-center text-gray-700">स्वस्थ जीवनशैली</p>
+                                <p class="text-xl text-center text-gray-500 mt-1">Pain Free Life</p>
+                                <p class="text-sm text-center text-red-600 mt-2">दर्द मुक्त जीवन</p>
                             </div>
                         </div>
                     </div>
@@ -1900,10 +2445,7 @@
             <div class="relative max-w-lg mx-auto">
                 <!-- Professional Header -->
                 <div class="text-center mb-8">
-                    <div class="inline-block bg-gradient-to-r from-red-600 to-orange-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4 shadow-lg">
-                        <span class="english-text">Professional Solution</span>
-                    </div>
-                    <h2 class="text-2xl font-bold text-gray-800 mb-3 hindi-text leading-relaxed">समझदार विकल्प</h2>
+                    <h2 class="text-6xl font-bold text-red-800 mb-3 hindi-text leading-relaxed ">समझदार विकल्प</h2>
                     <p class="text-gray-600 text-lg hindi-text">जो वास्तव में काम करता है</p>
                 </div>
                 
@@ -1913,7 +2455,7 @@
                     <div class="bg-gradient-to-r from-red-600 via-orange-600 to-amber-600 px-6 py-4">
                         <div class="flex items-center justify-between">
                             <div>
-                                <h3 class="text-white font-bold text-lg english-text">Metrex Nuero Shakti</h3>
+                                <h3 class="text-white font-bold text-2xl english-text">Metrex Nuero Shakti</h3>
                                 <p class="text-red-100 text-sm hindi-text">प्रमाणित आयुर्वेदिक फॉर्मूला</p>
                             </div>
                             <div class="bg-white/20 rounded-full px-3 py-1">
@@ -1943,79 +2485,19 @@
                                         <div class="w-8 h-8 border-2 border-white rounded-full"></div>
                                     </div>
                                     <p class="font-bold text-xl text-center text-gray-700 hindi-text">Metrex Nuero Shakti</p>
-                                    <p class="text-lg text-center text-gray-500 mt-1 english-text">Pain Relief Oil</p>
+                                    <p class="text-xl text-center text-gray-500 mt-1 english-text">Pain Relief Oil</p>
                                     <p class="text-sm text-center text-red-600 mt-2 hindi-text font-semibold">100% आयुर्वेदिक समाधान</p>
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- Professional Information Grid -->
-                        <div class="grid grid-cols-2 gap-4 mb-6">
-                            <div class="bg-gradient-to-br from-red-50 to-orange-50 p-4 rounded-xl border border-red-200/50 hover:shadow-md transition-shadow duration-300">
-                                <div class="flex items-center mb-2">
-                                    <div class="w-8 h-8 bg-red-500 rounded-full mr-3 flex items-center justify-center">
-                                        <div class="w-4 h-4 border-2 border-white rounded-full"></div>
-                                    </div>
-                                    <h4 class="font-bold text-gray-800 text-sm hindi-text">तुरंत प्रभावी</h4>
-                                </div>
-                                <p class="text-xs text-gray-600 hindi-text">15 मिनट में राहत महसूस करें</p>
-                            </div>
-                            
-                            <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-4 rounded-xl border border-orange-200/50 hover:shadow-md transition-shadow duration-300">
-                                <div class="flex items-center mb-2">
-                                    <div class="w-8 h-8 bg-orange-500 rounded-full mr-3 flex items-center justify-center">
-                                        <div class="w-3 h-3 bg-white rounded-full"></div>
-                                    </div>
-                                    <h4 class="font-bold text-gray-800 text-sm hindi-text">प्राकृतिक</h4>
-                                </div>
-                                <p class="text-xs text-gray-600 hindi-text">8 आयुर्वेदिक जड़ी-बूटियाँ</p>
-                            </div>
-                            
-                            <div class="bg-gradient-to-br from-amber-50 to-yellow-50 p-4 rounded-xl border border-amber-200/50 hover:shadow-md transition-shadow duration-300">
-                                <div class="flex items-center mb-2">
-                                    <div class="w-8 h-8 bg-amber-500 rounded-full mr-3 flex items-center justify-center">
-                                        <div class="w-2 h-4 bg-white rounded-sm"></div>
-                                    </div>
-                                    <h4 class="font-bold text-gray-800 text-sm hindi-text">प्रमाणित</h4>
-                                </div>
-                                <p class="text-xs text-gray-600 english-text">ISO & Lab Tested</p>
-                            </div>
-                            
-                            <div class="bg-gradient-to-br from-yellow-50 to-orange-50 p-4 rounded-xl border border-yellow-200/50 hover:shadow-md transition-shadow duration-300">
-                                <div class="flex items-center mb-2">
-                                    <div class="w-8 h-8 bg-yellow-500 rounded-full mr-3 flex items-center justify-center">
-                                        <div class="w-4 h-1 bg-white rounded-full"></div>
-                                    </div>
-                                    <h4 class="font-bold text-gray-800 text-sm hindi-text">सुरक्षित</h4>
-                                </div>
-                                <p class="text-xs text-gray-600 hindi-text">कोई साइड इफेक्ट नहीं</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Professional Credentials -->
-                        <div class="bg-gradient-to-r from-red-50 to-orange-50 p-4 rounded-xl border border-red-200/50 mb-6">
-                            <div class="flex items-center justify-between text-xs">
-                                <div class="flex items-center">
-                                    <div class="w-2 h-2 bg-red-500 rounded-full mr-2"></div>
-                                    <span class="text-gray-600 english-text">50ml Bottle</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <div class="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
-                                    <span class="text-gray-600 english-text">Lab Certified</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <div class="w-2 h-2 bg-amber-500 rounded-full mr-2"></div>
-                                    <span class="text-gray-600 hindi-text">डॉक्टर अप्रूव्ड</span>
-                                </div>
-                            </div>
-                        </div>
+                    
                         
                         <!-- Professional CTA -->
                         <div class="text-center">
-                            <button onclick="scrollToContact()" class="bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 pulse-animation hindi-text">
+                            <button onclick="scrollToContact()" class="bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-full font-bold text-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 pulse-animation hindi-text">
                                 प्रोफेशनल सलूशन पाएं
                             </button>
-                            <p class="text-sm text-gray-600 mt-3 hindi-text">✅ मुफ्त डिलीवरी | 📞 एक्सपर्ट सपोर्ट</p>
+                            <p class="text-sm text-gray-600 mt-3 hindi-text">✅ मुफ्त डिलीवरी | 🛒 एक्सपर्ट सपोर्ट</p>
                             
                             <!-- View Details Button -->
                             <div class="mt-4">
@@ -2034,20 +2516,30 @@
                     <div class="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-orange-200/10 to-transparent rounded-tr-full"></div>
                 </div>
                 
-                <!-- Professional Trust Indicators -->
-                <div class="flex justify-center gap-4 mt-6">
-                    <div class="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-md border border-red-200/50">
-                        <span class="text-xs font-semibold text-gray-700 english-text">4.9★ Rating</span>
+                <!-- Enhanced Trust Indicators with Highlighting -->
+                <div class="flex justify-center gap-3 mt-8">
+                    <div class="bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-4 rounded-full shadow-2xl border-4 border-yellow-400 hover:shadow-2xl hover:scale-110 transition-all duration-300 transform animate-bounce">
+                        <span class="text-lg font-bold english-text flex items-center gap-2">
+                            <span class="text-yellow-300 text-xl animate-pulse">⭐</span>4.9★ Rating
+                        </span>
                     </div>
-                    <div class="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-md border border-orange-200/50">
-                        <span class="text-xs font-semibold text-gray-700 hindi-text">10,000+ ग्राहक</span>
+                    <div class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-4 rounded-full shadow-2xl border-4 border-yellow-400 hover:shadow-2xl hover:scale-110 transition-all duration-300 transform animate-bounce" style="animation-delay: 0.2s;">
+                        <span class="text-lg font-bold hindi-text flex items-center gap-2">
+                            <span class="text-green-300 text-xl animate-pulse" style="animation-delay: 0.2s;">👥</span>100,000+ ग्राहक
+                        </span>
                     </div>
-                    <div class="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-md border border-amber-200/50">
-                        <span class="text-xs font-semibold text-gray-700 english-text">ISO Certified</span>
+                    <div class="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-6 py-4 rounded-full shadow-2xl border-4 border-yellow-400 hover:shadow-2xl hover:scale-110 transition-all duration-300 transform animate-bounce" style="animation-delay: 0.4s;">
+                        <span class="text-lg font-bold english-text flex items-center gap-2">
+                            <span class="text-blue-300 text-xl animate-pulse" style="animation-delay: 0.4s;">🛡️</span>ISO Certified
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
+
+            
+           
+        
 
         <!-- Professional Pain Impact Section -->
         <div class="px-4 py-8 bg-gradient-to-br from-red-50 via-orange-50 to-amber-50 relative overflow-hidden">
@@ -2072,10 +2564,10 @@
                     </div>
                     
                     <!-- Main Heading -->
-                    <h2 class="problem-title">दर्द सिर्फ़ दर्द नहीं...</h2>
+                    <h2 class="problem-title text-red-800">दर्द सिर्फ़ दर्द नहीं...</h2>
                     
                     <!-- Subheading -->
-                    <p class="text-gray-700 text-lg leading-relaxed font-semibold mb-6">ये धीरे-धीरे आपकी <span class="highlight-text">उम्र, हिम्मत और खुशियों</span> को कम करता है</p>
+                    <p class="text-gray-700 text-lg leading-relaxed font-semibold mb-6">ये धीरे-धीरे आपकी <span class="text-red-700 font-bold">उम्र, हिम्मत और खुशियों</span> को कम करता है</p>
                     
                     <!-- Impact Analysis Visual -->
                     <div class="before-after-container">
@@ -2083,7 +2575,7 @@
                             <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center">
                                 <div class="w-6 h-6 border-2 border-white rounded-full"></div>
                             </div>
-                            <h3 class="font-bold text-xl text-gray-800">दर्द का असली प्रभाव</h3>
+                            <h3 class="font-bold text-2xl text-gray-800">दर्द का असली प्रभाव</h3>
                         </div>
                     </div>
                 </div>
@@ -2316,111 +2808,6 @@
             </div>
         </div>
 
-        <!-- Solution Section -->
-        <div class="px-4 py-8 bg-gradient-to-br from-red-50 via-orange-50 to-amber-50 relative overflow-hidden">
-            <!-- Background Elements -->
-            <div class="absolute inset-0 opacity-10">
-                <div class="absolute top-10 left-10 w-32 h-32 bg-red-400 rounded-full blur-xl"></div>
-                <div class="absolute bottom-10 right-10 w-24 h-24 bg-orange-400 rounded-full blur-lg"></div>
-            </div>
-            
-            <div class="relative max-w-lg mx-auto">
-                <div class="text-center mb-6">
-                    <!-- Solution Badge -->
-                    <div class="inline-block bg-gradient-to-r from-red-600 to-orange-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4 shadow-lg">
-                        प्राकृतिक समाधान
-                    </div>
-                    
-                    <!-- Solution Icon -->
-                    <div class="w-16 h-16 bg-gradient-to-r from-red-600 to-orange-600 rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
-                        <div class="w-8 h-8 border-2 border-white rounded-full flex items-center justify-center">
-                            <div class="w-4 h-4 bg-white rounded-full"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Main Heading -->
-                    <h2 class="solution-title">आयुर्वेद से समाधान</h2>
-                </div>
-                
-                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-red-200">
-                    <!-- Product Highlight -->
-                    <div class="bg-gradient-to-r from-red-600 via-red-700 to-orange-600 text-white p-6 text-center">
-                        <!-- Product Icon -->
-                        <div class="w-16 h-16 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                                <div class="w-4 h-4 bg-red-600 rounded-full"></div>
-                            </div>
-                        </div>
-                        
-                        <!-- Heading -->
-                        <h3 class="text-2xl font-bold mb-2">पेश है — Metrex Nuero Shakti</h3>
-                        
-                        <!-- Subheading -->
-                        <p class="text-red-100 mb-4">Pain Relief Oil</p>
-                        
-                        <!-- Feature Badge -->
-                        <div class="inline-flex items-center bg-white/20 px-4 py-2 rounded-full">
-                            <div class="w-4 h-4 bg-amber-300 rounded-full mr-2"></div>
-                            <span class="font-bold">100% आयुर्वेदिक फॉर्मूला</span>
-                        </div>
-                    </div>
-                    
-                    <div class="p-6">
-                        <div class="testimonial-card mb-4">
-                            <p class="text-gray-800 font-semibold leading-relaxed">
-                                "ये सिर्फ़ <span class="highlight-text">पेन रिलीफ ऑयल</span> नहीं, बल्कि जोड़ों की <span class="solution-highlight">मजबूती, पोषण और लचीलापन</span> वापस लाने वाली आयुर्वेदिक थेरेपी है।"
-                            </p>
-                            <p class="text-sm text-gray-600 mt-2 font-semibold">— आयुर्वेद विशेषज्ञ</p>
-                        </div>
-                        
-                        <!-- Key Benefits -->
-                        <div class="grid grid-cols-2 gap-3 mb-6">
-                            <div class="text-center p-3 bg-red-50 rounded-xl border border-red-100">
-                                <!-- Icon -->
-                                <div class="w-8 h-8 bg-gradient-to-r from-red-500 to-red-600 rounded-full mx-auto mb-2 flex items-center justify-center shadow-md">
-                                    <div class="w-3 h-3 bg-white rounded-full"></div>
-                                </div>
-                                <!-- Content -->
-                                <p class="text-sm font-bold text-red-700">तुरंत राहत</p>
-                            </div>
-                            <div class="text-center p-3 bg-orange-50 rounded-xl border border-orange-100">
-                                <!-- Icon -->
-                                <div class="w-8 h-8 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full mx-auto mb-2 flex items-center justify-center shadow-md">
-                                    <div class="w-4 h-4 border-2 border-white rounded-full"></div>
-                                </div>
-                                <!-- Content -->
-                                <p class="text-sm font-bold text-orange-700">100% प्राकृतिक</p>
-                            </div>
-                            <div class="text-center p-3 bg-amber-50 rounded-xl border border-amber-100">
-                                <!-- Icon -->
-                                <div class="w-8 h-8 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full mx-auto mb-2 flex items-center justify-center shadow-md">
-                                    <div class="w-2 h-4 bg-white rounded-sm"></div>
-                                </div>
-                                <!-- Content -->
-                                <p class="text-sm font-bold text-amber-700">वैज्ञानिक फॉर्मूला</p>
-                            </div>
-                            <div class="text-center p-3 bg-yellow-50 rounded-xl border border-yellow-100">
-                                <!-- Icon -->
-                                <div class="w-8 h-8 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mx-auto mb-2 flex items-center justify-center shadow-md">
-                                    <div class="w-4 h-1 bg-white rounded-full"></div>
-                                </div>
-                                <!-- Content -->
-                                <p class="text-sm font-bold text-red-700">कोई नुकसान नहीं</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Solution CTA -->
-                        <div class="text-center">
-                            <button onclick="scrollToContact()" class="bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:from-red-700 hover:to-red-800 transition-all transform hover:scale-105 pulse-animation">
-                                🌿 यह समाधान चाहिए - अभी मंगवाएं
-                            </button>
-                            <p class="text-sm text-gray-600 mt-2">🚚 मुफ्त डिलीवरी | 📞 24 घंटे में कॉल बैक</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Professional Before/After Transformation -->
         <div class="px-4 py-8 bg-gradient-to-br from-red-50 via-orange-50 to-amber-50 relative overflow-hidden">
             <!-- Background Pattern -->
@@ -2538,58 +2925,117 @@
             </div>
         </div>
 
-        <!-- Ingredients Showcase -->
-        <div class="px-4 py-8 bg-gradient-to-br from-green-50 to-emerald-50 relative">
-            <!-- Decorative Elements -->
-            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-green-400 via-emerald-400 to-green-400"></div>
+        <!-- Enhanced Ingredients Showcase with Highlighting -->
+        <div class="px-4 py-8 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-700 relative overflow-hidden">
+            <!-- Animated Background Elements -->
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-2xl animate-pulse"></div>
+                <div class="absolute bottom-10 right-10 w-24 h-24 bg-yellow-200 rounded-full blur-xl animate-bounce"></div>
+                <div class="absolute top-1/2 left-1/4 w-6 h-6 bg-white rounded-full animate-ping"></div>
+                <div class="absolute bottom-1/3 right-1/3 w-4 h-4 bg-green-300 rounded-full animate-bounce" style="animation-delay: 0.3s;"></div>
+            </div>
             
-            <div class="text-center mb-8">
-                <div class="inline-block bg-white rounded-full p-4 shadow-lg mb-4">
-                    <span class="text-4xl">🌿</span>
+            <!-- Highlighted Header -->
+            <div class="text-center mb-8 relative z-10">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border-4 border-yellow-400 mb-4 animate-bounce">
+                    <div class="flex items-center justify-center gap-3 mb-3">
+                        <span class="text-5xl animate-pulse">🌿</span>
+                        <h2 class="text-3xl font-bold text-gray-800 hindi-text">प्राकृतिक आयुर्वेदिक शक्ति</h2>
+                        <span class="text-5xl animate-pulse">🌿</span>
+                    </div>
+                    <div class="bg-gradient-to-r from-green-100 to-emerald-100 px-6 py-3 rounded-full inline-block border-2 border-green-400">
+                        <p class="text-gray-800 font-bold text-lg">8 शक्तिशाली जड़ी-बूटियों का संयोजन</p>
+                    </div>
                 </div>
-                <h2 class="text-2xl font-bold text-gray-800 mb-2">प्राकृतिक आयुर्वेदिक शक्ति</h2>
-                <p class="text-gray-600">8 शक्तिशाली जड़ी-बूटियों का संयोजन</p>
             </div>
             
             <!-- Ingredients Grid -->
             <div class="grid grid-cols-2 gap-4 mb-6">
-                <div class="bg-white rounded-xl p-4 shadow-md border-l-4 border-green-500">
-                    <div class="flex items-center mb-2">
-                        <span class="text-2xl mr-3">🌱</span>
-                        <h3 class="font-bold text-gray-800">महामाशा तैल</h3>
+                <div class="bg-white rounded-xl p-4 shadow-md border-l-4 border-green-500 hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-start gap-3 mb-2">
+                        <div class="w-16 h-16 rounded-lg overflow-hidden shadow-md border-2 border-green-300 flex-shrink-0">
+                            <img 
+                                src="./images/oil.webp" 
+                                alt="महामाशा तैल - Pure Ayurvedic Oil" 
+                                class="w-full h-full object-cover"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                            >
+                            <div class="hidden w-full h-full bg-gradient-to-br from-green-500 to-green-600 items-center justify-center" style="display: none;">
+                                <span class="text-white text-2xl">🌱</span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-gray-800 text-sm">महामाशा तैल</h3>
+                            <p class="text-xs text-gray-600 mt-1">नसों और ऊतकों को मजबूती</p>
+                        </div>
                     </div>
-                    <p class="text-sm text-gray-600">नसों और ऊतकों को मजबूती</p>
                 </div>
                 
-                <div class="bg-white rounded-xl p-4 shadow-md border-l-4 border-blue-500">
-                    <div class="flex items-center mb-2">
-                        <span class="text-2xl mr-3">🍃</span>
-                        <h3 class="font-bold text-gray-800">निर्गुंडी</h3>
+                <div class="bg-white rounded-xl p-4 shadow-md border-l-4 border-blue-500 hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-start gap-3 mb-2">
+                        <div class="w-16 h-16 rounded-lg overflow-hidden shadow-md border-2 border-blue-300 flex-shrink-0">
+                            <img 
+                                src="./images/plant.webp" 
+                                alt="निर्गुंडी - Natural Plant" 
+                                class="w-full h-full object-cover"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                            >
+                            <div class="hidden w-full h-full bg-gradient-to-br from-blue-500 to-blue-600 items-center justify-center" style="display: none;">
+                                <span class="text-white text-2xl">🍃</span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-gray-800 text-sm">निर्गुंडी</h3>
+                            <p class="text-xs text-gray-600 mt-1">सूजन और दर्द में कमी</p>
+                        </div>
                     </div>
-                    <p class="text-sm text-gray-600">सूजन और दर्द में कमी</p>
                 </div>
                 
-                <div class="bg-white rounded-xl p-4 shadow-md border-l-4 border-purple-500">
-                    <div class="flex items-center mb-2">
-                        <span class="text-2xl mr-3">🌿</span>
-                        <h3 class="font-bold text-gray-800">अश्वगंधा</h3>
+                <div class="bg-white rounded-xl p-4 shadow-md border-l-4 border-purple-500 hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-start gap-3 mb-2">
+                        <div class="w-16 h-16 rounded-lg overflow-hidden shadow-md border-2 border-purple-300 flex-shrink-0">
+                            <img 
+                                src="./images/ashwalandha.jpg" 
+                                alt="अश्वगंधा - Ashwagandha Root" 
+                                class="w-full h-full object-cover"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                            >
+                            <div class="hidden w-full h-full bg-gradient-to-br from-purple-500 to-purple-600 items-center justify-center" style="display: none;">
+                                <span class="text-white text-2xl">🌿</span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-gray-800 text-sm">अश्वगंधा</h3>
+                            <p class="text-xs text-gray-600 mt-1">मांसपेशियों की ताकत</p>
+                        </div>
                     </div>
-                    <p class="text-sm text-gray-600">मांसपेशियों की ताकत</p>
                 </div>
                 
-                <div class="bg-white rounded-xl p-4 shadow-md border-l-4 border-orange-500">
-                    <div class="flex items-center mb-2">
-                        <span class="text-2xl mr-3">🌾</span>
-                        <h3 class="font-bold text-gray-800">शल्लकी</h3>
+                <div class="bg-white rounded-xl p-4 shadow-md border-l-4 border-orange-500 hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-start gap-3 mb-2">
+                        <div class="w-16 h-16 rounded-lg overflow-hidden shadow-md border-2 border-orange-300 flex-shrink-0">
+                            <img 
+                                src="./images/shakalki.jpg" 
+                                alt="शल्लकी - Boswellia Serrata" 
+                                class="w-full h-full object-cover"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                            >
+                            <div class="hidden w-full h-full bg-gradient-to-br from-orange-500 to-orange-600 items-center justify-center" style="display: none;">
+                                <span class="text-white text-2xl">🌾</span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-gray-800 text-sm">शल्लकी</h3>
+                            <p class="text-xs text-gray-600 mt-1">जोड़ों में लचीलापन</p>
+                        </div>
                     </div>
-                    <p class="text-sm text-gray-600">जोड़ों में लचीलापन</p>
                 </div>
             </div>
             
             <!-- View All Ingredients Button -->
             <div class="text-center">
                 <button onclick="scrollToContact()" class="bg-red-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-red-700 transition-all">
-                    ऑर्डर करें - सभी घटकों के साथ 📞
+                    ऑर्डर करें - सभी घटकों के साथ 🛒
                 </button>
             </div>
         </div>
@@ -2667,30 +3113,29 @@
             </div>
         </div>
 
-        <!-- How It Works - Professional Design -->
-        <div class="px-4 py-8 bg-gradient-to-br from-red-50 via-orange-50 to-amber-50 relative overflow-hidden">
-            <!-- Background Elements -->
-            <div class="absolute inset-0 opacity-10">
-                <div class="absolute top-10 left-10 w-24 h-24 bg-red-400 rounded-full blur-xl"></div>
-                <div class="absolute bottom-10 right-10 w-32 h-32 bg-orange-400 rounded-full blur-lg"></div>
-                <div class="absolute top-1/2 left-1/3 w-4 h-4 bg-amber-400 rounded-full"></div>
+        <!-- Enhanced How It Works Section with Highlighting -->
+        <div class="px-4 py-8 bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-700 relative overflow-hidden">
+            <!-- Animated Background Elements -->
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-2xl animate-pulse"></div>
+                <div class="absolute bottom-10 right-10 w-24 h-24 bg-cyan-200 rounded-full blur-xl animate-bounce"></div>
+                <div class="absolute top-1/2 right-1/4 w-6 h-6 bg-white rounded-full animate-ping"></div>
+                <div class="absolute bottom-1/3 left-1/4 w-4 h-4 bg-blue-300 rounded-full animate-bounce" style="animation-delay: 0.3s;"></div>
             </div>
             
             <div class="relative max-w-2xl mx-auto">
-                <!-- Section Header -->
-                <div class="text-center mb-8">
-                    <!-- Heading Icon -->
-                    <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
-                        <div class="w-8 h-8 border-2 border-white rounded-full flex items-center justify-center">
-                            <div class="w-3 h-3 bg-white rounded-full"></div>
+                <!-- Enhanced Section Header -->
+                <div class="text-center mb-8 relative z-10">
+                    <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border-4 border-cyan-400 mb-4 animate-bounce">
+                        <div class="flex items-center justify-center gap-3 mb-3">
+                            <span class="text-5xl animate-pulse">⚙️</span>
+                            <h2 class="text-3xl font-bold text-gray-800 hindi-text">कैसे करता है असर?</h2>
+                            <span class="text-5xl animate-pulse">⚙️</span>
+                        </div>
+                        <div class="bg-gradient-to-r from-blue-100 to-cyan-100 px-6 py-3 rounded-full inline-block border-2 border-blue-400">
+                            <p class="text-gray-800 font-bold text-lg">प्राकृतिक उपचार प्रक्रिया</p>
                         </div>
                     </div>
-                    
-                    <!-- Main Heading -->
-                    <h2 class="text-2xl font-bold text-gray-800 mb-2">कैसे करता है असर?</h2>
-                    
-                    <!-- Subheading -->
-                    <p class="text-gray-600 text-lg">प्राकृतिक उपचार प्रक्रिया</p>
                 </div>
                 
                 <!-- Process Steps -->
@@ -2854,86 +3299,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Doctor Testimonials -->
-        <div class="px-4 py-6 bg-gradient-to-br from-purple-50 to-pink-50">
-            <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <span class="text-2xl">👨‍⚕️</span> डॉक्टर की सलाह
-            </h2>
-            
-            <!-- Scrolling Doctor Reviews -->
-            <div class="scrolling-reviews flex pb-4" id="doctorReviews">
-                <div class="auto-scroll flex gap-4">
-                    <div class="review-card bg-white p-4 rounded-lg shadow-lg border-l-4 border-purple-500">
-                        <div class="flex items-center mb-3">
-                            <img 
-                                src="./images/docture2.jpg" 
-                                alt="Ayurvedic Doctor" 
-                                class="w-12 h-12 rounded-full mr-3 border-2 border-purple-200"
-                                onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSI+PGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjQiIGZpbGw9IiM5MzMzZWEiLz48cGF0aCBkPSJtMjQgMTZjLTIuMiAwLTQgMS44LTQgNHMxLjggNCA0IDQgNC0xLjggNC00LTEuOC00LTQtNHptMCAxNGMtNS41IDAtMTAgMi4yLTEwIDVzNC41IDMgMTAgMyAxMC0uNyAxMC0zLTQuNS01LTEwLTV6IiBmaWxsPSIjZmZmIi8+PC9zdmc+'"
-                            >
-                            <div>
-                                <h4 class="font-semibold text-gray-800">डॉ. राजेश शर्मा</h4>
-                                <p class="text-xs text-purple-600">बीएएमएस आयुर्वेद विशेषज्ञ</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-700 italic text-sm">
-                            "जोड़ों के दर्द में आयुर्वेदिक तेल चिकित्सा बहुत प्रभावी होती है। Nuero Shakti का संयोजन जोड़ों को प्राकृतिक रूप से मजबूत करने में मदद करता है।"
-                        </p>
-                        <div class="flex items-center mt-2">
-                            <div class="text-yellow-400 text-sm">★★★★★</div>
-                            <span class="text-xs text-gray-500 ml-2">15+ वर्षों का अनुभव</span>
-                        </div>
-                    </div>
-                    
-                    <div class="review-card bg-white p-4 rounded-lg shadow-lg border-l-4 border-blue-500">
-                        <div class="flex items-center mb-3">
-                            <img 
-                                src="./images/docture1.jpg" 
-                                alt="Orthopedic Specialist" 
-                                class="w-12 h-12 rounded-full mr-3 border-2 border-blue-200"
-                                onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSI+PGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjQiIGZpbGw9IiMzYjgyZjYiLz48cGF0aCBkPSJtMjQgMTZjLTIuMiAwLTQgMS44LTQgNHMxLjggNCA0IDQgNC0xLjggNC00LTEuOC00LTQtNHptMCAxNGMtNS41IDAtMTAgMi4yLTEwIDVzNC41IDMgMTAgMyAxMC0uNyAxMC0zLTQuNS01LTEwLTV6IiBmaWxsPSIjZmZmIi8+PC9zdmc+'"
-                            >
-                            <div>
-                                <h4 class="font-semibold text-gray-800">डॉ. प्रिया गुप्ता</h4>
-                                <p class="text-xs text-blue-600">ऑर्थो प्रैक्टिशनर</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-700 italic text-sm">
-                            "पेनकिलर सिर्फ़ दर्द छुपाते हैं, लेकिन तेल चिकित्सा ऊतकों को पोषण देती है। मैं अपने मरीजों को प्राकृतिक उपचार की सलाह देती हूं।"
-                        </p>
-                        <div class="flex items-center mt-2">
-                            <div class="text-yellow-400 text-sm">★★★★★</div>
-                            <span class="text-xs text-gray-500 ml-2">10+ वर्षों का अनुभव</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Duplicate cards for seamless loop -->
-                    <div class="review-card bg-white p-4 rounded-lg shadow-lg border-l-4 border-green-500">
-                        <div class="flex items-center mb-3">
-                            <img 
-                                src="./images/docture3.webp" 
-                                alt="Physiotherapy Expert" 
-                                class="w-12 h-12 rounded-full mr-3 border-2 border-green-200"
-                                onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSI+PGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjQiIGZpbGw9IiMxMGI5ODEiLz48cGF0aCBkPSJtMjQgMTZjLTIuMiAwLTQgMS44LTQgNHMxLjggNCA0IDQgNC0xLjggNC00LTEuOC00LTQtNHptMCAxNGMtNS41IDAtMTAgMi4yLTEwIDVzNC41IDMgMTAgMyAxMC0uNyAxMC0zLTQuNS01LTEwLTV6IiBmaWxsPSIjZmZmIi8+PC9zdmc+'"
-                            >
-                            <div>
-                                <h4 class="font-semibold text-gray-800">डॉ. अमित कुमार</h4>
-                                <p class="text-xs text-green-600">फिजियोथेरेपी एक्सपर्ट</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-700 italic text-sm">
-                            "जोड़ों की गतिशीलता बढ़ाने में आयुर्वेदिक तेल का बहुत फायदा है। मैं अपने पेशेंट्स को रेगुलर मसाज की सलाह देता हूं।"
-                        </p>
-                        <div class="flex items-center mt-2">
-                            <div class="text-yellow-400 text-sm">★★★★★</div>
-                            <span class="text-xs text-gray-500 ml-2">12+ वर्षों का अनुभव</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Customer Reviews -->
         <div class="px-4 py-6 bg-yellow-50">
             <h2 class="text-xl font-bold text-gray-800 mb-1 flex items-center gap-2">
@@ -3010,7 +3375,7 @@
                         <p class="text-gray-700 text-sm">
                             "पहले बाम और स्प्रे लगाती थी, फर्क नहीं। ये तेल 5–7 मिनट बाद गर्मी देता है और जकड़न कम हो जाती है।"
                         </p>
-                        <p class="text-xs text-green-600 mt-2">💬 WhatsApp Review</p>
+                        <p class="text-xs text-green-600 mt-2">💬  Review</p>
                     </div>
                     
                     <div class="review-card bg-white p-4 rounded-lg shadow-md border-t-4 border-purple-500">
@@ -3038,40 +3403,28 @@
                 </div>
             </div>
         </div>
-
-        <!-- Video Placeholder -->
-        <div class="px-4 py-6 bg-gray-100">
-            <h3 class="text-lg font-bold text-gray-800 mb-3 text-center">📹 देखें कैसे काम करता है</h3>
-            <div class="bg-gradient-to-br from-red-100 to-orange-100 h-48 rounded-lg flex items-center justify-center shadow-lg">
-                <div class="text-center">
-                    <div class="text-6xl mb-2">▶️</div>
-                    <p class="text-gray-700 font-semibold">Video Tutorial</p>
-                    <p class="text-sm text-gray-600">Product Demo & Usage</p>
-                </div>
-            </div>
-        </div>
-
         <!-- How to Use -->
-        <div class="px-4 py-6 bg-gradient-to-br from-red-50 to-orange-50">
-            <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <span class="text-2xl">🧴</span> इस्तेमाल करने का तरीका
-            </h2>
-            <div class="space-y-3">
-                <div class="bg-white p-3 rounded-lg shadow flex items-start gap-3">
-                    <span class="bg-gradient-to-r from-red-500 to-orange-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
-                    <p class="text-gray-700">जिस जगह दर्द है वहाँ तेल हल्का गर्म करके लगाएँ</p>
-                </div>
-                <div class="bg-white p-3 rounded-lg shadow flex items-start gap-3">
-                    <span class="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
-                    <p class="text-gray-700">3–5 मिनट गोलाई में मालिश करें</p>
-                </div>
-                <div class="bg-white p-3 rounded-lg shadow flex items-start gap-3">
-                    <span class="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
-                    <p class="text-gray-700">दिन में 2 बार इस्तेमाल करें</p>
-                </div>
-                <div class="bg-white p-3 rounded-lg shadow flex items-start gap-3">
-                    <span class="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
-                    <p class="text-gray-700">लगाने के तुरंत बाद ठंडी हवा से बचें</p>
+        <div class="py-6 bg-gradient-to-br from-red-50 to-orange-50">
+            <div class="w-full">
+                <img 
+                    src="./images/table.png" 
+                    alt="Usage Instructions Table - उपयोग निर्देश तालिका" 
+                    class="w-full h-auto clickable-image hover:scale-105 transition-all duration-500"
+                    loading="lazy"
+                    onclick="openImageModal(this.src)"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                    title="उपयोग निर्देशों के लिए क्लिक करें"
+                >
+                <!-- Fallback for missing table image -->
+                <div class="hidden w-full h-64 flex-col items-center justify-center text-gray-600 bg-gradient-to-br from-red-100 to-orange-100" style="display: none;">
+                    <div class="w-20 h-20 bg-red-500 rounded-full mb-6 flex items-center justify-center">
+                        <span class="text-4xl text-white">📋</span>
+                    </div>
+                    <p class="font-bold text-2xl text-center text-red-700 hindi-text mb-2">उपयोग निर्देश</p>
+                    <p class="text-lg text-center text-red-600 mb-4">Usage Instructions</p>
+                    <div class="bg-red-600 text-white px-6 py-3 rounded-full font-bold">
+                        विस्तृत जानकारी
+                    </div>
                 </div>
             </div>
         </div>
@@ -3113,97 +3466,131 @@
                         </div>
                     </div>
                     
-                    <!-- View Certificates Button -->
-                    <div class="text-center mt-4">
-                        <div class="inline-flex items-center gap-2 bg-green-100 hover:bg-green-200 px-4 py-2 rounded-full text-sm text-green-700 cursor-pointer transition-all duration-300 border border-green-200 hover:border-green-300" onclick="openImageModal('./images/')">
-                            <div class="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
-                                <div class="w-2 h-2 bg-white rounded-full"></div>
-                            </div>
-                            <span class="hindi-text font-semibold">प्रमाणपत्र विस्तार से देखें</span>
-                        </div>
-                    </div>
-                </div>
                 
                 <!-- Trust Badge CTA -->
                 <div class="text-center mt-6">
-                    <button onclick="scrollToContact()" class="bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:from-red-700 hover:to-red-800 transition-all transform hover:scale-105 hindi-text">
+                    <button onclick="scrollToContact()" class="bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-full font-bold text-2xl shadow-xl hover:from-red-700 hover:to-red-800 transition-all transform hover:scale-105 hindi-text">
                         प्रमाणित समाधान - अभी मंगवाएं
                     </button>
                     <p class="text-sm text-gray-600 mt-2 hindi-text">✅ 100% सुरक्षित और प्रमाणित</p>
                 </div>
             </div>
         </div>
-
-        <!-- Urgency Section -->
-        <!-- <div class="px-4 py-6 bg-red-50">
-            <h2 class="text-xl font-bold text-red-700 mb-4 flex items-center gap-2">
-                <span class="text-2xl">⚠</span> क्यों आज ही कदम उठाएँ?
-            </h2>
-            <div class="bg-white p-4 rounded-lg shadow-lg">
-                <div class="space-y-3">
-                    <div class="flex items-center gap-3">
-                        <span class="text-2xl">📉</span>
-                        <p class="text-gray-700">दर्द बढ़ता है</p>
+        <!-- Enhanced Guarantee Section with Highlighting -->
+        <div class="px-4 py-8 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 relative overflow-hidden">
+            <!-- Animated Background Elements -->
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-2xl animate-pulse"></div>
+                <div class="absolute bottom-10 right-10 w-24 h-24 bg-yellow-200 rounded-full blur-xl animate-bounce"></div>
+                <div class="absolute top-1/2 right-1/4 w-6 h-6 bg-white rounded-full animate-ping"></div>
+                <div class="absolute bottom-1/3 left-1/3 w-4 h-4 bg-yellow-300 rounded-full animate-bounce" style="animation-delay: 0.5s;"></div>
+            </div>
+            
+            <!-- Highlighted Header -->
+            <div class="relative z-10 text-center mb-6">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border-4 border-yellow-400 mb-4 animate-bounce">
+                    <div class="flex items-center justify-center gap-3 mb-3">
+                        <span class="text-4xl animate-pulse">🛡️</span>
+                        <h2 class="text-3xl font-bold text-gray-800 hindi-text">भरोसा और सुरक्षा वादा</h2>
+                        <span class="text-4xl animate-pulse">🛡️</span>
                     </div>
-                    <div class="text-center text-2xl text-gray-400">↓</div>
-                    <div class="flex items-center gap-3">
-                        <span class="text-2xl">🚶</span>
-                        <p class="text-gray-700">मूवमेंट कम होती है</p>
+                    <div class="bg-gradient-to-r from-blue-100 to-purple-100 px-6 py-3 rounded-full inline-block border-2 border-blue-400">
+                        <p class="text-gray-800 font-bold text-lg">
+                            हम आपका दर्द समझते हैं — विश्वास और राहत देने के लिए प्रतिबद्ध हैं।
+                        </p>
                     </div>
-                    <div class="text-center text-2xl text-gray-400">↓</div>
-                    <div class="flex items-center gap-3">
-                        <span class="text-2xl">💔</span>
-                        <p class="text-gray-700">जोड़ और कमजोर हो जाते हैं</p>
-                    </div>
-                    <div class="text-center text-2xl text-gray-400">↓</div>
-                    <div class="flex items-center gap-3">
-                        <span class="text-2xl">⏰</span>
-                        <p class="text-gray-700">देर करने से रिकवरी मुश्किल हो सकती है</p>
-                    </div>
-                </div>
-                <div class="mt-4 bg-yellow-100 p-3 rounded-lg border-l-4 border-yellow-500">
-                    <p class="text-gray-800 font-bold text-center">
-                        जोड़ आज मदद माँग रहे हैं — कल देर हो सकती है।
-                    </p>
                 </div>
             </div>
-        </div> -->
-
-        <!-- Guarantee Section -->
-        <div class="px-4 py-6 bg-gradient-to-br from-red-50 to-orange-50">
-            <h2 class="text-xl font-bold text-gray-800 mb-2 flex items-center gap-2">
-                <span class="text-2xl">🛡</span> भरोसा और सुरक्षा वादा
-            </h2>
-            <p class="text-gray-700 mb-4">
-                हम आपका दर्द समझते हैं — और इसी वजह से हम केवल प्रॉडक्ट नहीं, बल्कि विश्वास और राहत देने के लिए प्रतिबद्ध हैं।
-            </p>
-            <div class="bg-white p-4 rounded-lg shadow-lg">
-                <div class="space-y-2">
-                    <div class="flex items-start gap-2">
-                        <span class="text-blue-500 text-lg">🔹</span>
-                        <p class="text-gray-700 text-sm">100% Pure Ayurvedic & Natural Formula</p>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <span class="text-blue-500 text-lg">🔹</span>
-                        <p class="text-gray-700 text-sm">Quality Tested & Certified Manufacturing</p>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <span class="text-blue-500 text-lg">🔹</span>
-                        <p class="text-gray-700 text-sm">Customer Support Till Satisfaction</p>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <span class="text-blue-500 text-lg">🔹</span>
-                        <p class="text-gray-700 text-sm">COD Available — Pay When You Receive</p>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <span class="text-blue-500 text-lg">🔹</span>
-                        <p class="text-gray-700 text-sm">Assurance-Based Purchase — No Risk</p>
+            <!-- Enhanced Guarantee Cards -->
+            <div class="relative z-10 grid grid-cols-1 gap-4 mb-6">
+                <!-- 100% Pure Ayurvedic -->
+                <div class="bg-white/95 backdrop-blur-sm p-5 rounded-2xl shadow-2xl border-4 border-green-400 hover:border-green-500 transition-all duration-300 transform hover:scale-105 animate-bounce" style="animation-delay: 0.1s;">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-green-500 p-3 rounded-full animate-pulse">
+                            <span class="text-2xl text-white">🌿</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-1 hindi-text">100% शुद्ध आयुर्वेदिक</h3>
+                            <p class="text-gray-700 text-sm font-medium">Pure Ayurvedic & Natural Formula - कोई केमिकल नहीं</p>
+                        </div>
                     </div>
                 </div>
-                <div class="mt-4 bg-gradient-to-r from-blue-100 to-purple-100 p-3 rounded-lg">
-                    <p class="text-gray-800 font-semibold text-sm italic text-center">
-                        "आपका विश्वास और संतुष्टि हमारे लिए सबसे महत्वपूर्ण है — इसलिए हम हर ग्राहक को सुरक्षित और आश्वासन-आधारित खरीदारी अनुभव प्रदान करते हैं।"
+                
+                <!-- Quality Tested -->
+                <div class="bg-white/95 backdrop-blur-sm p-5 rounded-2xl shadow-2xl border-4 border-blue-400 hover:border-blue-500 transition-all duration-300 transform hover:scale-105 animate-bounce" style="animation-delay: 0.2s;">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-500 p-3 rounded-full animate-pulse" style="animation-delay: 0.2s;">
+                            <span class="text-2xl text-white">🏆</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-1 hindi-text">गुणवत्ता प्रमाणित</h3>
+                            <p class="text-gray-700 text-sm font-medium">Quality Tested & Certified Manufacturing - ISO प्रमाणित</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Customer Support -->
+                <div class="bg-white/95 backdrop-blur-sm p-5 rounded-2xl shadow-2xl border-4 border-purple-400 hover:border-purple-500 transition-all duration-300 transform hover:scale-105 animate-bounce" style="animation-delay: 0.3s;">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-purple-500 p-3 rounded-full animate-pulse" style="animation-delay: 0.4s;">
+                            <span class="text-2xl text-white">🤝</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-1 hindi-text">पूर्ण सहायता</h3>
+                            <p class="text-gray-700 text-sm font-medium">Customer Support Till Satisfaction - संतुष्टि तक सपोर्ट</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- COD Available -->
+                <div class="bg-white/95 backdrop-blur-sm p-5 rounded-2xl shadow-2xl border-4 border-orange-400 hover:border-orange-500 transition-all duration-300 transform hover:scale-105 animate-bounce" style="animation-delay: 0.4s;">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-orange-500 p-3 rounded-full animate-pulse" style="animation-delay: 0.6s;">
+                            <span class="text-2xl text-white">💳</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-1 hindi-text">COD उपलब्ध</h3>
+                            <p class="text-gray-700 text-sm font-medium">Pay When You Receive - पहले देखें फिर पेमेंट करें</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- No Risk Purchase -->
+                <div class="bg-white/95 backdrop-blur-sm p-5 rounded-2xl shadow-2xl border-4 border-red-400 hover:border-red-500 transition-all duration-300 transform hover:scale-105 animate-bounce" style="animation-delay: 0.5s;">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-red-500 p-3 rounded-full animate-pulse" style="animation-delay: 0.8s;">
+                            <span class="text-2xl text-white">🔒</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-1 hindi-text">जोखिम मुक्त</h3>
+                            <p class="text-gray-700 text-sm font-medium">Assurance-Based Purchase - 100% सुरक्षित खरीदारी</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Final Guarantee Message -->
+            <div class="relative z-10 text-center">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border-4 border-yellow-400 animate-pulse">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <span class="text-3xl animate-bounce">💎</span>
+                        <span class="text-3xl animate-bounce" style="animation-delay: 0.2s;">✨</span>
+                        <span class="text-3xl animate-bounce" style="animation-delay: 0.4s;">💎</span>
+                    </div>
+                    <p class="text-gray-800 font-bold text-lg italic text-center leading-relaxed hindi-text mb-4">
+                        "आपका विश्वास और संतुष्टि हमारे लिए सबसे महत्वपूर्ण है"
                     </p>
+                    <div class="bg-gradient-to-r from-green-100 to-blue-100 px-6 py-3 rounded-full border-2 border-green-400">
+                        <p class="text-gray-700 font-semibold text-sm">
+                            🛡️ हर ग्राहक को सुरक्षित खरीदारी की गारंटी 🛡️
+                        </p>
+                    </div>
+                    
+                    <!-- Call to Action -->
+                    <div class="mt-6">
+                        <button onclick="scrollToContact()" class="bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-4 rounded-full font-bold text-xl shadow-xl hover:from-green-700 hover:to-green-800 transition-all transform hover:scale-105 animate-bounce border-4 border-green-400">
+                            <span class="animate-pulse">🎯</span> अभी ऑर्डर करें - पूर्ण सुरक्षा के साथ <span class="animate-pulse">🎯</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -3247,7 +3634,7 @@
             <button onclick="scrollToContact()" class="block w-full bg-gradient-to-r from-red-600 to-red-700 text-white text-center py-4 rounded-lg font-bold text-xl shadow-lg hover:from-red-700 hover:to-red-800 transition-all transform hover:scale-105">
                 👉 अभी ऑर्डर करें – तुरंत राहत पाएं
             </button>
-            <p class="text-center text-gray-600 mt-3 text-sm">📞 कॉल करके ऑर्डर करें | COD उपलब्ध | विशेष छूट</p>
+            <p class="text-center text-gray-600 mt-3 text-sm">तुरंत ऑर्डर करें | COD उपलब्ध | विशेष छूट</p>
         </div>
 
         <!-- FAQ Section -->
@@ -3314,87 +3701,153 @@
             </div>
         </div>
 
-        <!-- Streamlined Contact Section -->
-        <div id="contact" class="px-4 py-6 bg-gradient-to-br from-red-50 to-orange-50">
-            <div class="max-w-md mx-auto">
-                <div class="text-center mb-4">
-                    <h2 class="text-xl font-bold text-gray-800 mb-2">📞 तुरंत ऑर्डर करें</h2>
-                    <p class="text-sm text-gray-600">2 मिनट में ऑर्डर कंप्लीट</p>
-                </div>
-                
-                <!-- Quick Order Form -->
-                <div class="bg-white rounded-xl shadow-lg p-4 border border-red-200">
-                    <form id="contactForm" class="space-y-3">
-                        <div>
-                            <input type="text" required class="w-full px-3 py-2 border border-red-200 rounded-lg text-sm focus:border-red-500 focus:ring-2 focus:ring-red-200" placeholder="आपका नाम *" name="name">
+        <!-- Enhanced Contact Section with Highlighting -->
+        <div id="contact" class="px-4 py-8 bg-gradient-to-br from-red-600 via-red-500 to-orange-600 relative overflow-hidden">
+            <!-- Background Animation -->
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-2xl animate-pulse"></div>
+                <div class="absolute bottom-10 right-10 w-24 h-24 bg-yellow-200 rounded-full blur-xl animate-bounce"></div>
+                <div class="absolute top-1/2 left-1/4 w-4 h-4 bg-white rounded-full animate-ping"></div>
+            </div>
+            
+            <div class="max-w-lg mx-auto relative z-10">
+                <!-- Highlighted Header Section -->
+                <div class="text-center mb-6">
+                    <!-- Main Headline with Highlight -->
+                    <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border-4 border-yellow-400 mb-4 animate-bounce">
+                        <div class="flex items-center justify-center gap-3 mb-2">
+                            <span class="text-4xl animate-pulse">📞</span>
+                            <h1 class="text-3xl font-bold text-red-700 hindi-text">तुरंत ऑर्डर करें</h1>
+                            <span class="text-4xl animate-pulse">📞</span>
                         </div>
-                        
-                        <div>
-                            <input type="tel" required class="w-full px-3 py-2 border border-red-200 rounded-lg text-sm focus:border-red-500 focus:ring-2 focus:ring-red-200" placeholder="मोबाइल नंबर *" name="phone">
-                        </div>
-                        
-                        <div>
-                            <select class="w-full px-3 py-2 border border-red-200 rounded-lg text-sm focus:border-red-500 focus:ring-2 focus:ring-red-200" name="problem">
-                                <option>घुटने का दर्द</option>
-                                <option>कमर दर्द</option>
-                                <option>कंधे का दर्द</option>
-                                <option>गर्दन का दर्द</option>
-                                <option>जोड़ों की जकड़न</option>
-                            </select>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-gradient-to-r from-red-600 to-red-700 text-white font-bold py-3 rounded-lg shadow-lg text-sm hover:from-red-700 hover:to-red-800 transition-all">
-                            📞 Contact to us - संपर्क करें
-                        </button>
-                    </form>
+                        <p class="text-lg font-bold text-orange-600 mb-2">दर्द से मुक्ति का आसान तरीका</p>
+                        <p class="text-sm text-gray-700 bg-yellow-100 px-4 py-2 rounded-full inline-block border-2 border-yellow-400">
+                            ⏰ केवल 2 मिनट में ऑर्डर कंप्लीट
+                        </p>
+                    </div>
                     
-                    <!-- Direct Contact Options -->
-                    <div class="mt-6 pt-6 border-t border-gray-200">
-                        <div class="grid grid-cols-2 gap-4">
-                            <a href="tel:+919876543210" class="flex items-center justify-center bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition-all">
-                                <span class="mr-2">📞</span>
-                                कॉल करें
-                            </a>
-                            <a href="https://wa.me/919876543210" target="_blank" class="flex items-center justify-center bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-all">
-                                <span class="mr-2">💬</span>
-                                WhatsApp
-                            </a>
-                        </div>
-                        
-                        <!-- Business Hours -->
-                        <div class="mt-4 text-center text-sm text-gray-600">
-                            <p class="font-semibold">⏰ सेवा समय</p>
-                            <p>सोमवार - शनिवार: 9:00 AM - 8:00 PM</p>
-                            <p>रविवार: 10:00 AM - 6:00 PM</p>
-                        </div>
+                    <!-- Special Offer Highlight -->
+                    <div class="bg-gradient-to-r from-yellow-400 to-orange-400 text-red-800 px-6 py-3 rounded-full text-lg font-bold shadow-xl mb-4 animate-pulse border-4 border-white">
+                        🔥 आज ही ऑर्डर करें - विशेष छूट 🔥
                     </div>
                 </div>
                 
-                <!-- Why Contact Us -->
-                <div class="mt-8 bg-gradient-to-r from-green-100 to-blue-100 rounded-2xl p-6">
-                    <h3 class="font-bold text-gray-800 mb-4 text-center">हमसे संपर्क क्यों करें?</h3>
+                <!-- Enhanced Order Form with Highlighting -->
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-6 border-4 border-yellow-400 hover:border-yellow-500 transition-all duration-300">
+                    <!-- Form Header -->
+                    <div class="text-center mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 hindi-text">📋 ऑर्डर फॉर्म भरें</h3>
+                        <p class="text-sm text-gray-600 bg-green-100 px-3 py-1 rounded-full inline-block">
+                            ✅ 100% सुरक्षित और विश्वसनीय
+                        </p>
+                    </div>
+                    
+                    <form id="contactForm" class="space-y-4">
+                        <div class="relative">
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">👤 आपका पूरा नाम</label>
+                            <input type="text" required class="w-full px-4 py-3 border-2 border-red-300 rounded-xl text-lg focus:border-red-500 focus:ring-4 focus:ring-red-200 bg-red-50 hover:bg-white transition-all" placeholder="उदाहरण: राज कुमार" name="name">
+                        </div>
+                        
+                        <div class="relative">
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">📱 मोबाइल नंबर</label>
+                            <input type="tel" required class="w-full px-4 py-3 border-2 border-red-300 rounded-xl text-lg focus:border-red-500 focus:ring-4 focus:ring-red-200 bg-red-50 hover:bg-white transition-all" placeholder="उदाहरण: 9876543210" name="phone">
+                        </div>
+                        
+                        <div class="relative">
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">🎯 मुख्य समस्या</label>
+                            <select class="w-full px-4 py-3 border-2 border-red-300 rounded-xl text-lg focus:border-red-500 focus:ring-4 focus:ring-red-200 bg-red-50 hover:bg-white transition-all" name="problem">
+                                <option value="">समस्या चुनें...</option>
+                                <option>🦵 घुटने का दर्द</option>
+                                <option>🤕 कमर दर्द</option>
+                                <option>💪 कंधे का दर्द</option>
+                                <option>🏃 गर्दन का दर्द</option>
+                                <option>⚡ जोड़ों की जकड़न</option>
+                                <option>🔥 पूरे शरीर में दर्द</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gradient-to-r from-green-600 to-green-700 text-white font-bold py-4 rounded-xl shadow-2xl text-xl hover:from-green-700 hover:to-green-800 transition-all transform hover:scale-105 border-4 border-green-400 hover:border-green-500">
+                            <span class="animate-pulse">📞</span> अभी कॉल बैक मांगें <span class="animate-pulse">📞</span>
+                        </button>
+                        
+                        <!-- Security Badges -->
+                        <div class="flex justify-center gap-3 mt-3">
+                            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-semibold">🔒 सुरक्षित</span>
+                            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-semibold">✅ प्रमाणित</span>
+                            <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs font-semibold">⚡ तुरंत</span>
+                        </div>
+                    </form>
+                    
+                </div>
+                
+                <!-- Enhanced Benefits Section -->
+                <div class="mt-8 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border-4 border-blue-400">
+                    <div class="text-center mb-4">
+                        <h3 class="font-bold text-2xl text-gray-800 mb-2 hindi-text bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">🤝 हमसे संपर्क के फायदे</h3>
+                        <p class="text-sm text-gray-600 bg-blue-100 px-3 py-1 rounded-full inline-block">विशेष सुविधाएं और गारंटी</p>
+                    </div>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="flex items-start gap-3 bg-gradient-to-r from-green-50 to-green-100 p-4 rounded-xl border-l-4 border-green-500 hover:shadow-lg transition-all">
+                            <span class="text-green-500 text-2xl animate-bounce">🎯</span>
+                            <div>
+                                <p class="font-bold text-gray-800 text-lg">व्यक्तिगत सलाह</p>
+                                <p class="text-sm text-gray-600">आपकी समस्या के अनुसार विशेषज्ञ डॉक्टर की सलाह</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-gradient-to-r from-orange-50 to-orange-100 p-4 rounded-xl border-l-4 border-orange-500 hover:shadow-lg transition-all">
+                            <span class="text-orange-500 text-2xl animate-bounce" style="animation-delay: 0.2s;">💰</span>
+                            <div>
+                                <p class="font-bold text-gray-800 text-lg">विशेष छूट</p>
+                                <p class="text-sm text-gray-600">फोन ऑर्डर पर अतिरिक्त 15% डिस्काउंट</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-gradient-to-r from-purple-50 to-purple-100 p-4 rounded-xl border-l-4 border-purple-500 hover:shadow-lg transition-all">
+                            <span class="text-purple-500 text-2xl animate-bounce" style="animation-delay: 0.4s;">⚡</span>
+                            <div>
+                                <p class="font-bold text-gray-800 text-lg">तुरंत सहायता</p>
+                                <p class="text-sm text-gray-600">24 घंटे में कॉल बैक की 100% गारंटी</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-gradient-to-r from-red-50 to-red-100 p-4 rounded-xl border-l-4 border-red-500 hover:shadow-lg transition-all">
+                            <span class="text-red-500 text-2xl animate-bounce" style="animation-delay: 0.6s;">🚚</span>
+                            <div>
+                                <p class="font-bold text-gray-800 text-lg">मुफ्त डिलीवरी</p>
+                                <p class="text-sm text-gray-600">COD + तेज़ डिलीवरी की सुविधा</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Thank You Modal -->
+        <div id="thankYouModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+            <div class="bg-white rounded-2xl p-8 max-w-md mx-4 shadow-2xl border-4 border-green-400 animate-bounce">
+                <div class="text-center">
+                    <!-- Success Animation -->
+                    <div class="w-20 h-20 bg-green-500 rounded-full mx-auto mb-4 flex items-center justify-center animate-pulse">
+                        <span class="text-4xl text-white">✅</span>
+                    </div>
+                    
+                    <!-- Thank You Message -->
+                    <h2 class="text-3xl font-bold text-gray-800 mb-3 hindi-text">धन्यवाद! 🙏</h2>
+                    <p class="text-lg text-gray-700 mb-4">आपका ऑर्डर सफलतापूर्वक भेज दिया गया है</p>
+                    
+                    <!-- Details -->
+                    <div class="bg-green-50 p-4 rounded-xl mb-4 border-2 border-green-200">
+                        <div class="space-y-2 text-sm text-gray-700">
+                            <p><span class="font-semibold">📞 कॉल बैक:</span> अगले 2 घंटे में</p>
+                            <p><span class="font-semibold">⏰ समय:</span> सुबह 9 बजे से रात 9 बजे तक</p>
+                            <p><span class="font-semibold">🎯 विशेष:</span> फोन पर अतिरिक्त छूट</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
                     <div class="space-y-3">
-                        <div class="flex items-start gap-3">
-                            <span class="text-green-500 text-xl">✅</span>
-                            <div>
-                                <p class="font-semibold text-gray-800">व्यक्तिगत सलाह</p>
-                                <p class="text-sm text-gray-600">आपकी समस्या के अनुसार उपयोग की सलाह</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-green-500 text-xl">✅</span>
-                            <div>
-                                <p class="font-semibold text-gray-800">विशेष छूट</p>
-                                <p class="text-sm text-gray-600">फोन ऑर्डर पर अतिरिक्त डिस्काउंट</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <span class="text-green-500 text-xl">✅</span>
-                            <div>
-                                <p class="font-semibold text-gray-800">तुरंत सहायता</p>
-                                <p class="text-sm text-gray-600">24 घंटे में कॉल बैक गारंटी</p>
-                            </div>
-                        </div>
+                        <button onclick="closeThankYouModal()" class="w-full bg-gradient-to-r from-green-600 to-green-700 text-white py-3 px-6 rounded-xl font-bold text-lg hover:from-green-700 hover:to-green-800 transition-all">
+                            ✅ समझ गया
+                        </button>
+                        <p class="text-xs text-gray-500">हमारी टीम जल्दी ही आपसे संपर्क करेगी</p>
                     </div>
                 </div>
             </div>
@@ -3404,7 +3857,7 @@
         <div class="px-4 py-8 bg-gradient-to-br from-red-600 to-red-700 text-white text-center">
             <h3 class="text-2xl font-bold mb-3">🌿 अपने जोड़ों को आज ही राहत दें</h3>
             <p class="mb-4">दर्द मुक्त जीवन की शुरुआत अभी करें</p>
-            <button onclick="scrollToContact()" class="inline-block bg-white text-red-700 px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:bg-gray-100 transition-all transform hover:scale-105">
+            <button onclick="scrollToContact()" class="inline-block bg-white text-red-700 px-8 py-3 rounded-full font-bold text-2xl shadow-lg hover:bg-gray-100 transition-all transform hover:scale-105">
                 अभी ऑर्डर करें 🛒
             </button>
         </div>
@@ -3441,18 +3894,32 @@
         <!-- Scrolling Text Line -->
         <div class="footer-scroll-line">
             <div class="scroll-text-unlimited">
-                🔥 सीमित समय ऑफर • 22% तक बचत • मुफ्त डिलीवरी • COD उपलब्ध • 100% आयुर्वेदिक • तुरंत राहत • 4.9★ रेटिंग • 10,000+ संतुष्ट ग्राहक • ISO प्रमाणित • डॉक्टर अप्रूव्ड • 24 घंटे सपोर्ट • गारंटी के साथ •  “जोड़ों का दर्द आपकी उम्र से नहीं… आपकी रोज़ की ज़िंदगी से जीत रहा है।”
+                🔥 सीमित समय ऑफर • 22% तक बचत • मुफ्त डिलीवरी • COD उपलब्ध • 100% आयुर्वेदिक • तुरंत राहत • 4.9★ रेटिंग • 100,000+ संतुष्ट ग्राहक • ISO प्रमाणित • डॉक्टर अप्रूव्ड • 24 घंटे सपोर्ट • गारंटी के साथ •  “जोड़ों का दर्द आपकी उम्र से नहीं… आपकी रोज़ की ज़िंदगी से जीत रहा है।”
 “इस दर्द ने आपके चलने-फिरने की आज़ादी, आत्मविश्वास और दिनभर के कामकाज पर क़ब्ज़ा कर लिया है।”
   
             </div>
         </div>
         
         <div class="quick-cta-content">
-            <div>
-                <div class="text-xs opacity-80">मुफ्त डिलीवरी + COD</div>
+            <div class="relative">
+                <!-- Bouncing Highlighted Discount Text -->
+                <div class="animate-bounce bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white px-3 py-2 rounded-full shadow-xl border-2 border-yellow-300">
+                    <div class="text-sm font-bold text-center animate-pulse text-yellow-100" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">
+                        🔥 आज ऑर्डर करें और पाई 10% की छूट 🔥
+                    </div>
+                </div>
+                
+                <!-- Sparkle Effects -->
+                <div class="absolute -top-1 -left-1 w-3 h-3 bg-yellow-400 rounded-full animate-ping"></div>
+                <div class="absolute -top-1 -right-1 w-2 h-2 bg-orange-400 rounded-full animate-ping" style="animation-delay: 0.5s;"></div>
+                <div class="absolute -bottom-1 -left-1 w-2 h-2 bg-red-400 rounded-full animate-ping" style="animation-delay: 1s;"></div>
+                <div class="absolute -bottom-1 -right-1 w-3 h-3 bg-yellow-500 rounded-full animate-ping" style="animation-delay: 1.5s;"></div>
+                
+                <!-- Glow Effect -->
+                <div class="absolute inset-0 bg-gradient-to-r from-red-400/50 via-orange-400/50 to-yellow-400/50 rounded-full blur-lg scale-110 animate-pulse opacity-75"></div>
             </div>
-            <button onclick="scrollToContact()" class="quick-btn">
-                📞 अभी ऑर्डर करें
+            <button onclick="scrollToContact()" class="quick-btn animate-bounce" style="animation-delay: 0.2s; animation-duration: 2s;">
+               🛒 अभी ऑर्डर करें
             </button>
         </div>
     </div>
@@ -3813,12 +4280,91 @@
         // Initialize scroll effects when page loads
         document.addEventListener('DOMContentLoaded', initScrollEffects);
         
+        // Enhanced form submission with thank you modal
+        function showThankYouModal() {
+            const modal = document.getElementById('thankYouModal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                // Add sparkle effect
+                document.body.style.overflow = 'hidden';
+                
+                // Auto close after 10 seconds
+                setTimeout(() => {
+                    closeThankYouModal();
+                }, 10000);
+            }
+        }
+        
+        function closeThankYouModal() {
+            const modal = document.getElementById('thankYouModal');
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+        
+        // Enhanced contact form handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = new FormData(this);
+                    const name = formData.get('name');
+                    const phone = formData.get('phone');
+                    const problem = formData.get('problem');
+                    
+                    // Basic validation
+                    if (!name || !phone) {
+                        alert('कृपया सभी आवश्यक फ़ील्ड भरें।');
+                        return;
+                    }
+                    
+                    // Phone number validation
+                    const phoneRegex = /^[6-9]\d{9}$/;
+                    if (!phoneRegex.test(phone)) {
+                        alert('कृपया सही मोबाइल नंबर डालें।');
+                        return;
+                    }
+                    
+                    // Simulate form submission
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    const originalText = submitButton.innerHTML;
+                    
+                    // Show loading state
+                    submitButton.innerHTML = '⏳ भेजा जा रहा है...';
+                    submitButton.disabled = true;
+                    
+                    // Simulate API call delay
+                    setTimeout(() => {
+                        // Reset form
+                        this.reset();
+                        
+                        // Reset button
+                        submitButton.innerHTML = originalText;
+                        submitButton.disabled = false;
+                        
+                        // Show thank you modal
+                        showThankYouModal();
+                        
+                        // Optional: Send data to actual backend
+                        console.log('Form submitted:', { name, phone, problem });
+                        
+                    }, 1500);
+                });
+            }
+        });
+        
         // Global function declarations for onclick handlers
         window.openImageModal = openImageModal;
         window.closeImageModal = closeImageModal;
         window.scrollToTop = scrollToTop;
         window.scrollToContact = scrollToContact;
         window.toggleIngredients = toggleIngredients;
+        window.showThankYouModal = showThankYouModal;
+        window.closeThankYouModal = closeThankYouModal;
     </script>
     
     <!-- Floating Order Button -->
